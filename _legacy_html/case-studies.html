@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Case Studies | Qrious Tech Team LLP</title>
+  <meta name="description"
+    content="Explore Qrioustech Team LLP's case studies. See how we help global clients scale engineering capacity, build SaaS products, and modernize with artificial intelligence." />
+  <!-- Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/css/style.css" rel="stylesheet" />
+  <link href="/css/responsive.css" rel="stylesheet" />
+  <link href="/css/header.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+  <style>
+    /* ============================================
+       CASE STUDIES — PREMIUM STYLES
+       ============================================ */
+    .cs-hero {
+      background: #ffffff;
+      padding: 60px 0 40px;
+    }
+
+    .cs-hero-title {
+      font-size: 48px;
+      font-weight: 800;
+      color: #1a1a2e;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .cs-hero-title span {
+      color: #ed693a;
+    }
+
+    .cs-hero-subtitle {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.75;
+      max-width: 720px;
+      margin: 0 auto 10px;
+    }
+
+    .cs-container {
+      background: #f8f9fb;
+      padding: 60px 0;
+    }
+
+    /* Individual Case Study Panel */
+    .cs-panel {
+      background: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+      padding: 45px;
+      margin-bottom: 50px;
+    }
+
+    .cs-panel:last-child {
+      margin-bottom: 0;
+    }
+
+    .cs-category-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #ed693a;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+      padding: 4px 12px;
+      background: #fdf5f2;
+      border-radius: 0px;
+    }
+
+    .cs-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: #323232;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .cs-client-lbl {
+      font-size: 14px;
+      font-weight: 600;
+      color: #888888;
+      margin-bottom: 30px;
+    }
+
+    .cs-detail-img-wrapper {
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+      margin-bottom: 25px;
+      border: 1px solid #e8e8e8;
+      background: #fdf5f2;
+    }
+
+    .cs-detail-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Metric Grid */
+    .cs-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .cs-metric-card {
+      background: #f8f9fb;
+      border: 1px solid #e8e8e8;
+      padding: 16px 10px;
+      text-align: center;
+      border-top: 3px solid #ed693a;
+    }
+
+    .cs-metric-val {
+      display: block;
+      font-size: 22px;
+      font-weight: 800;
+      color: #ed693a;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .cs-metric-lbl {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: #666666;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Section Subheadings */
+    .cs-section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #323232;
+      margin-top: 25px;
+      margin-bottom: 12px;
+      position: relative;
+      padding-bottom: 6px;
+    }
+
+    .cs-section-title::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background: #ed693a;
+    }
+
+    .cs-section-text {
+      font-size: 15px;
+      color: #555555;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* Custom separator line */
+    .cs-divider {
+      height: 1px;
+      background: #e8e8e8;
+      margin: 40px 0;
+    }
+
+    /* Interactive Deck Button */
+    .cs-btn-interactive {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #ed693a;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: 2px solid #ed693a;
+      padding: 10px 20px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      background: transparent;
+      margin-top: 25px;
+    }
+
+    .cs-btn-interactive:hover {
+      background: #ed693a;
+      color: #ffffff !important;
+      text-decoration: none;
+    }
+
+    /* ============================================
+       CASE STUDIES TABS & COMING SOON
+       ============================================ */
+    .cs-tabs-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .cs-tabs-container {
+      display: inline-flex;
+      background: #ffffff;
+      padding: 6px;
+      gap: 5px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .cs-filter-tab {
+      background: transparent;
+      border: none;
+      outline: none !important;
+      padding: 12px 30px;
+      font-family: "Arimo", sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #555555;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .cs-filter-tab i {
+      font-size: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .cs-filter-tab:hover {
+      color: #ed693a;
+    }
+
+    .cs-filter-tab:hover i {
+      transform: translateY(-2px);
+    }
+
+    .cs-filter-tab.active {
+      background: #ed693a;
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(237, 105, 58, 0.25);
+    }
+
+    .cs-filter-tab.active i {
+      transform: scale(1.1);
+    }
+
+    /* Coming Soon Card Style */
+    .cs-coming-soon-card {
+      background: #ffffff;
+      border: 1px solid #e8e8e8;
+      border-radius: 0px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+      padding: 80px 45px;
+      text-align: center;
+      max-width: 750px;
+      margin: 40px auto;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .cs-coming-soon-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    .cs-coming-soon-icon {
+      width: 90px;
+      height: 90px;
+      background: #fdf5f2;
+      color: #ed693a;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      margin-bottom: 30px;
+      animation: pulseComingSoon 2s infinite;
+    }
+
+    @keyframes pulseComingSoon {
+      0% {
+        box-shadow: 0 0 0 0 rgba(237, 105, 58, 0.4);
+      }
+
+      70% {
+        box-shadow: 0 0 0 18px rgba(237, 105, 58, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(237, 105, 58, 0);
+      }
+    }
+
+    .cs-coming-soon-card h3 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #1a1a2e;
+      margin-bottom: 15px;
+    }
+
+    .cs-coming-soon-card p {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 35px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cs-coming-soon-card .theme-btn {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #ed693a;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: 2px solid #ed693a;
+      padding: 12px 28px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      background: transparent;
+    }
+
+    .cs-coming-soon-card .theme-btn:hover {
+      background: #ed693a;
+      color: #ffffff !important;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="icon"></div>
+    </div>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="cs-hero">
+      <div class="max-width text-center">
+        <h1 class="cs-hero-title">
+          Our <span class="text-orange">Case Studies</span>
+        </h1>
+        <p class="cs-hero-subtitle">
+          Real-world proof of how we help global businesses scale engineering
+          capacity, transition to cloud SaaS platforms, and modernize using
+          artificial intelligence.
+        </p>
+      </div>
+    </section>
+
+    <!-- Case Studies Container -->
+    <section class="cs-container">
+      <div class="max-width">
+        <!-- Filter Tabs -->
+        <div class="cs-tabs-wrapper">
+          <div class="cs-tabs-container">
+            <button class="cs-filter-tab active" data-tab="ai">
+              <i class="fa-solid fa-brain"></i> AI
+            </button>
+            <button class="cs-filter-tab" data-tab="web">
+              <i class="fa-solid fa-laptop-code"></i> Web
+            </button>
+            <button class="cs-filter-tab" data-tab="mobile">
+              <i class="fa-solid fa-mobile-screen-button"></i> Mobile
+            </button>
+            <button class="cs-filter-tab" data-tab="salesforce">
+              <i class="fa-brands fa-salesforce"></i> Salesforce
+            </button>
+            <button class="cs-filter-tab" data-tab="power-bi">
+              <i class="fa-solid fa-chart-line"></i> Power BI
+            </button>
+          </div>
+        </div>
+
+        <!-- Case Studies List -->
+        <div id="case-studies-list-container">
+          <div class="text-center py-5">
+            <div class="spinner-border text-primary" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <p class="mt-2 text-muted">Loading case studies...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="full-width half-padding"></section>
+    <!-- Footer -->
+    <div id="footer"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+    integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/js/scrollbar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+    integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+    integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.js"
+    integrity="sha512-ETeDoII5o/Zv6W1AtLiNDwfdkH684h6M/S8wd2N0vMEAeL3UAOf7a1SHdP1LGDieDrofe1KZpp9k6yLkR90E6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"
+    integrity="sha512-j7/1CJweOskkQiS5RD9W8zhEG9D9vpgByNGxPIqkO5KrXrwyDAroM9aQ9w8J7oRqwxGyz429hPVk/zR6IOMtSA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+    integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.js"
+    integrity="sha512-4YGNovJrl6Qk98aRC7DThxWJt+7+wDIqV2ldbIbjQ/WOYOaYInFuS8U4niSTyFL+T8gPuioZ5OOwRY495oUPWw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.js"
+    integrity="sha512-iH/pDSVxvLhkkjp/iRv71KHJ16zsIyFtzG2YnQrmofmOK6W7EQekpGcMymyimL964E5XqxioscKLmvv5d6MGzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-appear/0.1/jquery.appear.js"
+    integrity="sha512-gmlF0Cjvx6n5XCLF9NNN+rZwS3X0Xn1vwuk+K0L3B4qve4UI+RVbNt0VynWadl//O0VQ8X47GH55KF9j3kVdUw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"
+    integrity="sha512-Rd5Gf5A6chsunOJte+gKWyECMqkG8MgBYD1u80LOOJBfl6ka9CtatRrD4P0P5Q5V/z/ecvOCSYC8tLoWNrCpPg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/js/custom-script.js"></script>
+
+  <script>
+    $(function () {
+      $("#footer").load("/footer.html");
+    });
+    $(function () {
+      $("#header").load("/header.html");
+    });
+    $(document).ready(function () {
+      const labelMap = {
+        "Inbound Call Coverage": "Inbound Cover",
+        "Speech Round-trip Latency": "Latency",
+        "Sourcing Cost Optimization": "Cost Opt.",
+        "Manual Review Reduction": "Review Red.",
+        "Concurrent Camera Streams": "Streams",
+        "Alert Dispatch Speed": "Alert Speed",
+        "Socket Broadcast Latency": "Latency",
+        "Concurrent Listeners": "Listeners",
+        "Coordinator Velocity": "Velocity",
+        "Time Saved Per Employee": "Time Saved",
+        "RBAC Access Compliance": "RBAC",
+        "Security Standard": "Security",
+        "Manual Patient Effort Cut": "Effort Cut",
+        "Report Delivery Velocity": "Report Speed",
+        "Biomarkers Mapped": "Biomarkers",
+        "Manual Effort Reduction": "Effort Cut",
+        "Sync Latency": "Sync Latency",
+        "Supported Elements": "Supported",
+        "Manual Sourcing Workload Cut": "Effort Cut",
+        "Parsing Velocity": "Parsing Speed",
+        "Skill Match Accuracy": "Accuracy",
+        "Dynamic Adaptation Rate": "Adaptation",
+        "Multi-Agent Decision Cycle": "Decision Cycle",
+        "Long-Term Retention Boost": "Retention Boost",
+        "Memory Crashes": "RAM Safety",
+        "Private Data Kept Local": "Data Kept Local",
+        "AI Plan Accuracy": "Plan Accuracy",
+        "Drafting Time Reduction": "Time Saved",
+        "End-to-End Paper Generation": "Gen Speed",
+        "Syllabus & Blueprint Alignment": "Alignment",
+        "Voice Response Latency": "Voice Latency",
+        "Memory Retention Rate": "Retention",
+        "Cross-Tenant Data Leakage": "Zero Leakage",
+      };
+
+      function getShortLabel(lbl) {
+        return labelMap[lbl] || lbl;
+      }
+
+      let allCaseStudies = [];
+
+      function renderCaseStudies(tabId) {
+        const filtered = allCaseStudies.filter(function (cs) {
+          return cs.tab === tabId;
+        });
+        let html = "";
+
+        if (filtered.length > 0) {
+          filtered.forEach(function (cs) {
+            let metricsHtml = "";
+            cs.kpis.slice(0, 3).forEach(function (kpi) {
+              metricsHtml += `
+                <div class="cs-metric-card">
+                  <span class="cs-metric-val">${kpi.val}</span>
+                  <span class="cs-metric-lbl">${getShortLabel(kpi.lbl)}</span>
+                </div>
+              `;
+            });
+
+            html += `
+              <div class="cs-panel wow fadeInUp" data-wow-delay="100ms">
+                <div class="row">
+                  <!-- Left Column: Details -->
+                  <div class="col-lg-7 col-md-12">
+                    <span class="cs-category-tag">${cs.category}</span>
+                    <h2 class="cs-title">${cs.title}</h2>
+
+                    <h4 class="cs-section-title">The Challenge</h4>
+                    <p class="cs-section-text">${cs.challengeText}</p>
+
+                    <h4 class="cs-section-title">Our Approach</h4>
+                    <p class="cs-section-text">${cs.approachText}</p>
+
+                    <h4 class="cs-section-title">The Results</h4>
+                    <p class="cs-section-text">${cs.resultsText}</p>
+
+                    <div>
+                      <a href="/case-study/${cs.id}" class="cs-btn-interactive">
+                        View Interactive Deck <i class="fa-solid fa-arrow-right-long ml-2"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Right Column: Image & Metrics -->
+                  <div class="col-lg-5 col-md-12 mt-4 mt-lg-0">
+                    <div class="cs-detail-img-wrapper">
+                      <img src="/${cs.image}" alt="${cs.title}" onerror="this.onerror=null; this.src='/images/power-bi-image.png';">
+                    </div>
+
+                    <div class="cs-metrics-grid">
+                      ${metricsHtml}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
+          });
+        } else {
+          // Coming Soon State
+          const comingSoonConfig = {
+            "ai": {
+              name: "Artificial Intelligence",
+              icon: "fa-solid fa-brain",
+              desc: "We are currently compiling our latest AI, Machine Learning, and Agentic engineering case studies. Check back shortly or contact our team to discuss your AI initiative."
+            },
+            "web": {
+              name: "Web Applications",
+              icon: "fa-solid fa-laptop-code",
+              desc: "We are currently formatting our latest full-stack web engineering and cloud platform case studies. Check back shortly or contact our experts."
+            },
+            "mobile": {
+              name: "Mobile Applications",
+              icon: "fa-solid fa-mobile-screen-button",
+              desc: "We are currently publishing our cross-platform and native iOS / Android mobile application case studies. Check back shortly or reach out to discuss your mobile roadmap."
+            },
+            "salesforce": {
+              name: "Salesforce",
+              icon: "fa-brands fa-salesforce",
+              desc: "We are currently compiling our success stories, technical architectures, and results for our Salesforce integrations. Check back shortly or contact us to discuss your Salesforce development needs today."
+            },
+            "power-bi": {
+              name: "Power BI & Analytics",
+              icon: "fa-solid fa-chart-line",
+              desc: "We are currently formatting our latest interactive dashboards and business intelligence engineering case studies. Check back shortly or reach out to discuss your custom analytics requirements."
+            }
+          };
+
+          const tabConfig = comingSoonConfig[tabId] || {
+            name: "Category",
+            icon: "fa-solid fa-briefcase",
+            desc: "We are currently formatting case studies for this category. Check back shortly or contact our experts."
+          };
+
+          html = `
+              <div class="cs-coming-soon-card wow fadeIn" data-wow-delay="100ms">
+                <div class="cs-coming-soon-icon">
+                  <i class="${tabConfig.icon}"></i>
+                </div>
+                <h3>${tabConfig.name} Case Studies Coming Soon</h3>
+                <p>${tabConfig.desc}</p>
+                <a href="/contact" class="theme-btn">
+                  <span class="btn-title qt-button-text qt-fw-bold">Contact Our Experts</span>
+                </a>
+              </div>
+            `;
+        }
+
+        $("#case-studies-list-container").html(html);
+
+        // Re-trigger WOW.js animations
+        if (typeof WOW !== 'undefined') {
+          new WOW().init();
+        }
+      }
+
+      // Fetch case studies (with cache-buster to prevent stale browser cache)
+      $.getJSON("/data/case-studies.json?v=" + new Date().getTime(), function (data) {
+        allCaseStudies = data;
+        renderCaseStudies("ai");
+      }).fail(function () {
+        $("#case-studies-list-container").html(
+          '<div class="alert alert-danger text-center">Failed to load case studies. Please try again later.</div>',
+        );
+      });
+
+      // Tab click event bindings
+      $(".cs-filter-tab").on("click", function () {
+        $(".cs-filter-tab").removeClass("active");
+        $(this).addClass("active");
+        const selectedTab = $(this).attr("data-tab");
+        renderCaseStudies(selectedTab);
+      });
+    });
+  </script>
+</body>
+
+</html>

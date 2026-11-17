@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>How We Work | Qrious Tech Team LLP</title>
+  <meta name="description"
+    content="How we work with you. Choose from Dedicated Development Teams, SaaS Development Partner, or AI Modernization Partner to accelerate your business." />
+  <!-- Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+  <style>
+    /* ============================================
+       PARTNER WITH US — PAGE STYLES
+       ============================================ */
+
+    /* ---------- Hero Banner ---------- */
+    /* Hero Banner styles removed to match site-wide standard header sections */
+
+    /* Stats */
+    .wwu-stats {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .wwu-stat {
+      text-align: center;
+    }
+
+    .wwu-stat .num {
+      display: block;
+      font-size: 36px;
+      font-weight: 700;
+      color: #ed693a;
+      line-height: 1;
+    }
+
+    .wwu-stat .lbl {
+      display: block;
+      font-size: 13px;
+      color: #888888;
+      margin-top: 7px;
+    }
+
+    /* ---------- Section Header ---------- */
+    .wwu-sec-head {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .wwu-sec-tag {
+      display: inline-block;
+      background: #fff3ee;
+      color: #ed693a;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 0px;
+      margin-bottom: 14px;
+    }
+
+    .wwu-sec-head h2 {
+      font-size: 40px;
+      font-weight: 700;
+      color: #323232;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .wwu-sec-head h2 span {
+      color: #ed693a;
+    }
+
+    .wwu-sec-head p {
+      font-size: 16px;
+      color: #777;
+      line-height: 1.75;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ---------- How We Work Cards ---------- */
+    .hww-card {
+      background: #ffffff;
+      border: 1px solid #e8e8e8;
+      border-radius: 0px;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .hww-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(237, 105, 58, 0.12);
+      border-color: rgba(237, 105, 58, 0.3);
+    }
+
+    .hww-card-image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      background: #fdf5f2;
+    }
+
+    .hww-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .hww-card:hover .hww-card-image img {
+      transform: scale(1.08);
+    }
+
+    .hww-card-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .hww-card-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: #fff3ee;
+      color: #ed693a;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      margin-bottom: 14px;
+    }
+
+    .hww-card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #323232;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .hww-card-desc {
+      font-size: 14px;
+      color: #666666;
+      line-height: 1.6;
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+
+    .hww-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 16px;
+      margin-bottom: 20px;
+      min-height: 60px;
+      align-content: end;
+    }
+
+    .hww-card-tags span {
+      display: inline-flex !important;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 5px 12px;
+      background: #f4f4f4;
+      color: #555;
+      border: 1px solid #e4e4e4;
+      border-radius: 2px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .hww-card-btn {
+      display: inline-block;
+      text-align: center;
+      background: #ed693a;
+      color: #ffffff !important;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 12px 20px;
+      text-decoration: none !important;
+      transition: all 0.3s ease;
+      border: 1.5px solid #ed693a;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hww-card-btn:hover {
+      background: transparent;
+      color: #ed693a !important;
+    }
+
+    /* ---------- Process Steps ---------- */
+    .wwu-steps {
+      display: flex;
+      gap: 0;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .wwu-steps::before {
+      content: "";
+      position: absolute;
+      top: 35px;
+      left: calc(12.5% + 35px);
+      right: calc(12.5% + 35px);
+      height: 2px;
+      background: linear-gradient(90deg, #ed693a, #f2845c, #ed693a);
+    }
+
+    .wwu-step {
+      flex: 1;
+      text-align: center;
+      padding: 0 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .wwu-step-num {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #fff;
+      border: 3px solid #ed693a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #ed693a;
+      box-shadow: 0 0 0 6px rgba(237, 105, 58, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .wwu-step:hover .wwu-step-num {
+      background: #ed693a;
+      color: #fff;
+    }
+
+    .wwu-step h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #323232;
+      margin-bottom: 8px;
+    }
+
+    .wwu-step p {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ---------- Connect CTA ---------- */
+    .wwu-connect {
+      background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .wwu-connect::before {
+      content: "";
+      position: absolute;
+      right: -60px;
+      top: -60px;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle,
+          rgba(237, 105, 58, 0.2) 0%,
+          transparent 65%);
+      pointer-events: none;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 991px) {
+      .wwu-stats {
+        gap: 30px;
+      }
+
+      .wwu-tab-btn {
+        min-width: 180px;
+        padding: 14px 18px;
+      }
+
+      .wwu-panel-head {
+        padding: 28px 24px 22px;
+      }
+
+      .wwu-panel-head-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wwu-panel-icon-large {
+        display: none;
+      }
+
+      .wwu-panel-body {
+        padding: 28px 24px;
+      }
+
+      .wwu-feat-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wwu-steps {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+      }
+
+      .wwu-steps::before {
+        display: none;
+      }
+
+      .wwu-step {
+        max-width: 260px;
+      }
+
+      .wwu-panel-cta {
+        justify-content: center;
+      }
+
+      .wwu-cta-note {
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .wwu-stats {
+        gap: 20px;
+      }
+
+      .wwu-stat .num {
+        font-size: 28px;
+      }
+
+      .wwu-sec-head h2 {
+        font-size: 28px;
+      }
+
+      .wwu-tabs-wrap {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .wwu-tab-btn {
+        max-width: 100%;
+      }
+
+      .wwu-panel-head h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="icon"></div>
+    </div>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- ==============================
+         ENGAGEMENT MODEL CARDS
+         ============================= -->
+    <section class="full-width" style="background: #f8f9fb">
+      <div class="max-width top-full-padding">
+        <div class="wwu-sec-head">
+          <h2>Our Engagement <span>Models</span></h2>
+          <!-- <p>
+              Every business has unique needs. Choose the engagement model that
+              aligns with your goals, timelines, and growth strategy.
+            </p> -->
+        </div>
+
+        <div class="row">
+          <!-- Card 1: Dedicated Development Teams -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="hww-card">
+              <div class="hww-card-image">
+                <img src="images/resource/dedicated-teams-cover.png" alt="Dedicated Development Teams" />
+              </div>
+              <div class="hww-card-content">
+                <span class="hww-card-badge">Staff Augmentation</span>
+                <h3 class="hww-card-title">Dedicated Development Teams</h3>
+                <p class="hww-card-desc">
+                  Scale your product capacity instantly with an embedded
+                  development team that works as a seamless, transparent
+                  extension of your in-house engineering.
+                </p>
+                <div class="hww-card-tags">
+                  <span>Tech Lead</span>
+                  <span>Developers</span>
+                  <span>QA</span>
+                  <span>DevOps</span>
+                </div>
+                <a href="dedicated-development-teams" class="hww-card-btn">Explore Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: SaaS Development Partner -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="hww-card">
+              <div class="hww-card-image">
+                <img src="images/resource/saas-partner-cover.png" alt="SaaS Development Partner" />
+              </div>
+              <div class="hww-card-content">
+                <span class="hww-card-badge">Product Partnership</span>
+                <h3 class="hww-card-title">SaaS Development Partner</h3>
+                <p class="hww-card-desc">
+                  Turn your software idea into a market-ready SaaS product. We
+                  take you from MVP conceptualization and design to production
+                  architecture and launch.
+                </p>
+                <div class="hww-card-tags">
+                  <span>Startups</span>
+                  <span>MVP to Scaling</span>
+                  <span>Multi-tenant</span>
+                  <span>Cloud Infra</span>
+                </div>
+                <a href="saas-development-partner" class="hww-card-btn">Explore Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: AI Modernization Partner -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="hww-card">
+              <div class="hww-card-image">
+                <img src="images/resource/ai-modernization-cover.png" alt="AI Modernization Partner" />
+              </div>
+              <div class="hww-card-content">
+                <span class="hww-card-badge">AI Integration</span>
+                <h3 class="hww-card-title">AI Modernization Partner</h3>
+                <p class="hww-card-desc">
+                  Modernize your existing product with AI. We re-engineer
+                  workflows, integrate LLMs or machine learning models, and
+                  unlock intelligent features.
+                </p>
+                <div class="hww-card-tags">
+                  <span>Legacy Upgrade</span>
+                  <span>LLM Integration</span>
+                  <span>Automation</span>
+                  <span>AI Audit</span>
+                </div>
+                <a href="ai-modernization-partner" class="hww-card-btn">Explore Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.max-width -->
+    </section>
+
+    <!-- ==============================
+         HOW IT WORKS
+         ============================== -->
+    <section class="full-width">
+      <div class="max-width top-full-padding">
+        <div class="wwu-sec-head">
+          <div class="wwu-sec-tag">Simple &amp; Transparent</div>
+          <h2>How It <span>Works</span></h2>
+          <p>
+            Our onboarding is streamlined so you get started quickly — no
+            surprises, no delays.
+          </p>
+        </div>
+
+        <div class="wwu-steps">
+          <div class="wwu-step">
+            <div class="wwu-step-num">1</div>
+            <h4>Share Requirements</h4>
+            <p>
+              Tell us your goals, team needs, and timeline via a quick
+              discovery call.
+            </p>
+          </div>
+          <div class="wwu-step">
+            <div class="wwu-step-num">2</div>
+            <h4>Choose Your Model</h4>
+            <p>
+              We recommend the best model and assemble the right team for you.
+            </p>
+          </div>
+          <div class="wwu-step">
+            <div class="wwu-step-num">3</div>
+            <h4>Meet Your Team</h4>
+            <p>
+              Interview candidates, review CVs, and confirm who you want to
+              work with.
+            </p>
+          </div>
+          <div class="wwu-step">
+            <div class="wwu-step-num">4</div>
+            <h4>Sign &amp; Kick Off</h4>
+            <p>
+              Finalize the agreement and your team starts on the confirmed
+              date.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         CONNECT CTA (matches site)
+         ============================== -->
+    <section id="tp-contact" class="wwu-connect full-width">
+      <div class="map-pattern-layer"></div>
+      <div class="half-padding max-width">
+        <div>
+          <div class="row clearfix responsive-gap">
+            <div class="text-column col-lg-9 col-md-12 col-sm-12">
+              <div class="inner">
+                <div>
+                  <h2 class="text-white text-left qt-title-text qt-fw-bold qt-lh-large">
+                    Ready to Build
+                    <span class="text-orange">Something Great?</span>
+                  </h2>
+                  <h3 class="text-white text-left qt-subtitle-text text-capitalize qt-fw-normal qt-lh-small">
+                    Whether you're scaling a team, launching SaaS,<br />
+                    <strong><span>or modernizing with AI — we're your partner.</span></strong>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="form-column col-lg-3 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
+              <div class="inner">
+                <div class="form-box">
+                  <div class="default-form appointment-form">
+                    <div class="row clearfix">
+                      <div class="form-group col-md-12 col-sm-12">
+                        <button type="submit" class="theme-btn btn-style-one" onClick="window.location.href='contact';">
+                          <span class="btn-title qt-button-text">Let's Connect</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="full-width half-padding"></section>
+
+    <div id="footer"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/scrollbar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+    integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+    integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+    integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.js"
+    integrity="sha512-ETeDoII5o/Zv6W1AtLiNDwfdkH684h6M/S8wd2N0vMEAeL3UAOf7a1SHdP1LGDieDrofe1KZpp9k6yLkR90E6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"
+    integrity="sha512-j7/1CJweOskkQiS5RD9W8zhEG9D9vpgByNGxPIqkO5KrXrwyDAroM9aQ9w8J7oRqwxGyz429hPVk/zR6IOMtSA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+    integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.js"
+    integrity="sha512-4YGNovJrl6Qk98aRC7DThxWJt+7+wDIqV2ldbIbjQ/WOYOaYInFuS8U4niSTyFL+T8gPuioZ5OOwRY495oUPWw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.js"
+    integrity="sha512-iH/pDSVxvLhkkjp/iRv71KHJ16zsIyFtzG2YnQrmofmOK6W7EQekpGcMymyimL964E5XqxioscKLmvv5d6MGzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-appear/0.1/jquery.appear.js"
+    integrity="sha512-gmlF0Cjvx6n5XCLF9NNN+rZwS3X0Xn1vwuk+K0L3B4qve4UI+RVbNt0VynWadl//O0VQ8X47GH55KF9j3kVdUw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"
+    integrity="sha512-Rd5Gf5A6chsunOJte+gKWyECMqkG8MgBYD1u80LOOJBfl6ka9CtatRrD4P0P5Q5V/z/ecvOCSYC8tLoWNrCpPg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/custom-script.js"></script>
+
+  <script>
+    // Load header & footer
+    $(function () {
+      $("#footer").load("footer.html");
+    });
+    $(function () {
+      $("#header").load("header.html");
+    });
+  </script>
+</body>
+
+</html>

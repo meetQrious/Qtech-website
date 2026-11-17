@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <style>
+      .text-title { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 700; fill: #ffffff; font-size: 11px; }
+      .text-category { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 600; fill: #ed693a; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; }
+      .text-kpi-val { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 800; fill: #ed693a; font-size: 24px; }
+      .text-kpi-lbl { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 600; fill: #8b9bb4; font-size: 9px; letter-spacing: 0.05em; text-transform: uppercase; }
+      .text-node { font-family: monospace; fill: #ffffff; font-size: 8px; font-weight: bold; }
+    </style>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090514" />
+      <stop offset="100%" stop-color="#040209" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" rx="12" fill="url(#bgGrad)" stroke="#22113c" stroke-width="2" />
+  
+  <!-- Header -->
+  <g>
+    <circle cx="85" cy="22" r="5" fill="#ff5f56" />
+    <circle cx="97" cy="22" r="5" fill="#ffbd2e" />
+    <circle cx="109" cy="22" r="5" fill="#27c93f" />
+    <text x="135" y="18" class="text-category">Cloud Modernization</text>
+    <text x="135" y="32" class="text-title">Dashboard Migration to Amazon QuickSight</text>
+    <rect x="680" y="12" width="95" height="20" rx="10" fill="#ed693a" opacity="0.15" />
+    <text x="727" y="25" font-family="'Inter', sans-serif" font-weight="700" fill="#ed693a" font-size="9" text-anchor="middle">CLOUD SERVICES</text>
+  </g>
+
+  <!-- Left Side: 3 KPI Cards -->
+  <g transform="translate(85, 65)">
+    <rect width="180" height="75" rx="6" fill="#110b21" stroke="#22113c" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="75" stroke="#ed693a" stroke-width="4" />
+    <text x="15" y="32" class="text-kpi-val">22</text>
+    <text x="15" y="52" class="text-kpi-lbl">Dashboards Migrated</text>
+    
+    <g transform="translate(0, 95)">
+      <rect width="180" height="75" rx="6" fill="#110b21" stroke="#22113c" stroke-width="1" />
+      <line x1="0" y1="0" x2="0" y2="75" stroke="#06b6d4" stroke-width="4" />
+      <text x="15" y="32" class="text-kpi-val">100%</text>
+      <text x="15" y="52" class="text-kpi-lbl">Data Parity</text>
+    </g>
+    
+    <g transform="translate(0, 190)">
+      <rect width="180" height="75" rx="6" fill="#110b21" stroke="#22113c" stroke-width="1" />
+      <line x1="0" y1="0" x2="0" y2="75" stroke="#ed693a" stroke-width="4" />
+      <text x="15" y="32" class="text-kpi-val">40%</text>
+      <text x="15" y="52" class="text-kpi-lbl">Latency Reduction</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Cloud Topology node mapping -->
+  <g transform="translate(285, 65)">
+    <rect width="490" height="265" rx="8" fill="#110b21" stroke="#22113c" stroke-width="1" />
+    <text x="20" y="28" font-family="'Inter', sans-serif" font-weight="700" fill="#ffffff" font-size="12">Integration Topology Mapping</text>
+    
+    <g transform="translate(30, 40)">
+      <path d="M50,100 L170,50 M50,100 L170,100 M50,100 L170,150 M170,50 L300,100 M170,100 L300,100 M170,150 L300,100 M300,100 L400,100" fill="none" stroke="#2a164d" stroke-width="2" />
+      <path d="M50,100 L170,50" fill="none" stroke="#ed693a" stroke-width="1.5" stroke-dasharray="5 5" />
+      <path d="M170,100 L300,100" fill="none" stroke="#06b6d4" stroke-width="2" />
+      
+      <!-- Source node -->
+      <circle cx="50" cy="100" r="24" fill="#1b0e35" stroke="#ed693a" stroke-width="2.5" />
+      <text x="50" y="103" class="text-node" text-anchor="middle">API</text>
+      
+      <!-- Intermediate nodes -->
+      <circle cx="170" cy="50" r="18" fill="#1b0e35" stroke="#06b6d4" stroke-width="2" />
+      <text x="170" y="53" class="text-node" text-anchor="middle">ROUTER</text>
+      
+      <circle cx="170" cy="100" r="18" fill="#1b0e35" stroke="#06b6d4" stroke-width="2" />
+      <text x="170" y="103" class="text-node" text-anchor="middle">FILTER</text>
+      
+      <circle cx="170" cy="150" r="18" fill="#1b0e35" stroke="#06b6d4" stroke-width="2" />
+      <text x="170" y="153" class="text-node" text-anchor="middle">CACHE</text>
+      
+      <!-- Target DB node -->
+      <circle cx="300" cy="100" r="24" fill="#1b0e35" stroke="#ed693a" stroke-width="2.5" />
+      <text x="300" y="103" class="text-node" text-anchor="middle">STORE</text>
+      
+      <!-- BI report endpoint -->
+      <circle cx="400" cy="100" r="16" fill="#1b0e35" stroke="#06b6d4" stroke-width="2" />
+      <text x="400" y="103" class="text-node" text-anchor="middle">FLOW</text>
+    </g>
+  </g>
+
+  <!-- Bottom Panel: Log console -->
+  <g transform="translate(85, 345)">
+    <rect width="690" height="85" rx="6" fill="#110b21" stroke="#22113c" stroke-width="1" />
+    <text x="15" y="22" font-family="'Inter', sans-serif" font-weight="700" fill="#ffffff" font-size="9" letter-spacing="0.055em" text-transform="uppercase">Cloud Sync Console Logs</text>
+    <g font-family="monospace" font-size="8.5" fill="#a5b4fc" transform="translate(15, 38)">
+      <text x="0" y="10" fill="#06b6d4">[INFO] Connected to data connectors (Google Drive, Salesforce, Box)...</text>
+      <text x="0" y="22" fill="#06b6d4">[INFO] Initiating incremental background cache synchronization...</text>
+      <text x="0" y="34" fill="#ed693a">[SUCCESS] Indexes updated. System security state verified compliant.</text>
+    </g>
+  </g>
+</svg>

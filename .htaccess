@@ -1,0 +1,39 @@
+RewriteEngine On
+
+# 1. Content Negotiation for Homepage (Accept: text/markdown)
+RewriteCond %{HTTP:Accept} text/markdown [NC]
+RewriteCond %{REQUEST_URI} ^/(index(\.html)?)?$ [NC]
+RewriteRule ^.*$ /index.md [L]
+# Ensure Vary: Accept header is sent on all HTML and Markdown responses
+<FilesMatch "\.(html|md)$">
+    Header append Vary "Accept"
+</FilesMatch>
+<Files "index.md">
+    Header set Content-Type "text/markdown; charset=utf-8"
+</Files>
+
+# If requested file exists, serve it directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Route /case-study/:id to case-study.html (dynamic case study pages)
+RewriteRule ^case-study/([^/]+)/?$ /case-study.html [NC,L]
+
+# Route /portfolio/:id to portfolio-detail.html (dynamic portfolio pages)
+RewriteRule ^portfolio/([^/]+)/?$ /portfolio-detail.html [NC,L]
+
+# Check if file.html exists, and serve it
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Return 404.md with text/markdown when agents request Accept: text/markdown
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html !-f
+RewriteCond %{HTTP:Accept} text/markdown [NC]
+RewriteRule ^.*$ /404.md [R=404,L]
+<Files "404.md">
+    Header set Content-Type "text/markdown; charset=utf-8"
+    Header set Vary "Accept"
+</Files>

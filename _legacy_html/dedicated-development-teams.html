@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dedicated Development Teams | Qrious Tech Team LLP</title>
+    <meta
+      name="description"
+      content="Scale your product capacity instantly with an embedded development team that works as a seamless, transparent extension of your in-house engineering."
+    />
+    <!-- Stylesheets -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+
+    <style>
+      /* ============================================
+       DETAIL PAGE — PREMIUM STYLES
+       ============================================ */
+      .hww-detail-hero {
+        background: #ffffff;
+        padding: 60px 0 40px;
+      }
+
+      .hww-detail-container {
+        background: #f8f9fb;
+        padding: 60px 0;
+      }
+
+      .hww-detail-card {
+        background: #ffffff;
+        border: 1px solid #e8e8e8;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        padding: 40px;
+        margin-bottom: 30px;
+      }
+
+      .hww-detail-card h3 {
+        font-size: 22px;
+        font-weight: 700;
+        color: #323232;
+        margin-bottom: 24px;
+        position: relative;
+        padding-bottom: 12px;
+      }
+
+      .hww-detail-card h3::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: #ed693a;
+      }
+
+      .hww-detail-img-wrapper {
+        width: 100%;
+        height: 320px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        border: 1px solid #e8e8e8;
+        background: #fdf5f2;
+      }
+
+      .hww-detail-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hww-role-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 0;
+      }
+
+      .hww-role-badge {
+        display: inline-block;
+        background: #f8f9fb;
+        color: #323232;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 0px;
+        border-left: 3px solid #ed693a;
+        border-top: 1px solid #e8e8e8;
+        border-right: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
+      }
+
+      .hww-deliverable-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .hww-deliverable-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #fff3ee;
+        color: #ed693a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 14px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .hww-deliverable-text {
+        font-size: 15px;
+        color: #555555;
+        line-height: 1.5;
+      }
+
+      /* CTA Card */
+      .hww-cta-card {
+        background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+        color: #ffffff;
+        padding: 40px;
+        border-radius: 0px;
+        box-shadow: 0 10px 30px rgba(15, 52, 96, 0.15);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hww-cta-card::before {
+        content: "";
+        position: absolute;
+        right: -50px;
+        top: -50px;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(
+          circle,
+          rgba(237, 105, 58, 0.25) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+
+      .hww-cta-card h3 {
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 14px;
+      }
+
+      .hww-cta-card p {
+        color: #b0c4de;
+        font-size: 14px;
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      .hww-cta-btn {
+        display: inline-block;
+        background: #ed693a;
+        color: #ffffff !important;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 14px 28px;
+        border: 1.5px solid #ed693a;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        transition: all 0.3s ease;
+        width: 100%;
+        text-decoration: none !important;
+      }
+
+      .hww-cta-btn:hover {
+        background: transparent;
+        color: #ed693a !important;
+        border-color: #ed693a;
+      }
+
+      .hww-cta-note {
+        display: block;
+        font-size: 12px;
+        color: #88a0c0;
+        margin-top: 14px;
+      }
+
+      .hww-back-btn {
+        display: inline-flex;
+        align-items: center;
+        color: #ed693a !important;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 30px;
+        transition: all 0.2s ease;
+        text-decoration: none !important;
+      }
+
+      .hww-back-btn svg {
+        margin-right: 8px;
+        transition: transform 0.2s ease;
+      }
+
+      .hww-back-btn:hover svg {
+        transform: translateX(-4px);
+      }
+
+      .hww-hero-title {
+        font-size: 48px;
+        font-weight: 800;
+        color: #1a1a2e;
+        line-height: 1.15;
+        margin-bottom: 16px;
+      }
+
+      .hww-hero-title span {
+        color: #ed693a;
+      }
+
+      .hww-hero-subtitle {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.75;
+        max-width: 620px;
+        margin: 0 auto 28px;
+      }
+
+      .hww-card-link {
+        display: block;
+        height: 100%;
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+
+      .hww-card {
+        background: #ffffff;
+        border: 1px solid #e8e8e8;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .hww-card-link:hover .hww-card {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(237, 105, 58, 0.12);
+      }
+
+      .hww-card-image {
+        height: 220px;
+        overflow: hidden;
+      }
+
+      .hww-card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hww-card-content {
+        padding: 24px;
+      }
+
+      .hww-card-badge {
+        display: inline-block;
+        background: #fff3ee;
+        color: #ed693a;
+        padding: 5px 12px;
+        font-size: 11px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .hww-card-title {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: #323232 !important;
+      }
+
+      .hww-card-link:hover .hww-card-title {
+        color: #323232 !important;
+      }
+
+      .hww-card-desc {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+
+      .hww-card-btn {
+        display: inline-block;
+        background: #ed693a;
+        color: #fff !important;
+        padding: 12px 22px;
+        text-decoration: none;
+        font-weight: 700;
+        border: 1px solid #ed693a;
+        transition: all 0.3s ease;
+      }
+
+      .hww-card-link:hover .hww-card-btn {
+        background: transparent;
+        color: #ed693a !important;
+        border: 1px solid #ed693a;
+      }
+
+      .wwu-sec-tag {
+        display: inline-block;
+        background: #fff3ee;
+        color: #ed693a;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 6px 16px;
+        margin-bottom: 18px;
+      }
+
+      .wwu-sec-head h2 {
+        font-size: 30px;
+        font-weight: 700;
+        color: #323232;
+        line-height: 1.2;
+        margin-bottom: 18px;
+      }
+
+      .wwu-sec-head h2 span {
+        color: #ed693a;
+      }
+
+      .wwu-sec-head p {
+        max-width: 650px;
+        margin: 0 auto;
+        color: #666666;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      @media (max-width: 767px) {
+        .wwu-sec-head h2 {
+          font-size: 32px;
+        }
+      }
+
+      .wwu-sec-tag::after {
+        content: "";
+        display: inline-block;
+        width: 50px;
+        height: 2px;
+        background: #ed693a;
+        margin-left: 12px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- Preloader -->
+      <div class="preloader">
+        <div class="icon"></div>
+      </div>
+
+      <!-- Header -->
+      <div id="header"></div>
+
+      <!-- Hero Section -->
+      <section class="hww-detail-hero">
+        <div class="max-width text-center">
+          <h2 class="hww-hero-title">
+            Dedicated <span class="text-orange">Development Teams</span>
+          </h2>
+          <p class="hww-hero-subtitle">
+            Embed dedicated tech experts directly into your workflow to
+            accelerate feature delivery, optimize infrastructure, and solve
+            complex development bottlenecks.
+          </p>
+        </div>
+      </section>
+
+      <!-- Detail Section -->
+      <section class="hww-detail-container">
+        <div class="max-width">
+          <div class="row">
+            <!-- Left Column: Details & Roles -->
+            <div class="col-lg-7 col-md-12">
+              <div class="hww-detail-card">
+                <div class="hww-detail-img-wrapper">
+                  <img
+                    src="images/resource/dedicated-teams-cover.png"
+                    alt="Dedicated Development Teams"
+                  />
+                </div>
+                <h3>Overview</h3>
+                <p class="description-text text-justify">
+                  Our Dedicated Development Teams model is designed to scale
+                  your technical capability seamlessly. We build a full-time,
+                  embedded team of engineers, designers, and managers who align
+                  directly with your development culture and business goals.
+                  While we handle candidate sourcing, onboarding, and
+                  administrative overhead, you focus purely on product strategy
+                  and delivery.
+                </p>
+                <p class="description-text text-justify">
+                  Whether you need to augment an existing team to meet a
+                  critical launch window, or build a complete multi-disciplinary
+                  product squad from scratch, our model offers complete
+                  flexibility, full transparency, and standard-setting
+                  execution.
+                </p>
+              </div>
+
+              <div class="hww-detail-card">
+                <h3>Embedded Team Roles</h3>
+                <p class="description-text mb-4">
+                  We assemble the exact engineering profiles required for your
+                  specific product roadmap. Select from:
+                </p>
+                <div class="hww-role-list">
+                  <span class="hww-role-badge">Technical Lead</span>
+                  <span class="hww-role-badge"
+                    >Backend Developers (Node.js, Go, Python)</span
+                  >
+                  <span class="hww-role-badge"
+                    >Frontend Developers (React, Next.js)</span
+                  >
+                  <span class="hww-role-badge"
+                    >Mobile App Developers (iOS, Android, React Native)</span
+                  >
+                  <span class="hww-role-badge"
+                    >QA Engineers (Automation & Manual)</span
+                  >
+                  <span class="hww-role-badge"
+                    >DevOps & Cloud Engineers (AWS, Azure, GCP)</span
+                  >
+                  <span class="hww-role-badge">UI/UX Designers</span>
+                  <span class="hww-role-badge">Business Analysts</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Deliverables & CTA -->
+            <div class="col-lg-5 col-md-12">
+              <div class="hww-detail-card">
+                <h3>What You Get</h3>
+
+                <div class="hww-deliverable-item">
+                  <div class="hww-deliverable-icon">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </div>
+                  <div class="hww-deliverable-text">
+                    <strong>Full-Time Focus:</strong> Developers are 100%
+                    dedicated to your project. They attend your daily standups
+                    and work in your timezone.
+                  </div>
+                </div>
+
+                <div class="hww-deliverable-item">
+                  <div class="hww-deliverable-icon">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </div>
+                  <div class="hww-deliverable-text">
+                    <strong>Agile Sprint Delivery:</strong> Weekly sprint
+                    planning, retrospectives, and demo sessions ensure constant
+                    alignment and rapid iteration.
+                  </div>
+                </div>
+
+                <div class="hww-deliverable-item">
+                  <div class="hww-deliverable-icon">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </div>
+                  <div class="hww-deliverable-text">
+                    <strong>Direct Collaboration:</strong> Direct communication
+                    via Slack, Jira, GitHub, or any tools of your choice for
+                    smooth integration.
+                  </div>
+                </div>
+
+                <div class="hww-deliverable-item">
+                  <div class="hww-deliverable-icon">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </div>
+                  <div class="hww-deliverable-text">
+                    <strong>Technical Governance:</strong> Automatic integration
+                    of CI/CD pipelines, automated testing suites, and strict
+                    peer code review standards.
+                  </div>
+                </div>
+
+                <div class="hww-deliverable-item">
+                  <div class="hww-deliverable-icon">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </div>
+                  <div class="hww-deliverable-text">
+                    <strong>Selectable Candidates:</strong> Review CVs, conduct
+                    technical interviews, and select the exact team members you
+                    want before they start.
+                  </div>
+                </div>
+              </div>
+
+              <!-- CTA Card -->
+              <div class="hww-cta-card">
+                <h3>Ready to Scale Your Team?</h3>
+                <p>
+                  Schedule a discovery call to outline your requirements and see
+                  available developer profiles.
+                </p>
+                <a href="contact" class="hww-cta-btn"
+                  >Get a Dedicated Team &rarr;</a
+                >
+                <span class="hww-cta-note"
+                  >&#128338; Typical onboarding in 5–7 business days</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="full-width half-padding" style="background: #f8f9fb">
+        <div class="max-width">
+          <div class="wwu-sec-head text-center mb-5">
+            <h2>
+              Explore
+              <span>Other Models</span>
+            </h2>
+          </div>
+
+          <div class="row">
+            <!-- SaaS -->
+            <div class="col-lg-6 mb-4">
+              <a href="saas-development-partner" class="hww-card-link">
+                <div class="hww-card">
+                  <div class="hww-card-image">
+                    <img
+                      src="images/resource/saas-partner-cover.png"
+                      alt="SaaS Development Partner"
+                    />
+                  </div>
+
+                  <div class="hww-card-content">
+                    <span class="hww-card-badge"> Product Partnership </span>
+
+                    <h3 class="hww-card-title">SaaS Development Partner</h3>
+
+                    <p class="hww-card-desc">
+                      From idea validation to launch and scaling, we build secure
+                      and scalable SaaS products that grow with your business.
+                    </p>
+
+                    <span class="hww-card-btn">
+                      Explore This Model
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- AI -->
+            <div class="col-lg-6 mb-4">
+              <a href="ai-modernization-partner" class="hww-card-link">
+                <div class="hww-card">
+                  <div class="hww-card-image">
+                    <img
+                      src="images/resource/ai-modernization-cover.png"
+                      alt="AI Modernization Partner"
+                    />
+                  </div>
+
+                  <div class="hww-card-content">
+                    <span class="hww-card-badge"> AI Integration </span>
+
+                    <h3 class="hww-card-title">AI Modernization Partner</h3>
+
+                    <p class="hww-card-desc">
+                      Upgrade your existing products with AI-powered experiences,
+                      automation, and intelligent workflows.
+                    </p>
+
+                    <span class="hww-card-btn">
+                      Explore This Model
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="full-width half-padding"></section>
+      <!-- Footer -->
+      <div id="footer"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/scrollbar.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+      integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+      integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.js"
+      integrity="sha512-ETeDoII5o/Zv6W1AtLiNDwfdkH684h6M/S8wd2N0vMEAeL3UAOf7a1SHdP1LGDieDrofe1KZpp9k6yLkR90E6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"
+      integrity="sha512-j7/1CJweOskkQiS5RD9W8zhEG9D9vpgByNGxPIqkO5KrXrwyDAroM9aQ9w8J7oRqwxGyz429hPVk/zR6IOMtSA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+      integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.js"
+      integrity="sha512-4YGNovJrl6Qk98aRC7DThxWJt+7+wDIqV2ldbIbjQ/WOYOaYInFuS8U4niSTyFL+T8gPuioZ5OOwRY495oUPWw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.js"
+      integrity="sha512-iH/pDSVxvLhkkjp/iRv71KHJ16zsIyFtzG2YnQrmofmOK6W7EQekpGcMymyimL964E5XqxioscKLmvv5d6MGzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-appear/0.1/jquery.appear.js"
+      integrity="sha512-gmlF0Cjvx6n5XCLF9NNN+rZwS3X0Xn1vwuk+K0L3B4qve4UI+RVbNt0VynWadl//O0VQ8X47GH55KF9j3kVdUw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"
+      integrity="sha512-Rd5Gf5A6chsunOJte+gKWyECMqkG8MgBYD1u80LOOJBfl6ka9CtatRrD4P0P5Q5V/z/ecvOCSYC8tLoWNrCpPg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/custom-script.js"></script>
+
+    <script>
+      $(function () {
+        $("#footer").load("footer.html");
+      });
+      $(function () {
+        $("#header").load("header.html");
+      });
+    </script>
+  </body>
+</html>

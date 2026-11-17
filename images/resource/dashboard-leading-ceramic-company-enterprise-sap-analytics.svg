@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <style>
+      .text-title { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 700; fill: #ffffff; font-size: 11px; }
+      .text-category { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 600; fill: #ed693a; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; }
+      .text-kpi-val { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 800; fill: #ed693a; font-size: 24px; }
+      .text-kpi-lbl { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 600; fill: #7c94b6; font-size: 9px; letter-spacing: 0.05em; text-transform: uppercase; }
+      .text-axis { font-family: monospace; fill: #7c94b6; font-size: 8px; }
+    </style>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040c0b" />
+      <stop offset="100%" stop-color="#0a1816" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" rx="12" fill="url(#bgGrad)" stroke="#11312c" stroke-width="2" />
+  
+  <!-- Header -->
+  <g>
+    <circle cx="85" cy="22" r="5" fill="#ff5f56" />
+    <circle cx="97" cy="22" r="5" fill="#ffbd2e" />
+    <circle cx="109" cy="22" r="5" fill="#27c93f" />
+    <text x="135" y="18" class="text-category">SAP Business Intelligence Strategy</text>
+    <text x="135" y="32" class="text-title">Leading Ceramic Company: Enterprise SAP An...</text>
+    <rect x="680" y="12" width="95" height="20" rx="10" fill="#ed693a" opacity="0.15" />
+    <text x="727" y="25" font-family="'Inter', sans-serif" font-weight="700" fill="#ed693a" font-size="9" text-anchor="middle">OPERATIONS GAUGE</text>
+  </g>
+
+  <!-- Left Side: 3 KPI Cards -->
+  <g transform="translate(85, 65)">
+    <rect width="180" height="75" rx="6" fill="#081412" stroke="#122c27" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="75" stroke="#ed693a" stroke-width="4" />
+    <text x="15" y="32" class="text-kpi-val">Multi</text>
+    <text x="15" y="52" class="text-kpi-lbl">Dept. Integration</text>
+    
+    <g transform="translate(0, 95)">
+      <rect width="180" height="75" rx="6" fill="#081412" stroke="#122c27" stroke-width="1" />
+      <line x1="0" y1="0" x2="0" y2="75" stroke="#06b6d4" stroke-width="4" />
+      <text x="15" y="32" class="text-kpi-val">High</text>
+      <text x="15" y="52" class="text-kpi-lbl">Query Velocity</text>
+    </g>
+    
+    <g transform="translate(0, 190)">
+      <rect width="180" height="75" rx="6" fill="#081412" stroke="#122c27" stroke-width="1" />
+      <line x1="0" y1="0" x2="0" y2="75" stroke="#ed693a" stroke-width="4" />
+      <text x="15" y="32" class="text-kpi-val">100%</text>
+      <text x="15" y="52" class="text-kpi-lbl">Data Integrity</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Dual Gauge Display -->
+  <g transform="translate(285, 65)">
+    <rect width="490" height="265" rx="8" fill="#081412" stroke="#122c27" stroke-width="1" />
+    <text x="20" y="28" font-family="'Inter', sans-serif" font-weight="700" fill="#ffffff" font-size="12">Industrial Efficiency &amp; Load Speedometers</text>
+    
+    <!-- Left Gauge -->
+    <g transform="translate(130, 145)">
+      <circle cx="0" cy="0" r="65" fill="none" stroke="#122c27" stroke-width="10" />
+      <path d="M-56,33 A65,65 0 1,1 56,33" fill="none" stroke="#ed693a" stroke-width="10" stroke-linecap="round" stroke-dasharray="210 320" />
+      <text x="0" y="5" font-family="'Inter', sans-serif" font-weight="800" fill="#ffffff" font-size="16" text-anchor="middle">89.4%</text>
+      <text x="0" y="22" font-family="'Inter', sans-serif" fill="#7c94b6" font-size="9" text-anchor="middle">SYSTEM LOAD</text>
+    </g>
+    
+    <!-- Right Gauge -->
+    <g transform="translate(340, 145)">
+      <circle cx="0" cy="0" r="65" fill="none" stroke="#122c27" stroke-width="10" />
+      <path d="M-56,33 A65,65 0 1,1 56,33" fill="none" stroke="#06b6d4" stroke-width="10" stroke-linecap="round" stroke-dasharray="160 320" />
+      <text x="0" y="5" font-family="'Inter', sans-serif" font-weight="800" fill="#ffffff" font-size="16" text-anchor="middle">67.5%</text>
+      <text x="0" y="22" font-family="'Inter', sans-serif" fill="#7c94b6" font-size="9" text-anchor="middle">OPTIMIZATION</text>
+    </g>
+  </g>
+
+  <!-- Bottom Panel -->
+  <g transform="translate(85, 345)">
+    <rect width="690" height="85" rx="6" fill="#081412" stroke="#122c27" stroke-width="1" />
+    <text x="15" y="22" font-family="'Inter', sans-serif" font-weight="700" fill="#ffffff" font-size="9" letter-spacing="0.055em" text-transform="uppercase">Logistics Timeline</text>
+    <path d="M50,390 L100,360 L150,385 L200,350 L250,370 L300,340 L350,365 L400,345 L450,370 L500,355 L550,380 L600,350 L650,360" fill="none" stroke="#ed693a" stroke-width="2" transform="translate(40, -10)" />
+  </g>
+</svg>

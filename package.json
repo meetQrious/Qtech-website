@@ -1,0 +1,19 @@
+{
+  "name": "qrioustech-website",
+  "version": "1.0.0",
+  "description": "Qrious Tech - Enterprise AI & Custom Software Engineering",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "cheerio": "^1.2.0"
+  }
+}

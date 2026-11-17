@@ -1,0 +1,209 @@
+.hamburger-wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hamburger {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100% !important;
+  max-height: 0% !important;
+  top: 268px;
+  div {
+    transition: all 0.65s;
+    margin: 0 auto;
+  }
+  .qt-table {
+    background-image: url(../images/hire-developer/table.png);
+    width: 70%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position: absolute;
+    z-index: 2;
+  }
+  .qt-computer {
+    background-image: url(../images/hire-developer/computer.png);
+    width: 70%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position: absolute;
+    z-index: 3;
+  }
+  .qt-lamp {
+    background-image: url(../images/hire-developer/lamp.png);
+    width: 70%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position: absolute;
+    z-index: 4;
+  }
+  .qt-plant {
+    background-image: url(../images/hire-developer/plant.png);
+    width: 70%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position: absolute;
+    z-index: 5;
+  }
+  .qt-developer {
+    background-image: url(../images/hire-developer/User.png);
+    width: 70%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position: absolute;
+    z-index: 1;
+  }
+}
+.hamburger-wrapper-1 {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hamburger-1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100% !important;
+  max-height: 0% !important;
+  flex-direction: column;
+  gap: 25px;
+  div {
+    position: relative;
+    transition: all 0.65s;
+    margin-right: auto;
+    margin-left: 4px;
+  }
+}
+.method-mobile {
+  display: none;
+}
+@media (min-width: 1025px) {
+  .method-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .method-display {
+    display: none !important;
+  }
+  .method-mobile {
+    display: grid !important;
+    gap: 20px;
+    .image-div {
+      background-image: url(../images/hire-developer/full-image.png);
+      width: 100%;
+      height: 300px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      margin: auto;
+    }
+
+    .content-start {
+      gap: 20px;
+    }
+
+    ul {
+      display: grid;
+      gap: 13px;
+    }
+  }
+}
+
+.method-display {
+  position: relative;
+  z-index: 1;
+  min-height: 490px;
+  overflow: visible;
+}
+
+.qt-subtitle-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hamburger,
+.hamburger-1 {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  overflow: visible;
+}
+
+.hamburger-wrapper,
+.hamburger-wrapper-1 {
+  position: relative;
+  min-height: 520px; /* Match the method-display height */
+  overflow: visible;
+}
+
+@media (max-width: 425px) {
+  #working-methodology .max-width.top-full-padding {
+    & > h3 {
+      font-size: 26px !important;
+    }
+    & .method-mobile {
+      & ul.max-width {
+        & li.d-flex.content-start {
+          & .qt-animated-icon-small {
+            width: 30px !important;
+            height: 30px !important;
+            & svg {
+              width: 30px !important;
+              height: 30px !important;
+            }
+          }
+
+          & div:nth-child(2) {
+            & > h3 > a {
+              font-size: 20px !important;
+            }
+            & > p {
+              margin-top: 10px !important;
+              font-size: 14px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  #product-develop {
+    & .page-wrapper {
+      & .full-width.pattern-layer {
+        & h3 {
+          margin-top: 15px !important;
+          font-size: 26px !important;
+        }
+        & .scroll-container {
+          & .constraint.row {
+            & .col-md-7 {
+              & > h3 {
+                font-size: 20px !important;
+              }
+              & > p {
+                margin-top: 10px !important;
+                font-size: 14px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

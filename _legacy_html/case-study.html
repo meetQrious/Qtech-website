@@ -1,0 +1,1222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Case Study | Qrious Tech Team LLP</title>
+    <meta
+      name="description"
+      content="Read our Qrioustech interactive presentation case study."
+    />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/responsive.css" rel="stylesheet" />
+    <link href="/css/header.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+
+    <style>
+      .cs-hero {
+        background: #1a1a2e;
+        padding: 70px 0 55px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cs-hero::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: #ed693a;
+      }
+
+      .cs-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            circle at 10% 50%,
+            rgba(237, 105, 58, 0.12) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 90% 20%,
+            rgba(237, 105, 58, 0.07) 0%,
+            transparent 40%
+          );
+        pointer-events: none;
+      }
+
+      .cs-hero-tag {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        color: #ed693a;
+        border: 1px solid rgba(237, 105, 58, 0.35);
+        background: rgba(237, 105, 58, 0.1);
+        padding: 5px 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        border-radius: 20px;
+        margin-bottom: 18px;
+      }
+
+      .cs-hero h1 {
+        font-size: 42px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1.2;
+        margin-bottom: 16px;
+      }
+
+      .cs-hero h1 span {
+        color: #ed693a;
+      }
+
+      .cs-hero-desc {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.75;
+        margin-bottom: 0;
+        max-width: 580px;
+      }
+
+      .cs-kpi-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .cs-kpi-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 3px solid #ed693a;
+        padding: 16px 20px;
+      }
+
+      .cs-kpi-val {
+        display: block;
+        font-size: 28px;
+        font-weight: 700;
+        color: #ed693a;
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+
+      .cs-kpi-lbl {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        font-weight: 600;
+      }
+
+      .cs-tab-nav {
+        background: #fff;
+        border-bottom: 2px solid #e8e8e8;
+        /* position: sticky; */
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .cs-tab-nav-inner {
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .cs-tab-nav-inner::-webkit-scrollbar {
+        display: none;
+      }
+
+      .cs-tab-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 22px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #565656;
+        border-bottom: 3px solid transparent;
+        margin-bottom: -2px;
+        cursor: pointer;
+        white-space: nowrap;
+        background: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+        font-family: "Arimo", sans-serif;
+        transition:
+          color 0.25s,
+          border-color 0.25s;
+      }
+
+      .cs-tab-btn:hover {
+        color: #ed693a;
+      }
+
+      .cs-tab-btn.active {
+        color: #ed693a;
+        border-bottom-color: #ed693a;
+      }
+
+      .cs-tab-num {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: #e8e8e8;
+        color: #565656;
+        font-size: 11px;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.25s;
+        flex-shrink: 0;
+      }
+
+      .cs-tab-btn.active .cs-tab-num {
+        background: #ed693a;
+        color: #fff;
+      }
+
+      .cs-pager-wrap {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: auto;
+        padding: 8px 16px;
+        border-left: 1px solid #e8e8e8;
+        flex-shrink: 0;
+      }
+
+      .cs-pager-btn {
+        width: 34px;
+        height: 34px;
+        border: 1.5px solid #e8e8e8;
+        background: #fff;
+        color: #565656;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 12px;
+        transition: all 0.2s;
+        font-family: "Arimo", sans-serif;
+      }
+
+      .cs-pager-btn:hover {
+        border-color: #ed693a;
+        color: #ed693a;
+      }
+
+      .cs-pager-btn.next-active {
+        background: #ed693a;
+        border-color: #ed693a;
+        color: #fff;
+      }
+
+      .cs-pager-label {
+        font-size: 12px;
+        font-weight: 700;
+        color: #888;
+      }
+
+      .cs-panes {
+        background: #f8f9fb;
+        padding: 55px 0;
+      }
+
+      .cs-pane {
+        display: none;
+      }
+
+      .cs-pane.active {
+        display: block;
+        animation: csSlideIn 0.4s ease forwards;
+      }
+
+      @keyframes csSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .cs-pane-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #323232;
+        margin-bottom: 8px;
+        padding-bottom: 12px;
+        position: relative;
+      }
+
+      .cs-pane-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 36px;
+        height: 3px;
+        background: #ed693a;
+      }
+
+      .cs-pane-subtitle {
+        font-size: 15px;
+        color: #565656;
+        margin-bottom: 30px;
+        line-height: 1.7;
+      }
+
+      .cs-client-strip {
+        background: #fdf5f2;
+        border: 1px solid #f5c4b1;
+        border-left: 3px solid #ed693a;
+        padding: 18px 24px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .cs-client-item {
+        font-size: 14px;
+        color: #565656;
+      }
+
+      .cs-client-item strong {
+        color: #323232;
+      }
+
+      .cs-tech-tag {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        color: #323232;
+        background: #fff;
+        border: 1px solid #e8e8e8;
+        padding: 3px 9px;
+        margin: 2px;
+        font-family: monospace;
+      }
+
+      .cs-box {
+        background: #fff;
+        border: 1px solid #e8e8e8;
+        border-left: 3px solid #ed693a;
+        padding: 24px 22px;
+        margin-bottom: 20px;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        transition: box-shadow 0.3s;
+        height: calc(100% - 20px);
+      }
+
+      .cs-box:hover {
+        box-shadow: 0 4px 18px rgba(237, 105, 58, 0.08);
+      }
+
+      .cs-box-icon {
+        width: 42px;
+        height: 42px;
+        background: #fdf5f2;
+        border: 1px solid #f5c4b1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .cs-box-icon i {
+        color: #ed693a;
+        font-size: 17px;
+      }
+
+      .cs-box h5 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #323232;
+        margin-bottom: 6px;
+      }
+
+      .cs-box p {
+        font-size: 14px;
+        color: #565656;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      .cs-feature-card {
+        background: #fff;
+        border: 1px solid #e8e8e8;
+        border-top: 3px solid #ed693a;
+        padding: 26px 22px;
+        height: 100%;
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cs-feature-tags {
+        margin-top: auto;
+      }
+
+      .cs-feature-card:hover {
+        box-shadow: 0 6px 24px rgba(237, 105, 58, 0.09);
+        transform: translateY(-3px);
+      }
+
+      .cs-feature-card.alt {
+        border-top-color: #323232;
+      }
+
+      .cs-feature-icon {
+        width: 44px;
+        height: 44px;
+        background: #fdf5f2;
+        border: 1px solid #f5c4b1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 14px;
+      }
+
+      .cs-feature-icon i {
+        color: #ed693a;
+        font-size: 17px;
+      }
+
+      .cs-feature-card h4 {
+        font-size: 17px;
+        font-weight: 700;
+        color: #323232;
+        margin-bottom: 10px;
+      }
+
+      .cs-feature-card p {
+        font-size: 14px;
+        color: #565656;
+        line-height: 1.65;
+        margin-bottom: 14px;
+      }
+
+      .cs-feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .cs-feature-list li {
+        border-top: 1px solid #e8e8e8;
+        padding: 10px 0 6px;
+      }
+
+      .cs-feature-list li:first-child {
+        border-top: none;
+        padding-top: 0;
+      }
+
+      .cs-feat-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #323232;
+        margin-bottom: 3px;
+      }
+
+      .cs-feat-arrow {
+        color: #ed693a;
+        font-size: 12px;
+      }
+
+      .cs-feature-list li .cs-feat-sub {
+        font-size: 12px;
+        color: #888;
+        font-family: monospace;
+        letter-spacing: 0.02em;
+        margin: 0;
+      }
+
+      .cs-problem {
+        background: #fff;
+        border: 1px solid #e8e8e8;
+        border-left: 4px solid #c0392b;
+        padding: 22px 24px;
+        margin-bottom: 18px;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        transition: box-shadow 0.25s;
+      }
+
+      .cs-problem:hover {
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+      }
+
+      .cs-problem-icon {
+        width: 38px;
+        height: 38px;
+        background: #fdf2f2;
+        border: 1px solid #f5c6c6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .cs-problem-icon i {
+        color: #c0392b;
+        font-size: 15px;
+      }
+
+      .cs-problem h5 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #323232;
+        margin-bottom: 6px;
+      }
+
+      .cs-problem p {
+        font-size: 14px;
+        color: #565656;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      .cs-decision {
+        background: #fff;
+        border: 1px solid #e8e8e8;
+        padding: 28px 24px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cs-decision.challenge {
+        border-top: 3px solid #c0392b;
+      }
+
+      .cs-decision.solution {
+        border-top: 3px solid #27ae60;
+      }
+
+      .cs-decision-hd {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 16px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e8e8e8;
+      }
+
+      .cs-decision-hd h4 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #323232;
+        margin: 0;
+      }
+
+      .cs-decision-item {
+        margin-bottom: 18px;
+      }
+
+      .cs-decision-item h5 {
+        font-size: 14px;
+        font-weight: 700;
+        color: #323232;
+        margin-bottom: 5px;
+      }
+
+      .cs-decision-item p {
+        font-size: 13.5px;
+        color: #565656;
+        line-height: 1.65;
+        margin: 0;
+      }
+
+      .cs-decision-footer {
+        margin-top: auto;
+        padding-top: 12px;
+        border-top: 1px solid #e8e8e8;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        font-family: monospace;
+      }
+
+      .cs-decision.challenge .cs-decision-footer {
+        color: #c0392b;
+      }
+
+      .cs-decision.solution .cs-decision-footer {
+        color: #27ae60;
+      }
+
+      .cs-formula-box {
+        margin-top: 14px;
+        background: #fdf5f2;
+        border: 1px dashed #f5c4b1;
+        padding: 12px 18px;
+        text-align: center;
+        font-size: 15px;
+        color: #323232;
+        font-style: italic;
+        letter-spacing: 0.01em;
+      }
+
+      .cs-formula-box sub {
+        font-size: 11px;
+      }
+
+      .cs-metric {
+        background: #fff;
+        border: 1px solid #e8e8e8;
+        border-top: 3px solid #ed693a;
+        padding: 30px 20px;
+        text-align: center;
+        height: 100%;
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+      }
+
+      .cs-metric:hover {
+        box-shadow: 0 8px 28px rgba(237, 105, 58, 0.1);
+        transform: translateY(-4px);
+      }
+
+      .cs-metric-val {
+        display: block;
+        font-size: 44px;
+        font-weight: 700;
+        color: #ed693a;
+        line-height: 1;
+        margin-bottom: 10px;
+      }
+
+      .cs-metric-lbl {
+        display: block;
+        font-size: 14px;
+        font-weight: 700;
+        color: #323232;
+        margin-bottom: 10px;
+      }
+
+      .cs-metric-desc {
+        font-size: 13px;
+        color: #565656;
+        line-height: 1.6;
+      }
+
+      .cs-cta {
+        background: #323232;
+        padding: 50px 0;
+        text-align: center;
+      }
+
+      .cs-cta h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 14px;
+      }
+
+      .cs-cta p {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.65);
+        margin-bottom: 28px;
+      }
+
+      @media (max-width: 991px) {
+        .cs-hero h1 {
+          font-size: 30px;
+        }
+
+        .cs-hero {
+          padding: 45px 0 35px;
+        }
+
+        .cs-kpi-stack {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        .cs-kpi-card {
+          flex: 1;
+          min-width: 140px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .cs-tab-btn {
+          padding: 12px 14px;
+          font-size: 12px;
+        }
+
+        .cs-hero h1 {
+          font-size: 26px;
+        }
+
+        .cs-panes {
+          padding: 35px 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <div class="preloader">
+        <div class="icon"></div>
+      </div>
+      <div id="header"></div>
+
+      <!-- HERO -->
+      <section class="cs-hero">
+        <div class="max-width">
+          <div class="row align-items-center">
+            <div class="col-lg-7 col-md-12" style="margin-bottom: 30px">
+              <span class="cs-hero-tag" id="hero-tag">Loading...</span>
+              <h1 id="hero-title">Loading...</h1>
+              <p class="cs-hero-desc" id="hero-desc">Loading details...</p>
+            </div>
+            <div class="col-lg-5 col-md-12">
+              <div class="cs-kpi-stack" id="kpi-stack">
+                <!-- Dynamic KPIs -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB NAVIGATION -->
+      <nav class="cs-tab-nav">
+        <div class="max-width">
+          <div class="cs-tab-nav-inner">
+            <button class="cs-tab-btn active" onclick="showPane(1, this)">
+              <span class="cs-tab-num">1</span> Overview
+            </button>
+            <button class="cs-tab-btn" onclick="showPane(2, this)">
+              <span class="cs-tab-num">2</span> Architecture
+            </button>
+            <button class="cs-tab-btn" onclick="showPane(3, this)">
+              <span class="cs-tab-num">3</span> Problem Space
+            </button>
+            <button class="cs-tab-btn" onclick="showPane(4, this)">
+              <span class="cs-tab-num">4</span> Engineering
+            </button>
+            <button class="cs-tab-btn" onclick="showPane(5, this)">
+              <span class="cs-tab-num">5</span> Performance
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- PANE CONTENT -->
+      <div class="cs-panes">
+        <div class="max-width">
+          <!-- PANE 1: OVERVIEW -->
+          <div id="pane-1" class="cs-pane active">
+            <h2 class="cs-pane-title">Overview &amp; Value Proposition</h2>
+            <p class="cs-pane-subtitle" id="overview-subtitle">Loading...</p>
+
+            <div class="cs-client-strip">
+              <div class="cs-client-item">
+                <strong>Sector:</strong>
+                <span id="client-sector">Loading...</span>
+              </div>
+              <div class="cs-client-item">
+                <strong>Stack:</strong>
+                <div id="stack-tags" style="display: inline-block"></div>
+              </div>
+            </div>
+
+            <div class="row" id="overview-highlights-row">
+              <!-- Highlights Dynamic -->
+            </div>
+          </div>
+
+          <!-- PANE 2: ARCHITECTURE -->
+          <div id="pane-2" class="cs-pane">
+            <h2 class="cs-pane-title">Platform Feature Architecture</h2>
+            <p class="cs-pane-subtitle" id="architecture-subtitle">
+              Loading...
+            </p>
+            <div class="row" id="architecture-row">
+              <!-- Dynamic Architecture Cards -->
+            </div>
+          </div>
+
+          <!-- PANE 3: PROBLEM SPACE -->
+          <div id="pane-3" class="cs-pane">
+            <h2 class="cs-pane-title">The Problem Space</h2>
+            <p class="cs-pane-subtitle" id="problems-subtitle">Loading...</p>
+            <div id="problems-list">
+              <!-- Dynamic Problem list -->
+            </div>
+          </div>
+
+          <!-- PANE 4: ENGINEERING -->
+          <div id="pane-4" class="cs-pane">
+            <h2 class="cs-pane-title">Strategic Engineering Decisions</h2>
+            <p class="cs-pane-subtitle" id="engineering-subtitle">Loading...</p>
+            <div class="row" id="engineering-row">
+              <!-- Dynamic Challenges & Solutions boxes -->
+            </div>
+          </div>
+
+          <!-- PANE 5: PERFORMANCE -->
+          <div id="pane-5" class="cs-pane">
+            <h2 class="cs-pane-title">System Performance Scorecard</h2>
+            <p class="cs-pane-subtitle" id="performance-subtitle">Loading...</p>
+            <div class="row" id="performance-row">
+              <!-- Dynamic Scorecard Metrics -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cs-cta">
+        <div class="max-width">
+          <h3 id="cta-title">Ready to Transform Your Operations?</h3>
+          <p id="cta-desc">
+            Let's discuss how we can build a similar enterprise-grade solution
+            for your organization.
+          </p>
+          <a
+            href="/contact"
+            class="theme-btn btn-style-one"
+            style="margin-right: 16px"
+            ><span class="btn-title qt-button-text qt-fw-bold"
+              >Let's Connect</span
+            ></a
+          >
+          <a href="/case-studies" class="theme-btn btn-style-two"
+            ><span class="btn-title qt-button-text qt-fw-bold"
+              >All Case Studies</span
+            ></a
+          >
+        </div>
+      </div>
+
+      <section class="full-width half-padding"></section>
+      <div id="footer"></div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/js/scrollbar.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+      integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+      integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.js"
+      integrity="sha512-ETeDoII5o/Zv6W1AtLiNDwfdkH684h6M/S8wd2N0vMEAeL3UAOf7a1SHdP1LGDieDrofe1KZpp9k6yLkR90E6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"
+      integrity="sha512-j7/1CJweOskkQiS5RD9W8zhEG9D9vpgByNGxPIqkO5KrXrwyDAroM9aQ9w8J7oRqwxGyz429hPVk/zR6IOMtSA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+      integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.js"
+      integrity="sha512-4YGNovJrl6Qk98aRC7DThxWJt+7+wDIqV2ldbIbjQ/WOYOaYInFuS8U4niSTyFL+T8gPuioZ5OOwRY495oUPWw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.js"
+      integrity="sha512-iH/pDSVxvLhkkjp/iRv71KHJ16zsIyFtzG2YnQrmofmOK6W7EQekpGcMymyimL964E5XqxioscKLmvv5d6MGzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-appear/0.1/jquery.appear.js"
+      integrity="sha512-gmlF0Cjvx6n5XCLF9NNN+rZwS3X0Xn1vwuk+K0L3B4qve4UI+RVbNt0VynWadl//O0VQ8X47GH55KF9j3kVdUw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"
+      integrity="sha512-Rd5Gf5A6chsunOJte+gKWyECMqkG8MgBYD1u80LOOJBfl6ka9CtatRrD4P0P5Q5V/z/ecvOCSYC8tLoWNrCpPg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/js/custom-script.js"></script>
+
+    <script>
+      $(function () {
+        $("#footer").load("/footer.html");
+      });
+      $(function () {
+        $("#header").load("/header.html", function () {
+          $(window).trigger("scroll");
+        });
+      });
+
+      // Scroll and resize listener to adjust tab navigation sticky offset
+      $(window).on("scroll resize", function () {
+        var windowpos = $(window).scrollTop();
+        var isMobile = $(window).width() <= 991;
+        if (windowpos > 180 && !isMobile) {
+          var headerHeight = $(".sticky-header").outerHeight() || 80;
+          var headerTop = parseFloat($(".sticky-header").css("top")) || 18;
+          $(".cs-tab-nav").css("top", headerHeight + headerTop + "px");
+        } else {
+          $(".cs-tab-nav").css("top", "0");
+        }
+      });
+
+      var current = 1,
+        total = 5;
+      function showPane(num, tabEl) {
+        document.querySelectorAll(".cs-pane").forEach(function (p) {
+          p.classList.remove("active");
+        });
+        document.querySelectorAll(".cs-tab-btn").forEach(function (t) {
+          t.classList.remove("active");
+        });
+        document.getElementById("pane-" + num).classList.add("active");
+        if (tabEl) tabEl.classList.add("active");
+        current = num;
+        document.getElementById("pager-label").textContent =
+          num + " / " + total;
+        const nav = document.querySelector(".cs-tab-nav");
+        if (nav) {
+          var isMobile = $(window).width() <= 991;
+          var offset = $(nav).offset().top;
+          var scrollTarget = offset;
+          if (!isMobile && $(window).scrollTop() > 180) {
+            var headerHeight = $(".sticky-header").outerHeight() || 80;
+            var headerTop = parseFloat($(".sticky-header").css("top")) || 18;
+            scrollTarget = offset - (headerHeight + headerTop);
+          }
+          window.scrollTo({ top: scrollTarget, behavior: "smooth" });
+        }
+      }
+      function nextPane() {
+        if (current < total) {
+          var tabs = document.querySelectorAll(".cs-tab-btn");
+          showPane(current + 1, tabs[current]);
+        }
+      }
+      function prevPane() {
+        if (current > 1) {
+          var tabs = document.querySelectorAll(".cs-tab-btn");
+          showPane(current - 1, tabs[current - 2]);
+        }
+      }
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight" || e.key === " ") {
+          e.preventDefault();
+          nextPane();
+        } else if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          prevPane();
+        }
+      });
+
+      // Dynamic Loader
+      $(document).ready(function () {
+        // Determine Case Study ID from URL path or parameter
+        let urlPath = window.location.pathname;
+        let caseStudyId = "";
+        if (urlPath.includes("/case-study/")) {
+          caseStudyId = urlPath.split("/case-study/")[1].split("/")[0];
+        } else {
+          let params = new URLSearchParams(window.location.search);
+          caseStudyId = params.get("id");
+        }
+
+        if (!caseStudyId) {
+          window.location.href = "/404.html";
+          return;
+        }
+
+        // Fetch dynamic content (with cache-buster to prevent stale browser cache)
+        $.getJSON("/data/case-studies.json?v=" + new Date().getTime(), function (data) {
+          let cs = data.find((item) => item.id === caseStudyId);
+          if (!cs) {
+            window.location.href = "/404.html";
+            return;
+          }
+
+          // 1. Meta / Head
+          document.title = cs.title + " | Qrious Tech Team LLP";
+          $('meta[name="description"]').attr("content", cs.heroDesc);
+
+          // 3. Hero Section
+          let heroIcon = "fa-solid fa-brain";
+          if (cs.id === "voicerix") heroIcon = "fa-solid fa-phone-volume";
+          if (cs.id === "video-analyzer") heroIcon = "fa-solid fa-video";
+          if (cs.id === "hooplive") heroIcon = "fa-solid fa-basketball";
+          if (cs.id === "enterprise-gpt")
+            heroIcon = "fa-solid fa-shield-halved";
+          if (cs.id === "aha-health") heroIcon = "fa-solid fa-heart-pulse";
+          if (cs.id === "fitze") heroIcon = "fa-solid fa-person-running";
+          if (cs.id === "fitmindai") heroIcon = "fa-solid fa-dumbbell";
+          if (cs.id === "migraflow") heroIcon = "fa-solid fa-database";
+          if (cs.id === "papervisor") heroIcon = "fa-solid fa-graduation-cap";
+          if (cs.id === "virtualbuddy") heroIcon = "fa-solid fa-headset";
+
+          $("#hero-tag").html(
+            `<i class="${heroIcon}" style="margin-right:6px;"></i> ${cs.category}`,
+          );
+
+          // Set title with highlight
+          let titleWords = cs.title.split(" ");
+          let highlightedTitle = cs.title;
+          let colonIndex = cs.title.indexOf(":");
+          if (colonIndex !== -1) {
+            let pre = cs.title.substring(0, colonIndex + 1);
+            let post = cs.title.substring(colonIndex + 1);
+            highlightedTitle = `${pre} <span>${post}</span>`;
+          } else if (titleWords.length > 2) {
+            let mid = Math.floor(titleWords.length / 2);
+            titleWords[mid] = `<span>${titleWords[mid]}</span>`;
+            highlightedTitle = titleWords.join(" ");
+          }
+          $("#hero-title").html(highlightedTitle);
+          $("#hero-desc").text(cs.heroDesc);
+
+          // Hero KPIs
+          let kpiHtml = "";
+          cs.kpis.forEach((kpi) => {
+            kpiHtml += `
+            <div class="cs-kpi-card">
+              <span class="cs-kpi-val">${kpi.val}</span>
+              <span class="cs-kpi-lbl">${kpi.lbl}</span>
+            </div>`;
+          });
+          $("#kpi-stack").html(kpiHtml);
+
+          // 4. Tab 1 Overview
+          $("#overview-subtitle").text(cs.overview.subtitle);
+          $("#client-sector").text(cs.category);
+
+          let stackHtml = "";
+          cs.overview.highlights.forEach((h, idx) => {
+            // Extract technologies from tags if any, otherwise build stack
+            if (idx === 0) {
+              // First highlight index serves to populate stack tags if any
+            }
+          });
+          // Gather stack tags from architecture or display them
+          let allStack = [];
+          if (cs.architecture && cs.architecture.features) {
+            cs.architecture.features.forEach((f) => {
+              f.tags.forEach((t) => {
+                if (!allStack.includes(t)) allStack.push(t);
+              });
+            });
+          }
+          allStack.forEach((tag) => {
+            stackHtml += `<span class="cs-tech-tag">${tag}</span>`;
+          });
+          $("#stack-tags").html(stackHtml);
+
+          // Highlights cards
+          let highlightsHtml = "";
+          cs.overview.highlights.forEach((h) => {
+            highlightsHtml += `
+            <div class="col-lg-6 col-md-12">
+              <div class="cs-box">
+                <div class="cs-box-icon"><i class="${h.icon}"></i></div>
+                <div>
+                  <h5>${h.title}</h5>
+                  <p>${h.desc}</p>
+                </div>
+              </div>
+            </div>`;
+          });
+          $("#overview-highlights-row").html(highlightsHtml);
+
+          // 5. Tab 2 Architecture
+          $("#architecture-subtitle").text(cs.architecture.subtitle);
+          let archHtml = "";
+          let colClass =
+            cs.architecture.features.length === 3 ? "col-lg-4" : "col-lg-3";
+          cs.architecture.features.forEach((f, idx) => {
+            let isAlt = idx % 2 === 1;
+            let featureIconHtml = isAlt
+              ? `<div class="cs-feature-icon" style="background:#f5f5f5;border-color:#ddd;"><i class="${f.icon}" style="color:#323232;"></i></div>`
+              : `<div class="cs-feature-icon"><i class="${f.icon}"></i></div>`;
+
+            let tagsList = "";
+            f.tags.forEach((tag) => {
+              tagsList += `<span class="cs-tech-tag">${tag}</span>`;
+            });
+
+            archHtml += `
+            <div class="${colClass} col-md-6" style="margin-bottom:24px;">
+              <div class="cs-feature-card ${isAlt ? "alt" : ""}">
+                ${featureIconHtml}
+                <h4>${f.title}</h4>
+                <p>${f.desc}</p>
+                <div class="cs-feature-tags">${tagsList}</div>
+              </div>
+            </div>`;
+          });
+          $("#architecture-row").html(archHtml);
+
+          // 6. Tab 3 Problem Space
+          let probSubtitle = cs.problems.subtitle;
+          $("#problems-subtitle").text(probSubtitle);
+          let probHtml = "";
+          cs.problems.list.forEach((p) => {
+            probHtml += `
+            <div class="cs-problem">
+              <div class="cs-problem-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+              <div>
+                <h5>${p.title}</h5>
+                <p>${p.desc}</p>
+              </div>
+            </div>`;
+          });
+          $("#problems-list").html(probHtml);
+
+          // 7. Tab 4 Engineering
+          let engSubtitle =
+            cs.engineering.subtitle ||
+            "Solving structural roadblocks and engineering bottlenecks.";
+          $("#engineering-subtitle").text(engSubtitle);
+
+          // Challenges Box
+          let chalHtml = "";
+          cs.engineering.challenge.items.forEach((item) => {
+            chalHtml += `
+            <div class="cs-decision-item">
+              <h5>${item.title}</h5>
+              <p>${item.desc}</p>
+            </div>`;
+          });
+
+          // Solutions Box
+          let solnHtml = "";
+          cs.engineering.solution.items.forEach((item) => {
+            let formulaHtml = "";
+            if (cs.id === "fitze" && item.title.includes("Velocity")) {
+              formulaHtml = `
+              <div class="cs-formula-box">
+                Velocity = ΔSteps / ΔTime &lt; V<sub>max</sub>
+              </div>`;
+            }
+            solnHtml += `
+            <div class="cs-decision-item">
+              <h5>${item.title}</h5>
+              <p>${item.desc}</p>
+              ${formulaHtml}
+            </div>`;
+          });
+
+          let decisionsHtml = `
+          <div class="col-lg-6 col-md-12" style="margin-bottom:24px;">
+            <div class="cs-decision challenge">
+              <div class="cs-decision-hd">
+                <i class="fa-solid fa-triangle-exclamation" style="color:#c0392b;font-size:18px;"></i>
+                <h4>${cs.engineering.challenge.title}</h4>
+              </div>
+              ${chalHtml}
+              <div class="cs-decision-footer">${cs.engineering.challenge.footer}</div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12" style="margin-bottom:24px;">
+            <div class="cs-decision solution">
+              <div class="cs-decision-hd">
+                <i class="fa-solid fa-circle-check" style="color:#27ae60;font-size:18px;"></i>
+                <h4>${cs.engineering.solution.title}</h4>
+              </div>
+              ${solnHtml}
+              <div class="cs-decision-footer">${cs.engineering.solution.footer}</div>
+            </div>
+          </div>`;
+          $("#engineering-row").html(decisionsHtml);
+
+          // 8. Tab 5 Performance
+          let perfSubtitle =
+            cs.performance.subtitle ||
+            "Validated production scorecard metrics from the systems integration.";
+          $("#performance-subtitle").text(perfSubtitle);
+
+          let metricsHtml = "";
+          cs.performance.metrics.forEach((m) => {
+            metricsHtml += `
+            <div class="col-lg-3 col-md-6" style="margin-bottom:24px;">
+              <div class="cs-metric">
+                <span class="cs-metric-val">${m.val}</span>
+                <span class="cs-metric-lbl">${m.lbl}</span>
+                <p class="cs-metric-desc">${m.desc}</p>
+              </div>
+            </div>`;
+          });
+          $("#performance-row").html(metricsHtml);
+
+          // 9. CTA Dynamic Descriptions
+          $("#cta-title").text(
+            `Ready to Transform Your ${cs.category} Operations?`,
+          );
+          $("#cta-desc").text(
+            `Let's discuss how we can build a similar enterprise-grade solution for your organization.`,
+          );
+        }).fail(function () {
+          console.error("Error loading case studies JSON.");
+          window.location.href = "/404.html";
+        });
+      });
+    </script>
+  </body>
+</html>

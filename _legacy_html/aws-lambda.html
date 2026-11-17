@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Qrious Tech</title>
+  <!-- Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- Responsive File -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+
+  <!-- Responsive Settings -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="icon"></div>
+    </div>
+
+    <!-- Main Header -->
+    <div id="header"></div>
+
+    <div class="sidebar-page-container">
+      <div class="max-width full-padding">
+        <div class="row clearfix">
+          <!--Content Side-->
+          <div class="content-side col-lg-9 col-md-12 col-sm-12">
+            <div class="blog-content">
+              <div class="post-details">
+                <!--News Block-->
+                <div class="news-block-three" style="margin-bottom: 0; padding-bottom: 0">
+                  <div class="inner-box">
+                    <div class="image-box">
+                      <img src="images/aws-lambda.webp" alt="" title="" />
+                    </div>
+                    <div class="lower-box">
+                      <div class="category">IT Projects, Development</div>
+                      <h3 class="text-light-grey text-start qt-card-title-text qt-fw-normal qt-lh-bold">
+                        What Is AWS Lambda?
+                      </h3>
+                      <div class="meta-info">
+                        <ul class="clearfix">
+                          <li class="text-off-white text-left qt-quote-cite-text qt-fw-normal qt-lh-large">
+                            By Admin
+                          </li>
+                          <li class="text-off-white text-left qt-quote-cite-text qt-fw-normal qt-lh-large">
+                            19 July 2023
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="text text-justify">
+                        <!-- <h4
+                            style="
+                              color: #222222;
+                              font-size: 25px;
+                              font-weight: 700;
+                            "
+                          >
+                            What Is AWS Lambda?
+                          </h4> -->
+                        <p>
+                          <strong>Lambda lets you run code without provisioning or
+                            managing servers,</strong>
+                          AWS states on the Lambda product page. You can think
+                          of Lambda as an event-driven computing platform;
+                          Lambda runs when triggered by an event and executes
+                          code that’s been loaded into the system.
+                        </p>
+
+                        <blockquote>
+                          Recently, Lambda has become popular thanks to AWS,
+                          but many folks still use Lambda and serverless
+                          interchangeably. In this post, we are going to shed
+                          some light on AWS Lambda, including how it ties into
+                          serverless architecture, how to create it, and when
+                          to use it.
+                        </blockquote>
+
+                        <h4 style="
+                              color: #222222;
+                              font-size: 25px;
+                              font-weight: 700;
+                              margin-top: 20px;
+                            ">
+                          Describing AWS Lambda
+                        </h4>
+                        <p style="margin-top: 30px">
+                          AWS Lambda service is a high-scale, provision-free
+                          serverless compute offering based on functions. It
+                          is used only for the compute layer of a serverless
+                          application. The purpose of AWS Lambda is to build
+                          event-driven applications that can be triggered by
+                          several events in AWS.
+                        </p>
+                        <p style="margin-bottom: 20px">
+                          In the case where you have multiple simultaneous
+                          events, Lambda simply spins up multiple copies of
+                          the function to handle the events. In other words,
+                          Lambda can be described as a type of function as a
+                          service (FaaS). Three components comprise AWS
+                          Lambda:
+                        </p>
+
+                        <p style="margin-bottom: 20px">
+                          <span><b>A function:-</b> This is the actual code that
+                            performs the task.</span><br />
+                          <span><b>A configuration:-</b> This specifies how your
+                            function is executed.</span><br />
+                          <span><b>An event source (optional):-</b> This is the
+                            event that triggers the function. You can trigger
+                            with several AWS services or a third-party
+                            service.</span>
+                        </p>
+
+                        <h4 style="
+                              color: #222222;
+                              font-size: 25px;
+                              font-weight: 700;
+                              margin-top: 20px;
+                            ">
+                          Lambda Function
+                        </h4>
+                        <p style="margin-bottom: 10px">
+                          Finally here is what a Lambda function using Node.js
+                          looks like.
+                          <img src="images/lambda-function.png" style="margin-top: 10px" />
+                        </p>
+                        <p>
+                          Here myHandler is the name of our Lambda function.
+                          The event object contains all the information about
+                          the event that triggered this Lambda. In the case of
+                          an HTTP request it’ll be information about the
+                          specific HTTP request. The context object contains
+                          info about the runtime our Lambda function is
+                          executing in. After we do all the work inside our
+                          Lambda function, we simply call the callback
+                          function with the results (or the error) and AWS
+                          will respond to the HTTP request with it.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h4 style="
+                      color: #222222;
+                      font-size: 25px;
+                      font-weight: 700;
+                      margin-top: 43px;
+                    ">
+                  Conclusion
+                </h4>
+                <p class="text-justify">
+                  AWS Lambda is like a magic tool by Amazon. It helps run
+                  computer code without dealing with servers. It's part of
+                  something called serverless, which means you don't have to
+                  worry about setting up servers or other technical stuff.
+                  It's great for making applications work smoothly without any
+                  headaches about server management. Developers use it for
+                  building cool things that respond to events.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--Sidebar Side-->
+          <div class="sidebar-side col-lg-3 col-md-12 col-sm-12">
+            <aside class="sidebar blog-sidebar">
+              <div class="sidebar-widget recent-posts">
+                <div class="widget-inner">
+                  <div class="sidebar-title">
+                    <h3 class="text-dark-grey qt-footer-title-text qt-fw-bold qt-lh-large mb-0">
+                      Recent Posts
+                    </h3>
+                  </div>
+
+                  <div class="post">
+                    <figure class="post-thumb">
+                      <img src="images/normalization.webp" alt="" style="width: 80px; height: 80px" />
+                    </figure>
+                    <h3 class="text">
+                      <a href="normalization"
+                        class="text-light-grey text-center qt-body-text qt-fw-bold qt-lh-bold">Database Normalization
+                        And Design Techniques</a>
+                    </h3>
+                    <div class="meta-info">
+                      <ul class="clearfix">
+                        <li class="text-off-white text-left qt-quote-cite-text qt-fw-normal qt-lh-large">
+                          By Admin
+                        </li>
+                        <li class="text-off-white text-left qt-quote-cite-text qt-fw-normal qt-lh-large">
+                          10 March 2023
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="post">
+                    <figure class="post-thumb">
+                      <img src="images/blockchain1.webp" alt="" style="width: 80px; height: 80px" />
+                    </figure>
+                    <h3 class="text">
+                      <a href="blockchain"
+                        class="text-light-grey text-center qt-body-text qt-fw-bold qt-lh-bold">BLOCKCHAIN</a>
+                    </h3>
+                    <div class="meta-info">
+                      <ul class="clearfix">
+                        <li class="text-off-white text-left qt-quote-cite-text qt-fw-normal qt-lh-large">
+                          By Admin
+                        </li>
+                        <li class="text-off-white text-left qt-quote-cite-text qt-fw-normal qt-lh-large">
+                          24 June 2023
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="post">
+                    <figure class="post-thumb">
+                      <img src="images/npmvsyarn.webp" alt="" style="width: 80px; height: 80px" />
+                    </figure>
+                    <h3 class="text">
+                      <a href="npm-yarn" class="text-light-grey text-center qt-body-text qt-fw-bold qt-lh-bold">NPM
+                        Vs Yarn</a>
+                    </h3>
+                    <div class="meta-info">
+                      <ul class="clearfix">
+                        <li class="text-off-white text-left qt-quote-cite-text qt-fw-normal qt-lh-large">
+                          By Admin
+                        </li>
+                        <li class="text-off-white text-left qt-quote-cite-text qt-fw-normal qt-lh-large">
+                          15 April 2023
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="post">
+                    <figure class="post-thumb">
+                      <img src="images/AI.webp" alt="" style="width: 80px; height: 80px" />
+                    </figure>
+                    <h3 class="text">
+                      <a href="generative-AI"
+                        class="text-light-grey text-center qt-body-text qt-fw-bold qt-lh-bold">What is Generative
+                        AI?</a>
+                    </h3>
+                    <div class="meta-info">
+                      <ul class="clearfix">
+                        <li class="text-off-white text-left qt-quote-cite-text qt-fw-normal qt-lh-large">
+                          By Admin
+                        </li>
+                        <li class="text-off-white text-left qt-quote-cite-text qt-fw-normal qt-lh-large">
+                          02 January 2023
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Separator-->
+
+    <div id="footer"></div>
+  </div>
+
+  <!-- <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/owl.js"></script> -->
+  <script src="js/scrollbar.js"></script>
+  <!-- <script src="js/validate.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/wow.js"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+    integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+    integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+    integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.js"
+    integrity="sha512-ETeDoII5o/Zv6W1AtLiNDwfdkH684h6M/S8wd2N0vMEAeL3UAOf7a1SHdP1LGDieDrofe1KZpp9k6yLkR90E6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"
+    integrity="sha512-j7/1CJweOskkQiS5RD9W8zhEG9D9vpgByNGxPIqkO5KrXrwyDAroM9aQ9w8J7oRqwxGyz429hPVk/zR6IOMtSA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+    integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.js"
+    integrity="sha512-4YGNovJrl6Qk98aRC7DThxWJt+7+wDIqV2ldbIbjQ/WOYOaYInFuS8U4niSTyFL+T8gPuioZ5OOwRY495oUPWw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.js"
+    integrity="sha512-iH/pDSVxvLhkkjp/iRv71KHJ16zsIyFtzG2YnQrmofmOK6W7EQekpGcMymyimL964E5XqxioscKLmvv5d6MGzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-appear/0.1/jquery.appear.js"
+    integrity="sha512-gmlF0Cjvx6n5XCLF9NNN+rZwS3X0Xn1vwuk+K0L3B4qve4UI+RVbNt0VynWadl//O0VQ8X47GH55KF9j3kVdUw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"
+    integrity="sha512-Rd5Gf5A6chsunOJte+gKWyECMqkG8MgBYD1u80LOOJBfl6ka9CtatRrD4P0P5Q5V/z/ecvOCSYC8tLoWNrCpPg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="js/custom-script.js"></script>
+  <script>
+    $(function () {
+      $("#footer").load("footer.html");
+    });
+
+    $(function () {
+      $("#header").load("header.html");
+    });
+  </script>
+  <!-- Start of Async Drift Code -->
+  <!-- <script>
+      "use strict";
+
+      !(function () {
+        var t = (window.driftt = window.drift = window.driftt || []);
+        if (!t.init) {
+          if (t.invoked)
+            return void (
+              window.console &&
+              console.error &&
+              console.error("Drift snippet included twice.")
+            );
+          (t.invoked = !0),
+            (t.methods = [
+              "identify",
+              "config",
+              "track",
+              "reset",
+              "debug",
+              "show",
+              "ping",
+              "page",
+              "hide",
+              "off",
+              "on",
+            ]),
+            (t.factory = function (e) {
+              return function () {
+                var n = Array.prototype.slice.call(arguments);
+                return n.unshift(e), t.push(n), t;
+              };
+            }),
+            t.methods.forEach(function (e) {
+              t[e] = t.factory(e);
+            }),
+            (t.load = function (t) {
+              var e = 3e5,
+                n = Math.ceil(new Date() / e) * e,
+                o = document.createElement("script");
+              (o.type = "text/javascript"),
+                (o.async = !0),
+                (o.crossorigin = "anonymous"),
+                (o.src =
+                  "https://js.driftt.com/include/" + n + "/" + t + ".js");
+              var i = document.getElementsByTagName("script")[0];
+              i.parentNode.insertBefore(o, i);
+            });
+        }
+      })();
+      drift.SNIPPET_VERSION = "0.3.1";
+      drift.load("sci2hbmm8ink");
+    </script> -->
+  <!-- End of Async Drift Code -->
+</body>
+
+</html>

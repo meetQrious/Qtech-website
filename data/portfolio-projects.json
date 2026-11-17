@@ -1,0 +1,935 @@
+[
+  {
+    "id": "budget-bee",
+    "name": "BudgetBee",
+    "originalContext": "Expense Management Application",
+    "year": "2022",
+    "domain": "finance",
+    "category": "Personal Finance & Budget Management Platform",
+    "image": "/images/resource/portfolio-parchi.png",
+    "accent": "#0f5f8c",
+    "summary": "A smart personal finance platform that helps users track daily expenses, manage receipts, create monthly budgets, and gain actionable insights into spending habits through interactive dashboards and visual reports.",
+    "overview": [
+      "BudgetBee enables users to record day-to-day transactions, store receipts digitally, and organize expenses across categories such as Food, Travel, Entertainment, Education, Shopping, and Utilities.",
+      "The platform provides complete visibility into monthly budgets and spending patterns, helping users control expenses, improve financial planning, and make informed money management decisions."
+    ],
+    "technicalOverview": [
+      "The application was developed using modern frontend technologies to provide a fast, responsive, and intuitive user experience across desktop and mobile devices.",
+      "Core functionality includes budget planning, expense categorization, transaction tracking, month-wise reporting, category-based analysis, and real-time financial calculations.",
+      "Interactive charts and visual dashboards offer users meaningful insights into their spending behavior, making it easier to monitor financial goals and optimize budgets."
+    ],
+    "technologies": [
+      "React JS",
+      "JavaScript / TypeScript",
+      "HTML5",
+      "CSS3 / SCSS",
+      "Chart.js / Recharts",
+      "REST APIs",
+      "Responsive Web Design"
+    ],
+    "features": [
+      "Daily expense tracking",
+      "Digital receipt management",
+      "Monthly budget planning",
+      "Category-wise expense organization",
+      "Month-wise transaction filtering",
+      "Interactive charts and analytics",
+      "Financial insights dashboard",
+      "Real-time budget calculations",
+      "Spending trend analysis",
+      "Responsive user experience"
+    ],
+    "metrics": [
+      {
+        "value": "2022",
+        "label": "Delivery Year"
+      },
+      {
+        "value": "10+",
+        "label": "Core Features"
+      },
+      {
+        "value": "7",
+        "label": "Tech Areas"
+      }
+    ]
+  },
+  {
+    "id": "thymos",
+    "name": "Thymos",
+    "originalContext": "Healthcare Management Platform",
+    "year": "2023",
+    "domain": "healthcare",
+    "category": "Healthcare Management Platform",
+    "image": "/images/resource/portfolio-thymos.png",
+    "accent": "#155e63",
+    "summary": "A healthcare management ecosystem for providers and patients, covering appointments, patient records, prescriptions, reports, schedules, secure communication, EHR integration, and real-time notifications.",
+    "overview": [
+      "Thymos streamlines collaboration between healthcare providers and patients through a unified web and mobile ecosystem.",
+      "The platform enables healthcare professionals to manage appointments, patient records, prescriptions, schedules, medical reports, and operational workflows while giving patients convenient access to healthcare services and medical information.",
+      "A Slack-based chatbot supports real-time communication, appointment notifications, operational support, and better care coordination."
+    ],
+    "technicalOverview": [
+      "The platform was developed using Spring Boot and PostgreSQL to provide a scalable, secure, and high-performance healthcare solution.",
+      "JWT-based authentication was used for secure access control, while integrations with healthcare and communication services supported real-time collaboration and operational workflows.",
+      "The system integrates with Oyster HR EHR, AWS Chime, AWS SNS, and Slack APIs for secure healthcare data management, communications, notification delivery, and chatbot-driven interactions."
+    ],
+    "technologies": [
+      "Spring Boot",
+      "Java",
+      "PostgreSQL",
+      "JWT Authentication",
+      "Slack API",
+      "AWS Chime",
+      "AWS SNS",
+      "Oyster HR EHR Integration",
+      "REST APIs",
+      "Mobile & Web Applications"
+    ],
+    "features": [
+      "Healthcare provider profile management",
+      "Appointment scheduling and management",
+      "Patient intake and registration forms",
+      "Electronic medical record management",
+      "Prescription generation and management",
+      "Medical report management",
+      "Oyster HR EHR integration",
+      "Slack chatbot integration",
+      "Real-time appointment notifications",
+      "Secure patient-provider communication",
+      "Role-based access control",
+      "Healthcare workflow automation",
+      "AWS SNS notification services",
+      "Cross-platform web and mobile support"
+    ],
+    "metrics": [
+      {
+        "value": "2023",
+        "label": "Delivery Year"
+      },
+      {
+        "value": "14+",
+        "label": "Healthcare Features"
+      },
+      {
+        "value": "4",
+        "label": "Major Integrations"
+      }
+    ]
+  },
+  {
+    "id": "faith-connect",
+    "name": "FaithConnect",
+    "originalContext": "Community & Social Networking Platform",
+    "year": "2023",
+    "domain": "community",
+    "category": "Community & Social Networking Platform",
+    "image": "/images/resource/portfolio-krew-social.png",
+    "accent": "#627de8",
+    "summary": "A faith-based community engagement platform that connects church members through events, social groups, real-time communication, community feeds, business directories, and personalized notifications.",
+    "overview": [
+      "FaithConnect was developed to strengthen relationships and communication within church communities and faith-based organizations.",
+      "The platform enables members to create profiles, discover church events, participate in community groups, share updates, and engage with fellow members through an interactive social experience.",
+      "It serves as a centralized hub for community engagement, event coordination, content sharing, and meaningful connections among church members."
+    ],
+    "technicalOverview": [
+      "FaithConnect was built as a cross-platform mobile application using React Native, providing a seamless experience across both iOS and Android devices.",
+      "The platform leverages Google Cloud Platform services to ensure scalability, reliability, and secure data management.",
+      "Google Cloud Functions manage backend services, Google Pub/Sub handles asynchronous event processing, Redux powers application state management, Temporal orchestrates workflows, and Jest ensures application quality through automated testing."
+    ],
+    "technologies": [
+      "React Native",
+      "Next.js",
+      "Node.js",
+      "JavaScript (ES6)",
+      "Redux",
+      "JSX",
+      "Google Cloud Platform (GCP)",
+      "Google Cloud Functions",
+      "Google Pub/Sub",
+      "Temporal",
+      "REST APIs",
+      "Jest",
+      "Real-Time Messaging"
+    ],
+    "features": [
+      "Mobile number-based registration and secure authentication",
+      "Church member profile creation and management",
+      "Church event planning and participation management",
+      "Community feed for announcements and updates",
+      "Real-time chat and messaging",
+      "Faith group communication and collaboration",
+      "Church and business directory management",
+      "Push notifications and engagement alerts",
+      "Third-party integrations and data synchronization",
+      "Cloud-native backend infrastructure",
+      "Workflow automation powered by Temporal",
+      "Cross-platform support for iOS and Android",
+      "State management using Redux",
+      "Automated testing and quality assurance with Jest"
+    ],
+    "metrics": [
+      {
+        "value": "2023",
+        "label": "Delivery Year"
+      },
+      {
+        "value": "14+",
+        "label": "Community Features"
+      },
+      {
+        "value": "iOS + Android",
+        "label": "Platforms"
+      }
+    ]
+  },
+  {
+    "id": "cartiva",
+    "name": "Cartiva",
+    "originalContext": "eCommerce & Rewards Platform",
+    "year": "2024",
+    "domain": "ecommerce",
+    "category": "eCommerce & Rewards Platform",
+    "image": "/images/resource/portfolio-dukkan.png",
+    "accent": "#34251b",
+    "summary": "A headless ecommerce and rewards platform with product catalog management, BigCommerce integration, reward points, returns, refunds, content management, SEO, and analytics.",
+    "overview": [
+      "Cartiva delivers a seamless online shopping experience while giving businesses tools for product management, customer engagement, and sales growth.",
+      "Customers can browse products, make purchases, earn reward points, redeem benefits, manage accounts, and handle returns or refunds through a responsive interface.",
+      "The solution uses a headless commerce approach to combine flexible content management with scalable ecommerce capabilities."
+    ],
+    "technicalOverview": [
+      "The platform was developed using Next.js and NestJS with a headless architecture for speed, scalability, SEO, and flexible content operations.",
+      "BigCommerce acts as the commerce engine for product management, inventory synchronization, order processing, and pricing management.",
+      "A Headless CMS allows content teams to update website content independently, while SEO improvements include dynamic sitemap generation and optimized rendering. Google Analytics and third-party integrations support customer journey and conversion tracking."
+    ],
+    "technologies": [
+      "Next.js",
+      "NestJS",
+      "Node.js",
+      "BigCommerce",
+      "Headless CMS",
+      "Google Analytics",
+      "REST APIs",
+      "SEO Optimization",
+      "Server-Side Rendering (SSR)",
+      "JavaScript / TypeScript"
+    ],
+    "features": [
+      "Product catalog and inventory management",
+      "BigCommerce integration",
+      "Headless commerce architecture",
+      "Dynamic content management through Headless CMS",
+      "SEO optimization and sitemap generation",
+      "Reward points and loyalty management system",
+      "Points earning and redemption workflows",
+      "Returns and refunds management",
+      "Customer account management",
+      "Order processing and tracking",
+      "Google Analytics integration",
+      "Third-party marketing and engagement integrations",
+      "Responsive web application",
+      "Performance-optimized shopping experience"
+    ],
+    "metrics": [
+      {
+        "value": "2024",
+        "label": "Delivery Year"
+      },
+      {
+        "value": "14+",
+        "label": "Commerce Features"
+      },
+      {
+        "value": "SEO + SSR",
+        "label": "Growth Focus"
+      }
+    ]
+  },
+  {
+    "id": "restro-staff",
+    "name": "RestroStaff",
+    "originalContext": "Restaurant Workforce Management Platform",
+    "year": "2024",
+    "domain": "workforce",
+    "category": "Restaurant Workforce Management Platform",
+    "image": "/images/resource/case-study-restaurant-staff-management.png",
+    "accent": "#263241",
+    "summary": "A serverless restaurant workforce management platform for staff onboarding, employee assignments, training programs, quizzes, scheduling, announcements, tasks, and operational compliance.",
+    "overview": [
+      "RestroStaff optimizes restaurant operations by managing staff, training programs, communication, and daily activities across multiple restaurant locations.",
+      "Administrators can add, update, remove, and assign employees while ensuring staff remain aligned with training and operational procedures.",
+      "The platform centralizes employee management, training delivery, task scheduling, and internal communication to improve workforce productivity and service consistency."
+    ],
+    "technicalOverview": [
+      "The system was built with a serverless cloud architecture powered by AWS services for scalability, reliability, and cost-efficient operations.",
+      "Node.js and AWS Lambda handle business logic, user management, training workflows, scheduling, and content delivery without dedicated server infrastructure.",
+      "AWS API Gateway exposes secure REST APIs, Amazon Cognito manages authentication and access control, PostgreSQL stores operational data, Amazon S3 stores media assets, and CloudWatch provides logging and monitoring."
+    ],
+    "technologies": [
+      "Node.js",
+      "AWS Lambda",
+      "AWS API Gateway",
+      "Amazon Cognito",
+      "Amazon S3",
+      "PostgreSQL",
+      "Amazon CloudWatch",
+      "Serverless Framework",
+      "REST APIs",
+      "AWS Serverless Architecture"
+    ],
+    "features": [
+      "Multi-restaurant staff management",
+      "Employee onboarding and profile management",
+      "Staff assignment across restaurant locations",
+      "Training course creation and assignment",
+      "Quiz and assessment management",
+      "Video library for instructional content",
+      "Internal news and announcements management",
+      "Employee recognition and celebration posts",
+      "Calendar-based scheduling system",
+      "Daily task management and tracking",
+      "Role-based authentication and access control",
+      "Secure cloud-based content storage",
+      "Real-time monitoring and logging",
+      "Scalable serverless infrastructure",
+      "Workforce productivity and compliance tracking"
+    ],
+    "metrics": [
+      {
+        "value": "2024",
+        "label": "Delivery Year"
+      },
+      {
+        "value": "15+",
+        "label": "Workforce Features"
+      },
+      {
+        "value": "AWS",
+        "label": "Serverless Cloud"
+      }
+    ]
+  },
+  {
+    "id": "hooplive-stats",
+    "name": "Hooplive Stats",
+    "originalContext": "Basketball Tournament Management Platform",
+    "year": "2024",
+    "domain": "community",
+    "category": "Basketball Tournament Management Platform",
+    "image": "/images/resource/portfolio-hooplive-stats.png",
+    "accent": "#ff6b6b",
+    "summary": "An innovative tournament management platform that replaces paper score sheets with dynamic scoreboards, live WebSockets updates, scheduling tools, and player profile databases.",
+    "overview": [
+      "Hooplive Stats is a comprehensive basketball tournament management system that streamlines scheduling, team management, and match updates.",
+      "The software eliminates manual calculations and data entry errors, providing fans and league admins with an online live scoring portal."
+    ],
+    "technicalOverview": [
+      "Built with a React JS frontend and Node JS/Express backend backend to coordinate high-frequency match metrics.",
+      "Integrates WebSockets (Socket.io) for real-time live score updates, Sequelize ORM for MySQL db interactions, and JWT tokens for secure authentication."
+    ],
+    "technologies": [
+      "React JS",
+      "React Native",
+      "Node JS",
+      "MySQL DB",
+      "Next JS",
+      "WebSockets",
+      "JWT",
+      "Sequelize ORM",
+      "Burp Security"
+    ],
+    "features": [
+      "Tournament Creation and Management",
+      "Team and Player Management",
+      "Match Scheduling & Live Score Updates",
+      "Match Results and Statistics",
+      "User Authentication and Roles & Notification System",
+      "Responsive UI and User Profiles"
+    ],
+    "metrics": [
+      {
+        "value": "2021-2024",
+        "label": "Timeline"
+      },
+      {
+        "value": "Real-Time",
+        "label": "Score Updates"
+      },
+      {
+        "value": "MySQL",
+        "label": "Relational DB"
+      }
+    ]
+  },
+  {
+    "id": "advance-health-academy",
+    "name": "Advance Health Academy",
+    "originalContext": "Personalized Health Insights & Biomarker Analysis Portal",
+    "year": "2024",
+    "domain": "healthcare",
+    "category": "Clinical Biomarker Diagnostics & Patient Portal",
+    "image": "/images/resource/portfolio-advance-health-academy.png",
+    "accent": "#0ea5e9",
+    "summary": "A clinical insights application that standardizes blood test metrics, extracts diagnostic markers using image processing, and generates organ workload reports with secure sharing.",
+    "overview": [
+      "Advance Health Academy is a comprehensive medical application designed to empower users with personalized insights into their health through automated blood test analysis.",
+      "The platform parses test reports to highlight potential organ abnormalities, helping patients proactively coordinate care with their healthcare providers."
+    ],
+    "technicalOverview": [
+      "Uses Python-based AWS Lambda functions and image processing algorithms to parse scanned blood test reports into structured data.",
+      "Implements unit standardization on the backend to reconcile variations in clinical metrics across different countries.",
+      "Integrates Amazon SES for secure clinical profile email delivery, Stripe for payment handling, and Dynamo DB for health records."
+    ],
+    "technologies": [
+      "React JS",
+      "React Native",
+      "Node JS",
+      "AWS Lambda",
+      "Amazon SES",
+      "Dynamo DB",
+      "Stripe Payment",
+      "Material UI",
+      "Firebase",
+      "AWS EC2",
+      "S3 Bucket"
+    ],
+    "features": [
+      "Blood Test Profiling",
+      "Comprehensive Blood Test Reports",
+      "Organ-Specific Insights",
+      "Image Processing Algorithms",
+      "Lambda Functions for Data Processing",
+      "Data Standardization Across Countries",
+      "Secure Profile Sharing via Amazon SES",
+      "Stripe Payment Integrations"
+    ],
+    "metrics": [
+      {
+        "value": "2022-2024",
+        "label": "Timeline"
+      },
+      {
+        "value": "Stripe",
+        "label": "Payments"
+      },
+      {
+        "value": "Lambda",
+        "label": "Processors"
+      }
+    ]
+  },
+  {
+    "id": "move-mint",
+    "name": "MoveMint",
+    "originalContext": "Gamified Fitness Counter & Rewards Platform",
+    "year": "2022",
+    "domain": "healthcare",
+    "category": "Gamified Fitness Counter & Rewards Platform",
+    "image": "/images/resource/case-study-movemint.png",
+    "accent": "#22c55e",
+    "summary": "A fitness rewards mobile application that integrates with Google Fit and Apple Health to convert daily physical activity into reward points, enabling users to participate in challenges, earn incentives, and unlock exclusive benefits.",
+    "overview": [
+      "MoveMint is a fitness engagement platform designed to encourage healthier lifestyles through gamification and reward-based motivation.",
+      "Users can track daily steps, earn reward points, join community and corporate fitness challenges, compete on leaderboards, and redeem rewards from partnered merchants."
+    ],
+    "technicalOverview": [
+      "Developed as a cross-platform mobile application using React Native, Redux-thunk, and TypeScript to deliver a seamless user experience across iOS and Android devices.",
+      "The platform integrates with Google Fit and Apple Health to securely synchronize fitness activity data, enabling accurate step tracking, challenge participation, and reward calculations in real time."
+    ],
+    "technologies": [
+      "React Native",
+      "JavaScript (ES6)",
+      "TypeScript",
+      "Redux",
+      "Redux-thunk",
+      "react-native-google-fit",
+      "react-native-health",
+      "react-navigation",
+      "react-native-image-picker"
+    ],
+    "features": [
+      "Google Fit integration",
+      "Apple Health integration",
+      "Daily step tracking",
+      "Reward points and coin system",
+      "Fitness challenge participation",
+      "Corporate wellness challenges",
+      "Leaderboards and rankings",
+      "Subscription management",
+      "Reward redemption workflows",
+      "Merchant partnership rewards",
+      "Cross-platform mobile experience",
+      "State management using Redux-thunk"
+    ],
+    "metrics": [
+      {
+        "value": "2020-2022",
+        "label": "Timeline"
+      },
+      {
+        "value": "iOS + Android",
+        "label": "Platforms"
+      },
+      {
+        "value": "Redux",
+        "label": "State Management"
+      }
+    ]
+  },
+  {
+    "id": "property-listing",
+    "name": "Property Listing",
+    "originalContext": "Real Estate Rental Analysis & Property Management Portal",
+    "year": "2021",
+    "domain": "real-estate",
+    "category": "Real Estate Rental Analysis & Property Management Portal",
+    "image": "/images/resource/portfolio-upky.png",
+    "accent": "#6d28d9",
+    "summary": "A comprehensive real estate analytics and property management platform that helps investors, buyers, and property managers evaluate rental opportunities, analyze market trends, and make data-driven investment decisions.",
+    "overview": [
+      "Property Listing enables users to discover real estate opportunities across multiple cities while analyzing property values, rental income potential, and investment performance.",
+      "The platform supports detailed analysis of single-family and multi-family properties, helping users compare rental yields, occupancy potential, and investment returns through advanced filtering and reporting tools."
+    ],
+    "technicalOverview": [
+      "Built using React JS and Core UI to deliver an interactive and responsive user experience for property discovery and investment analysis.",
+      "The platform utilizes a Node.js backend with Sequelize ORM for efficient data management and integrates advanced visualization tools to present market trends, pricing insights, and rental performance metrics.",
+      "Interactive dashboards and analytics reports help investors evaluate opportunities and monitor property portfolios with actionable real-time insights."
+    ],
+    "technologies": [
+      "React JS",
+      "Node JS",
+      "Express JS",
+      "Sequelize",
+      "Core UI",
+      "Ant Design (AntD)",
+      "Bizcharts",
+      "Redux"
+    ],
+    "features": [
+      "Property listing and search portal",
+      "Property details and pricing insights",
+      "Rental yield estimation",
+      "Investment return calculations",
+      "Multi-family property analysis",
+      "Real estate market analytics",
+      "Interactive maps and visualizations",
+      "Property portfolio tracking",
+      "Opportunity comparison tools",
+      "Advanced property filtering"
+    ],
+    "metrics": [
+      {
+        "value": "2020-2021",
+        "label": "Timeline"
+      },
+      {
+        "value": "Sequelize",
+        "label": "ORM Integration"
+      },
+      {
+        "value": "Bizcharts",
+        "label": "Analytics & Visuals"
+      }
+    ]
+  },
+  {
+    "id": "metric-voice",
+    "name": "MetricVoice",
+    "originalContext": "Customer Experience & Survey Engagement Platform",
+    "year": "2023",
+    "domain": "community",
+    "category": "Customer Experience & Survey Engagement Platform",
+    "image": "/images/resource/portfolio-sensemaker.png",
+    "accent": "#7c3aed",
+    "summary": "A customer experience and feedback intelligence platform that transforms survey responses into actionable insights through engagement-driven data collection, analytics dashboards, and enterprise reporting.",
+    "overview": [
+      "MetricVoice empowers organizations to collect, analyze, and act on customer feedback through structured survey engagements and framework-based data analysis.",
+      "The platform transforms responses into meaningful visual insights, helping businesses improve customer satisfaction, employee engagement, and strategic decision-making.",
+      "Role-based access controls ensure secure collaboration between administrators, members, and guests across the organization."
+    ],
+    "technicalOverview": [
+      "Built using React.js and Material UI on the frontend, with Node.js and NestJS powering scalable backend services.",
+      "An API Gateway architecture centralizes service communication while Elastic Search delivers high-performance querying across large volumes of survey and engagement data.",
+      "Interactive reporting and visualization capabilities are powered by ECharts, providing real-time analytics and trend analysis."
+    ],
+    "technologies": [
+      "React.js",
+      "Node.js",
+      "NestJS",
+      "Material UI",
+      "API Gateway",
+      "React ECharts",
+      "Elastic Search",
+      "Role-Based Access Control (RBAC)",
+      "REST APIs",
+      "JavaScript / TypeScript"
+    ],
+    "features": [
+      "Survey engagement management",
+      "Framework-based data collection structures",
+      "Dynamic questionnaire builder",
+      "Web and mobile collector interfaces",
+      "Elastic Search-powered query optimization",
+      "Interactive reports and analytics dashboards",
+      "Real-time charts and visualizations",
+      "Admin, Member, and Guest role management",
+      "Customer experience measurement",
+      "Feedback aggregation and analysis",
+      "Enterprise reporting tools",
+      "Secure access control and permissions"
+    ],
+    "metrics": [
+      {
+        "value": "2022-2023",
+        "label": "Project Timeline"
+      },
+      {
+        "value": "Elastic",
+        "label": "Search Engine"
+      },
+      {
+        "value": "NestJS",
+        "label": "Backend Core"
+      }
+    ]
+  },
+  {
+    "id": "gamora",
+    "name": "Gamora",
+    "originalContext": "Web3 Gaming & Token Rewards Platform",
+    "year": "2023",
+    "domain": "community",
+    "category": "Web3 Gaming & Token Rewards Platform",
+    "image": "/images/resource/portfolio-gamex.png",
+    "accent": "#db2777",
+    "summary": "A gaming application integrating Web3 MetaMask wallets, allowing gamers to use digital tokens for deposits, withdrawals, and tracking token yields.",
+    "overview": [
+      "Gamora connects cryptocurrency assets with casual gaming to provide a rewarding user experience.",
+      "Integrates MetaMask, tracks match metrics, and generates notifications for updates and token claim timelines."
+    ],
+    "technicalOverview": [
+      "Built with a Next.js and Redux frontend and a Node.js backend managing account and match details.",
+      "Integrates MetaMask SDK extensions for secure transaction signatures, Yup for validations, and Chart.js for progress records."
+    ],
+    "technologies": [
+      "Next.js",
+      "Redux",
+      "Chart JS",
+      "MetaMask SDK",
+      "Node.js",
+      "Yup Validation",
+      "Web3 Integration"
+    ],
+    "features": [
+      "MetaMask Web3 wallet integration",
+      "Game APIs database",
+      "In-game token deposits and withdrawals",
+      "Progress charting using Chart.js",
+      "User profile photo uploads",
+      "Email updates and notices"
+    ],
+    "metrics": [
+      {
+        "value": "2022-2023",
+        "label": "Timeline"
+      },
+      {
+        "value": "Web3",
+        "label": "MetaMask Core"
+      },
+      {
+        "value": "Next.js",
+        "label": "Frontend"
+      }
+    ]
+  },
+  {
+    "id": "bloomify",
+    "name": "Bloomify",
+    "originalContext": "E-commerce Plants Ordering & Real-Time Tracking Portal",
+    "year": "2019",
+    "domain": "ecommerce",
+    "category": "Online Nursery & Plant Delivery Platform",
+    "image": "/images/resource/portfolio-bloomify.png",
+    "accent": "#16a34a",
+    "summary": "A modern online nursery and plant delivery platform that enables customers to discover, purchase, and track plants while providing administrators with powerful inventory, pricing, and catalog management capabilities.",
+    "overview": [
+      "Bloomify allows customers to browse a wide range of indoor plants, outdoor plants, gardening products, and seasonal collections through an intuitive e-commerce experience.",
+      "The platform provides real-time order tracking, promotional campaigns, personalized product discovery, and a comprehensive administration portal for inventory management, pricing updates, and catalog maintenance."
+    ],
+    "technicalOverview": [
+      "Built using React.js and Next.js to deliver a fast, SEO-optimized shopping experience with server-side rendering and improved search engine visibility.",
+      "The platform leverages Node.js and MySQL to manage products, orders, inventory, customer accounts, and delivery workflows efficiently.",
+      "Additional optimizations include prerendering strategies for organic search performance, automated catalog synchronization, and security validation using industry-standard scanning tools."
+    ],
+    "technologies": [
+      "React JS",
+      "Next.js",
+      "Node.js",
+      "MySQL",
+      "Prerender.io",
+      "REST APIs",
+      "Burp Suite"
+    ],
+    "features": [
+      "Online plant marketplace",
+      "Plant catalog and advanced filtering",
+      "Real-time order and shipment tracking",
+      "SEO-optimized product pages",
+      "Discounts and promotional campaigns",
+      "Seasonal collections management",
+      "Customer account management",
+      "Inventory and stock management",
+      "Admin pricing controls",
+      "Responsive shopping experience"
+    ],
+    "metrics": [
+      {
+        "value": "2018-2019",
+        "label": "Timeline"
+      },
+      {
+        "value": "MySQL",
+        "label": "Database"
+      },
+      {
+        "value": "Next.js",
+        "label": "Platform"
+      }
+    ]
+  },
+  {
+    "id": "city-pulse",
+    "name": "CityPulse",
+    "originalContext": "Urban Facilities & Service Request Management Portal",
+    "year": "2023",
+    "domain": "workforce",
+    "category": "Urban Facilities & Service Request Management Portal",
+    "image": "/images/resource/portfolio-citypulse.png",
+    "accent": "#4f46e5",
+    "summary": "A centralized urban operations and workforce management platform that streamlines service requests, facility maintenance, carpool coordination, procurement tracking, payroll management, and administrative workflows.",
+    "overview": [
+      "CityPulse was developed to modernize urban operations by providing a unified platform for managing facility services, workforce activities, and administrative processes.",
+      "The platform enables employees and operational teams to submit service requests, coordinate transportation, manage purchase records, track payroll information, and monitor facility-related activities through an intuitive interface.",
+      "By centralizing operational workflows, CityPulse improves response times, increases transparency, and enhances collaboration across departments and city service teams."
+    ],
+    "technicalOverview": [
+      "The platform was built using React JS and Kendo UI to deliver responsive dashboards, dynamic forms, advanced data grids, and efficient administrative workflows.",
+      "A Java-based backend powers business operations and integrates with a MySQL database to securely manage requests, employee records, facility data, and operational transactions.",
+      "REST APIs facilitate seamless communication between frontend and backend systems while supporting real-time updates and scalable service management processes."
+    ],
+    "technologies": [
+      "React JS",
+      "Java",
+      "Kendo UI",
+      "MySQL Database",
+      "REST APIs"
+    ],
+    "features": [
+      "Facility service request management",
+      "Maintenance request submission and tracking",
+      "Carpool scheduling and ride coordination",
+      "Employee payroll and timesheet management",
+      "Procurement and purchase request logging",
+      "Administrative dashboard and reporting",
+      "Role-based user access management",
+      "Dynamic forms and workflow automation",
+      "Request assignment and status tracking",
+      "Operational analytics and reporting",
+      "Mobile-friendly user experience",
+      "Department-wide collaboration tools",
+      "Centralized workforce management",
+      "Secure data management and auditing"
+    ],
+    "metrics": [
+      {
+        "value": "2022-2023",
+        "label": "Project Timeline"
+      },
+      {
+        "value": "Kendo UI",
+        "label": "Forms & Grid Engine"
+      },
+      {
+        "value": "Java",
+        "label": "Backend Platform"
+      }
+    ]
+  },
+  {
+    "id": "family-vest",
+    "name": "FamilyVest",
+    "originalContext": "Multi-Role Wealth Management & Portfolio Analytics Platform",
+    "year": "2023",
+    "domain": "finance",
+    "category": "Family Wealth Management & Portfolio Analytics Platform",
+    "image": "/images/resource/portfolio-familyvest.png",
+    "accent": "#475569",
+    "summary": "A comprehensive family wealth management platform that enables households, family members, and financial advisors to track investments, monitor assets, analyze portfolio performance, and manage financial goals through role-based access and analytics dashboards.",
+    "overview": [
+      "FamilyVest provides a centralized platform for managing family wealth, allowing Heads of Household, Family Members, and Financial Advisors to securely access and manage financial portfolios.",
+      "The platform enables household heads to monitor aggregated family assets, switch between member portfolios, review investment performance, and gain real-time visibility into overall financial health."
+    ],
+    "technicalOverview": [
+      "Built with React.js for interactive dashboards and portfolio visualization, delivering a responsive user experience across devices.",
+      "The backend leverages ASP.NET and SQL Server to securely manage financial transactions, portfolio data, user permissions, and advisor workflows.",
+      "Role-based access control, credential encryption, and third-party financial integrations ensure secure management of investment data and real-time portfolio analytics."
+    ],
+    "technologies": [
+      "React JS",
+      ".NET",
+      "ASP.NET",
+      "SQL Server",
+      "MySQL",
+      "Role-Based Access Control (RBAC)"
+    ],
+    "features": [
+      "Family portfolio management",
+      "Household asset aggregation",
+      "Personal wealth tracking dashboards",
+      "Investment performance analytics",
+      "Financial advisor management portal",
+      "Role-based access control",
+      "Portfolio and transaction monitoring",
+      "Asset allocation visualization",
+      "Financial goal tracking",
+      "Task and activity management",
+      "Secure credential management",
+      "Real-time financial reporting"
+    ],
+    "metrics": [
+      {
+        "value": "2023",
+        "label": "Delivery Year"
+      },
+      {
+        "value": ".NET / SQL",
+        "label": "Backend Stack"
+      },
+      {
+        "value": "React",
+        "label": "UI Engine"
+      }
+    ]
+  },
+  {
+    "id": "rent-bridge",
+    "name": "RentBridge",
+    "originalContext": "Emergency Rental Assistance Platform",
+    "year": "2022",
+    "domain": "housing",
+    "category": "Emergency Rental Assistance Platform",
+    "image": "/images/resource/portfolio-rentbridge.png",
+    "accent": "#ea580c",
+    "summary": "A multi-portal rental assistance platform that streamlines emergency housing support by connecting applicants, landlords, and administrators through secure workflows, document verification, and payment processing.",
+    "overview": [
+      "RentBridge simplifies the emergency rental assistance process by providing a centralized platform for applicants, landlords, and program administrators.",
+      "The system manages the complete assistance lifecycle, including application submissions, document verification, lease validation, landlord collaboration, payment approvals, and fund distribution.",
+      "By consolidating multiple user portals into a unified platform, RentBridge improves transparency, reduces processing time, and enhances communication between all stakeholders."
+    ],
+    "technicalOverview": [
+      "The platform was developed using React JS for a responsive user experience and Node.js with MySQL for secure and scalable backend operations.",
+      "Document management workflows support lease verification, applicant eligibility validation, landlord documentation review, and case tracking.",
+      "Integrated payment processing and administrative workflows ensure efficient assistance distribution while maintaining compliance and auditability."
+    ],
+    "technologies": [
+      "React JS",
+      "Node.js",
+      "MySQL Database",
+      "REST APIs",
+      "Payment Gateway"
+    ],
+    "features": [
+      "Applicant registration and assistance application workflows",
+      "Landlord portal and rental ledger management",
+      "Document upload and verification system",
+      "Lease agreement validation and review",
+      "Case management and application tracking",
+      "Administrative approval workflows",
+      "Payment request and disbursement management",
+      "Role-based portal access and authentication",
+      "Status notifications and communication tools",
+      "Secure document storage and management",
+      "Audit logs and compliance reporting",
+      "Multi-portal architecture for different user roles",
+      "Application eligibility verification",
+      "Centralized assistance program administration"
+    ],
+    "metrics": [
+      {
+        "value": "2022",
+        "label": "Delivery Year"
+      },
+      {
+        "value": "MySQL",
+        "label": "Data Layer"
+      },
+      {
+        "value": "Node.js",
+        "label": "Backend Runtime"
+      }
+    ]
+  },
+  {
+    "id": "vestora",
+    "name": "Vestora",
+    "originalContext": "Stock Asset Management & Charitable Giving Platform",
+    "year": "2022",
+    "domain": "finance",
+    "category": "Stock Asset Management & Charitable Giving Platform",
+    "image": "/images/resource/portfolio-vestora.png",
+    "accent": "#b45309",
+    "summary": "A stock management and charitable giving platform enabling users to track investment portfolios, automate tax receipt generation, and donate stock assets directly through GraphQL-powered services.",
+    "overview": [
+      "Vestora combines modern portfolio management with seamless charitable giving capabilities.",
+      "Investors, advisors, and heads of households can monitor stock performance, manage risk profiles, and maximize tax-efficient donations.",
+      "The platform streamlines stock-based philanthropy while providing comprehensive asset tracking and reporting tools."
+    ],
+    "technicalOverview": [
+      "Built using React and TypeScript with GraphQL powering communication across frontend and backend services.",
+      "Apollo API Gateway orchestrates requests across multiple microservices, ensuring scalability, performance, and efficient data aggregation.",
+      "The microservice architecture enables independent deployment, simplified maintenance, and optimized portfolio and donation workflows."
+    ],
+    "technologies": [
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "GraphQL",
+      "Apollo API Gateway",
+      "Microservice Architecture",
+      "REST APIs",
+      "Portfolio Analytics",
+      "Tax Automation",
+      "Financial Reporting"
+    ],
+    "features": [
+      "Stock portfolio tracking and valuation",
+      "Investment performance analytics",
+      "Risk profile assessment tools",
+      "Direct stock donation workflows",
+      "Automated tax receipt generation",
+      "GraphQL API gateway integration",
+      "Microservice-based architecture",
+      "Portfolio reporting dashboards",
+      "Advisor and household account management",
+      "Tax-efficient charitable giving",
+      "Asset monitoring and tracking",
+      "Secure financial data management"
+    ],
+    "metrics": [
+      {
+        "value": "2022",
+        "label": "Delivery Year"
+      },
+      {
+        "value": "GraphQL",
+        "label": "API Core"
+      },
+      {
+        "value": "TypeScript",
+        "label": "Primary Language"
+      }
+    ]
+  }
+]
