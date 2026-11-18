@@ -1,16 +1,18 @@
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import ClientScripts from "@/components/ClientScripts";
+import "./legacy-compat.css";
 import Script from "next/script";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata = {
   metadataBase: new URL("https://qrioustech.com"),
-  title: "Qrious Tech | Enterprise AI & Custom Software Engineering",
-  description: "Enterprise software engineering, AI modernization partner, cloud web applications, and custom digital product development.",
+  title: "Qrious Tech | Enterprise AI Engineering & Autonomous Systems",
+  description: "Qrious Tech Team LLP engineers production-grade multi-agent AI systems, private foundation pipelines, and high-throughput cloud architectures for global enterprises.",
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 
@@ -22,35 +24,47 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
-        <link rel="stylesheet" href="/css/header.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/responsive.css" />
-        <link rel="stylesheet" href="/css/testimonial.css" />
-        <link rel="stylesheet" href="/css/custom-animate.css" />
-        <link rel="stylesheet" href="/css/product-development.css" />
-        <link rel="stylesheet" href="/css/working-methodology.css" />
-        <link rel="stylesheet" href="/css/techpractice.css" />
-        <link rel="stylesheet" href="/css/qt-kids.css" />
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('qt-theme');
+                  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  var t = (saved === 'light' || saved === 'dark') ? saved : (prefersDark ? 'dark' : 'dark');
+                  if (t === 'light') {
+                    document.documentElement.classList.add('light');
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.style.colorScheme = 'light';
+                  } else {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.classList.remove('light');
+                    document.documentElement.style.colorScheme = 'dark';
+                  }
+                } catch(e) {}
+              })();
+            `,
+          }}
+        />
       </head>
-      <body>
-        <div className="page-wrapper">
-          <div className="preloader">
-            <div className="icon"></div>
+      <body className="bg-slate-50 dark:bg-[#07080b] text-slate-900 dark:text-[#f8fafc] antialiased selection:bg-[#ff6b2b] selection:text-white transition-colors duration-300">
+        <ThemeProvider>
+          <div className="min-h-screen flex flex-col justify-between">
+            <Navbar />
+            <main className="flex-grow">{children}</main>
+            <Footer />
           </div>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <ClientScripts />
-          <div className="scroll-to-top scroll-to-target" data-target="html" style={{ display: "none" }}>
-            <span className="fa fa-angle-up"></span>
-          </div>
-        </div>
+        </ThemeProvider>
       </body>
     </html>
   );

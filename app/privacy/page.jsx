@@ -1,17 +1,120 @@
+"use client";
+
 import React from "react";
+import Link from "next/link";
+import { ShieldCheck, Lock, Mail, MapPin, Phone, ArrowRight, CheckCircle2 } from "lucide-react";
 
-export const metadata = {
-  title: "Privacy Policy | Qrious Tech",
-  description: "Privacy Policy for Qrious Tech (Qrioustech Team LLP). Learn how we protect, handle, and secure client and visitor information.",
-  keywords: "",
-};
+export default function PrivacyPage() {
+  const sections = [
+    {
+      title: "1. Overview & Commitment to Privacy",
+      content: `At Qrious Tech (Qrioustech Team LLP), accessible from https://qrioustech.com, our fundamental priority is safeguarding the privacy, confidentiality, and intellectual property of our clients, visitors, and commercial partners. This Privacy Policy details the categories of information we collect, our lawful bases for processing, and our zero-compromise security protocols.`
+    },
+    {
+      title: "2. Information We Collect",
+      content: `When you interact with our website, request architectural scoping, submit an RFP inquiry, or communicate with our engineering directors, we collect:
+- Contact Information: Full name, corporate email address, direct phone number, job title, and company entity.
+- Technical & Architectural Scope: Technical problem statements, project briefs, RFP specifications, and codebase documentation provided under mutual NDA.
+- Device & Network Telemetry: IP addresses, browser runtime headers, and referral metrics gathered through standard, anonymized server logs to prevent DDoS and malicious attacks.`
+    },
+    {
+      title: "3. Enterprise AI & Zero-Data-Retention Commitment",
+      content: `We enforce strict data governance for all AI and machine learning engagements:
+- Zero Model Training on Client Data: We do not permit proprietary client codebases, internal documentation, or transactional payloads to be ingested into public third-party foundation models.
+- Private Cloud & VPC Isolation: All client fine-tuning, embeddings, and RAG pipelines are hosted within sovereign, isolated VPC clusters (AWS, GCP, or client-managed infrastructure).
+- Ephemeral Inference: Data processed by our agent runtimes is held transiently in memory and never persisted without explicit cryptographic authorization.`
+    },
+    {
+      title: "4. Regulatory Standards & Compliance",
+      content: `Qrious Tech implements administrative, technical, and physical safeguards aligned with global standards:
+- HIPAA & HITECH: Full Business Associate Agreements (BAA) and cryptographic PHI de-identification protocols.
+- SOC2 Type II: Annual independent audits verifying availability, confidentiality, and integrity controls.
+- GDPR & CCPA: Complete data portability, right-to-be-forgotten adherence, and transparent audit logging.`
+    },
+    {
+      title: "5. Non-Disclosure & Intellectual Property",
+      content: `All client engagements operate under strict mutual Non-Disclosure Agreements (NDAs). Qrioustech Team LLP never sells, leases, or monetizes client information. 100% of custom code, model weights, and architectural assets developed during client engagements belong unconditionally to the client from Day 1.`
+    }
+  ];
 
-export default function Page() {
   return (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: "\n    <!-- Preloader -->\n    \n\n    <!-- Main Header -->\n    \n    <!-- End Main Header -->\n\n    <!-- Standard Inner Page Header Banner -->\n    <section class=\"main-page-header\">\n      <div class=\"max-width top-full-padding text-center\">\n        <h1 class=\"text-light-grey qt-title-text qt-fw-bold qt-lh-large\">\n          Privacy <span class=\"text-orange\">Policy</span>\n        </h1>\n        <h3 class=\"text-dark-grey qt-subtitle-text text-capitalize qt-fw-normal qt-lh-small pb-3\">\n          Transparency, Trust &amp; <strong>Data Security</strong>\n        </h3>\n        <p class=\"description-text text-dark-grey qt-intro-text qt-fw-normal qt-lh-large m-auto w-75 mb-3\">\n          Learn how Qrious Tech (Qrioustech Team LLP) protects, handles, and safeguards your corporate and personal information across our enterprise software engineering and consulting engagements.\n        </p>\n        <span class=\"text-muted\" style=\"font-size: 14px;\">Last updated: November 16, 2026</span>\n      </div>\n    </section>\n\n    <!-- Main Privacy Content Section -->\n    <section class=\"privacy-section full-width bottom-full-padding pt-4\">\n      <div class=\"max-width container\">\n        <div class=\"row\">\n          <div class=\"col-lg-12\">\n            \n            <!-- Policy Card 1 -->\n            <div class=\"policy-card p-4 p-md-5 mb-4\" style=\"background: #ffffff; border: 1px solid #eef0f3; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);\">\n              <h2 class=\"text-dark-grey qt-fw-bold pb-3\" style=\"font-size: 22px; border-bottom: 2px solid #f2f2f2;\">\n                1. Overview &amp; Commitment\n              </h2>\n              <p class=\"text-dark-grey qt-intro-text qt-fw-normal qt-lh-large pt-3\">\n                At <strong>Qrious Tech (Qrioustech Team LLP)</strong>, accessible from <a href=\"https://qrioustech.com\" class=\"text-orange\">https://qrioustech.com</a>, one of our fundamental priorities is ensuring the privacy, confidentiality, and security of our clients, visitors, and partners. This Privacy Policy outlines the categories of data we collect, how it is processed, and the measures we employ to safeguard your information.\n              </p>\n            </div>\n\n            <!-- Policy Card 2 -->\n            <div class=\"policy-card p-4 p-md-5 mb-4\" style=\"background: #ffffff; border: 1px solid #eef0f3; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);\">\n              <h2 class=\"text-dark-grey qt-fw-bold pb-3\" style=\"font-size: 22px; border-bottom: 2px solid #f2f2f2;\">\n                2. Information We Collect\n              </h2>\n              <p class=\"text-dark-grey qt-intro-text qt-fw-normal qt-lh-large pt-3\">\n                When you interact with our website, request project scoping, submit a proposal inquiry, or communicate with our engineering specialists, we may collect:\n              </p>\n              <ul class=\"list-style-one pl-0 pt-2 pb-2\">\n                <li class=\"li-sign-icon text-dark-grey qt-list-text qt-fw-normal qt-lh-large mb-2\">\n                  <strong>Contact Details:</strong> Full name, corporate email address, telephone number, job title, and company name.\n                </li>\n                <li class=\"li-sign-icon text-dark-grey qt-list-text qt-fw-normal qt-lh-large mb-2\">\n                  <strong>Project Information:</strong> Technical requirements, project briefs, request for proposal (RFP) documentation, and architectural scope.\n                </li>\n                <li class=\"li-sign-icon text-dark-grey qt-list-text qt-fw-normal qt-lh-large mb-2\">\n                  <strong>Technical Telemetry:</strong> Anonymized browser version, IP address, device telemetry, and referral URLs gathered via standard server logs.\n                </li>\n              </ul>\n            </div>\n\n            <!-- Policy Card 3 -->\n            <div class=\"policy-card p-4 p-md-5 mb-4\" style=\"background: #ffffff; border: 1px solid #eef0f3; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);\">\n              <h2 class=\"text-dark-grey qt-fw-bold pb-3\" style=\"font-size: 22px; border-bottom: 2px solid #f2f2f2;\">\n                3. How We Use Your Information\n              </h2>\n              <p class=\"text-dark-grey qt-intro-text qt-fw-normal qt-lh-large pt-3\">\n                We process your information strictly for legitimate commercial and engineering purposes:\n              </p>\n              <ul class=\"list-style-one pl-0 pt-2 pb-2\">\n                <li class=\"li-sign-icon text-dark-grey qt-list-text qt-fw-normal qt-lh-large mb-2\">\n                  To deliver tailored enterprise engineering, AI/ML development, and cloud consulting services.\n                </li>\n                <li class=\"li-sign-icon text-dark-grey qt-list-text qt-fw-normal qt-lh-large mb-2\">\n                  To communicate project milestones, provide technical consultations, and generate accurate commercial estimates.\n                </li>\n                <li class=\"li-sign-icon text-dark-grey qt-list-text qt-fw-normal qt-lh-large mb-2\">\n                  To uphold platform security, prevent unauthorized activities, and ensure adherence to international compliance frameworks.\n                </li>\n              </ul>\n            </div>\n\n            <!-- Policy Card 4 -->\n            <div class=\"policy-card p-4 p-md-5 mb-4\" style=\"background: #ffffff; border: 1px solid #eef0f3; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);\">\n              <h2 class=\"text-dark-grey qt-fw-bold pb-3\" style=\"font-size: 22px; border-bottom: 2px solid #f2f2f2;\">\n                4. Data Protection &amp; Non-Disclosure\n              </h2>\n              <p class=\"text-dark-grey qt-intro-text qt-fw-normal qt-lh-large pt-3\">\n                Qrioustech Team LLP implements industry-standard administrative, technical, and physical safeguards—including transport encryption and restricted role-based access controls—to protect client proprietary data and intellectual property.\n              </p>\n              <p class=\"text-dark-grey qt-intro-text qt-fw-normal qt-lh-large\">\n                <strong>We do not sell, rent, lease, or monetize your personal or business data to third parties under any circumstances.</strong>\n              </p>\n            </div>\n\n            <!-- Policy Card 5: Contact Card Styled like contact.html -->\n            <div class=\"policy-card p-4 p-md-5\" style=\"background: #ffffff; border: 1px solid #eef0f3; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);\">\n              <h2 class=\"text-dark-grey qt-fw-bold pb-2\" style=\"font-size: 22px;\">\n                5. Legal &amp; Data Protection Contact\n              </h2>\n              <p class=\"text-dark-grey qt-intro-text qt-fw-normal qt-lh-large mb-4\">\n                If you have questions regarding this Privacy Policy or wish to exercise your data rights, contact our legal and compliance office:\n              </p>\n              \n              <div class=\"row pt-2\">\n                <div class=\"col-md-6 mb-3\">\n                  <div class=\"p-3\" style=\"background: #fdfdfd; border: 1px solid #f0f0f0; border-radius: 6px;\">\n                    <span class=\"text-orange qt-fw-bold d-block mb-1\">Corporate Entity</span>\n                    <strong class=\"text-dark-grey\">Qrioustech Team LLP</strong>\n                  </div>\n                </div>\n                <div class=\"col-md-6 mb-3\">\n                  <div class=\"p-3\" style=\"background: #fdfdfd; border: 1px solid #f0f0f0; border-radius: 6px;\">\n                    <span class=\"text-orange qt-fw-bold d-block mb-1\">Inquiries &amp; Legal Email</span>\n                    <a href=\"mailto:info@qrioustech.com\" class=\"text-dark-grey font-weight-bold\">info@qrioustech.com</a>\n                  </div>\n                </div>\n                <div class=\"col-md-6 mb-3\">\n                  <div class=\"p-3\" style=\"background: #fdfdfd; border: 1px solid #f0f0f0; border-radius: 6px;\">\n                    <span class=\"text-orange qt-fw-bold d-block mb-1\">Telephone</span>\n                    <a href=\"tel:+916355794606\" class=\"text-dark-grey font-weight-bold\">+91 63557 94606</a>\n                  </div>\n                </div>\n                <div class=\"col-md-6 mb-3\">\n                  <div class=\"p-3\" style=\"background: #fdfdfd; border: 1px solid #f0f0f0; border-radius: 6px;\">\n                    <span class=\"text-orange qt-fw-bold d-block mb-1\">Registered Headquarters</span>\n                    <span class=\"text-dark-grey\" style=\"font-size: 14px;\">\n                      A - 706/707/708/709, Titanium City Center, 100 Feet Anand Nagar Rd, Satellite, Ahmedabad, Gujarat 380015, India\n                    </span>\n                  </div>\n                </div>\n              </div>\n            </div>\n\n          </div>\n        </div>\n      </div>\n    </section>\n\n    <!-- Main Footer -->\n    \n  "
-      }}
-    />
+    <div className="min-h-screen bg-[#07080b] text-[#f8fafc] py-16 md:py-24 relative overflow-hidden">
+      <div className="ambient-glow-top"></div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
+        
+        {/* Header */}
+        <div className="space-y-4 text-left">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs font-mono text-[#ff8a48]">
+            <ShieldCheck className="w-3.5 h-3.5" />
+            <span>Governance & Legal // Privacy Policy</span>
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Privacy Policy & <br />
+            <span className="text-[#ff8a48]">Enterprise Data Governance</span>
+          </h1>
+
+          <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
+            Effective Date: November 17, 2026 // Qrioustech Team LLP
+          </p>
+        </div>
+
+        {/* Policy Sections */}
+        <div className="space-y-8">
+          {sections.map((sec, idx) => (
+            <div 
+              key={idx}
+              className="p-8 rounded-3xl bg-[#0c0e16] border border-white/[0.08] space-y-4"
+            >
+              <h2 className="text-xl font-bold text-white tracking-tight flex items-center gap-2.5">
+                <span className="text-[#ff8a48] font-mono text-sm">#0{idx + 1}</span>
+                <span>{sec.title}</span>
+              </h2>
+              <div className="text-sm text-zinc-300 leading-relaxed whitespace-pre-line space-y-2">
+                {sec.content}
+              </div>
+            </div>
+          ))}
+
+          {/* Legal Contact Card */}
+          <div className="p-8 sm:p-10 rounded-3xl bg-[#0c0e16] border border-white/[0.08] space-y-6">
+            <h3 className="text-lg font-bold text-white">Legal & Compliance Inquiries</h3>
+            <p className="text-sm text-zinc-400">
+              For any privacy, security questionnaire, or compliance inquiries, please contact our legal office:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
+              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] space-y-1">
+                <span className="text-[#ff8a48]">Corporate Entity</span>
+                <div className="text-white font-sans font-semibold text-sm">Qrioustech Team LLP</div>
+              </div>
+              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] space-y-1">
+                <span className="text-[#ff8a48]">Compliance Email</span>
+                <div>
+                  <a href="mailto:info@qrioustech.com" className="text-white hover:underline font-sans font-semibold text-sm">
+                    info@qrioustech.com
+                  </a>
+                </div>
+              </div>
+              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] space-y-1">
+                <span className="text-[#ff8a48]">Telephone Hotline</span>
+                <div>
+                  <a href="tel:+916355794606" className="text-white hover:underline font-sans font-semibold text-sm">
+                    +91 63557 94606
+                  </a>
+                </div>
+              </div>
+              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] space-y-1">
+                <span className="text-[#ff8a48]">Headquarters</span>
+                <div className="text-zinc-300 font-sans text-xs">
+                  A-706 to 709, Dev Aurum, Prahladnagar, Ahmedabad, Gujarat, India
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   );
 }

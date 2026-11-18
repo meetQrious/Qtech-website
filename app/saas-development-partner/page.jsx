@@ -1,17 +1,281 @@
+"use client";
+
 import React from "react";
+import Link from "next/link";
+import { 
+  Boxes, 
+  CreditCard, 
+  ShieldCheck, 
+  Zap, 
+  ArrowRight, 
+  CheckCircle2, 
+  Sparkles, 
+  Lock, 
+  Server, 
+  Layers,
+  Cpu,
+  Workflow
+} from "lucide-react";
 
-export const metadata = {
-  title: "SaaS Development Partner | Qrious Tech Team LLP",
-  description: "Turn your software idea into a market-ready SaaS product. We take you from concept to launch — architecting, building, and scaling a platform that grows with your business.",
-  keywords: "",
-};
+export default function SaasDevelopmentPartnerPage() {
+  const pillars = [
+    {
+      title: "Multi-Tenant Cloud Architecture",
+      tag: "Strict Data Isolation",
+      desc: "Engineer resilient multi-tenant SaaS backends with dynamic schema routing and PostgreSQL Row-Level Security (RLS) guaranteeing absolute tenant privacy and zero data leakage across organizations.",
+      icon: Layers,
+      metric: "100% Tenant Isolation",
+      features: [
+        "Dynamic tenant provisioning & connection pooling",
+        "Row-Level Security (RLS) & schema-per-tenant support",
+        "Sub-domain & custom domain CNAME routing with automatic SSL",
+        "Multi-region tenant data residency compliance"
+      ]
+    },
+    {
+      title: "Usage-Based Metering & Stripe Billing",
+      tag: "Flexible Monetization Engines",
+      desc: "Architect consumption-based telemetry pipelines that track API calls, storage, or seats in real-time. Integrate Stripe Billing with automated invoicing, dunning management, and multi-tier subscription plans.",
+      icon: CreditCard,
+      metric: "99.99% Billing Accuracy",
+      features: [
+        "Real-time event metering with Apache Kafka & Redis",
+        "Stripe Billing, Customer Portal, and webhook handling",
+        "Automated overage alerts & plan upgrade nudges",
+        "Multi-currency & localized tax calculation (Stripe Tax)"
+      ]
+    },
+    {
+      title: "Enterprise SSO, RBAC & Audit Trails",
+      tag: "Enterprise-Ready Tiering",
+      desc: "Unlock enterprise sales deals with turnkey SAML 2.0 / OIDC Single Sign-On (Okta, Azure AD, Google Workspace), Directory Sync (SCIM), role-based access control, and immutable audit logs.",
+      icon: ShieldCheck,
+      metric: "SOC2 Type II Ready",
+      features: [
+        "WorkOS & Auth0 enterprise SAML / SCIM integration",
+        "Granular Role-Based & Attribute-Based Access Control (RBAC/ABAC)",
+        "Cryptographically signed enterprise activity audit logs",
+        "Session timeout and device management policies"
+      ]
+    },
+    {
+      title: "Embedded AI Copilots & Workflow Swarms",
+      tag: "Generative Product Acceleration",
+      desc: "Differentiate your SaaS platform from legacy competitors by embedding contextual AI copilots capable of generating reports, automating multi-step tasks, and querying tenant data in natural language.",
+      icon: Cpu,
+      metric: "3.4x Higher Retention",
+      features: [
+        "Contextual tenant-isolated RAG vector indexes",
+        "Natural language workflow triggers & tool dispatch",
+        "Zero data retention to foundation model providers",
+        "Streaming response rendering with sub-500ms TTFB"
+      ]
+    }
+  ];
 
-export default function Page() {
+  const lifecycle = [
+    {
+      step: "01",
+      title: "Architecture & Data Schema Blueprint",
+      desc: "We define tenant isolation boundaries, database schemas, API contracts, and user journey wireframes in an interactive 2-week sprint."
+    },
+    {
+      step: "02",
+      title: "MVP Production Sprint (Weeks 3-8)",
+      desc: "We construct the core Next.js frontend, backend microservices, authentication, and core workflow features ready for initial customer pilot onboarding."
+    },
+    {
+      step: "03",
+      title: "Enterprise Hardening & SOC2 Audit",
+      desc: "We implement SAML SSO, automated billing metering, rate-limiting gateways, and penetration testing verification for SOC2 Type II compliance."
+    },
+    {
+      step: "04",
+      title: "Continuous Scale & SLA Guarantee",
+      desc: "We maintain 99.99% uptime, manage multi-region cloud scaling, and continuously ship product enhancements as your dedicated engineering partner."
+    }
+  ];
+
   return (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: "\n    <!-- Preloader -->\n    \n\n    <!-- Header -->\n    \n\n    <!-- Hero Section -->\n    <section class=\"hww-detail-hero\">\n      <div class=\"max-width text-center\">\n        <h1 class=\"hww-hero-title\">\n          SaaS <span class=\"text-orange\">Development Partner</span>\n        </h1>\n        <p class=\"hww-hero-subtitle\">\n          Turn your software idea into a market-ready SaaS product. We take you from MVP conceptualization and UI/UX\n          design to robust multi-tenant cloud architecture.\n        </p>\n      </div>\n    </section>\n\n    <!-- Detail Section -->\n    <section class=\"hww-detail-container\">\n      <div class=\"max-width\">\n        <div class=\"row\">\n\n          <!-- Left Column: Details -->\n          <div class=\"col-lg-7 col-md-12\">\n            <div class=\"hww-detail-card\">\n              <div class=\"hww-detail-img-wrapper\">\n                <img src=\"/images/resource/saas-partner-cover.png\" alt=\"SaaS Development Partner\">\n              </div>\n              <h3>Overview</h3>\n              <p class=\"description-text text-justify\">\n                Our SaaS Development Partner model is tailor-made for founders, startups, and enterprises looking to\n                build modern, scalable multi-tenant platforms. Rather than just writing code, we operate as your\n                technical co-founders — helping you refine product specifications, structure databases for scale,\n                configure billing systems, and set up modern cloud infrastructure.\n              </p>\n              <p class=\"description-text text-justify\">\n                From initial MVP definition to complete post-launch iterations, we deliver the specialized architecture,\n                security integrations, and seamless user experiences that keep your users engaged and your operations\n                cost-effective.\n              </p>\n            </div>\n\n            <div class=\"hww-detail-card\">\n              <h3>Ideal For</h3>\n              <p class=\"description-text mb-4\">\n                We partner with various businesses to launch SaaS solutions:\n              </p>\n              <div class=\"hww-role-list\">\n                <span class=\"hww-role-badge\">Startups &amp; Founders</span>\n                <span class=\"hww-role-badge\">Product Companies</span>\n                <span class=\"hww-role-badge\">B2B Software Platforms</span>\n                <span class=\"hww-role-badge\">Enterprise SaaS Initiatives</span>\n                <span class=\"hww-role-badge\">ISVs (Independent Software Vendors)</span>\n              </div>\n            </div>\n          </div>\n\n          <!-- Right Column: Deliverables & CTA -->\n          <div class=\"col-lg-5 col-md-12\">\n            <div class=\"hww-detail-card\">\n              <h3>What We Deliver</h3>\n\n              <div class=\"hww-deliverable-item\">\n                <div class=\"hww-deliverable-icon\">\n                  <svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                    <polyline points=\"20 6 9 17 4 12\"></polyline>\n                  </svg>\n                </div>\n                <div class=\"hww-deliverable-text\">\n                  <strong>End-to-End Product Design:</strong> Full product scoping, user journey mapping, high-fidelity\n                  wireframing, and interactive UI/UX prototypes.\n                </div>\n              </div>\n\n              <div class=\"hww-deliverable-item\">\n                <div class=\"hww-deliverable-icon\">\n                  <svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                    <polyline points=\"20 6 9 17 4 12\"></polyline>\n                  </svg>\n                </div>\n                <div class=\"hww-deliverable-text\">\n                  <strong>Multi-Tenant Architecture:</strong> Secure logical data isolation, tenant management portals,\n                  subscription configurations, and Stripe/PayPal integrations.\n                </div>\n              </div>\n\n              <div class=\"hww-deliverable-item\">\n                <div class=\"hww-deliverable-icon\">\n                  <svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                    <polyline points=\"20 6 9 17 4 12\"></polyline>\n                  </svg>\n                </div>\n                <div class=\"hww-deliverable-text\">\n                  <strong>Scalable Cloud Infrastructure:</strong> Automating deployments on AWS, Azure, or GCP using\n                  Kubernetes, Docker, and serverless architectures.\n                </div>\n              </div>\n\n              <div class=\"hww-deliverable-item\">\n                <div class=\"hww-deliverable-icon\">\n                  <svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                    <polyline points=\"20 6 9 17 4 12\"></polyline>\n                  </svg>\n                </div>\n                <div class=\"hww-deliverable-text\">\n                  <strong>Analytics &amp; Optimization:</strong> Implementing user tracking (Mixpanel, Hotjar), feature\n                  flagging (LaunchDarkly), and real-time error monitoring (Sentry).\n                </div>\n              </div>\n\n              <div class=\"hww-deliverable-item\">\n                <div class=\"hww-deliverable-icon\">\n                  <svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                    <polyline points=\"20 6 9 17 4 12\"></polyline>\n                  </svg>\n                </div>\n                <div class=\"hww-deliverable-text\">\n                  <strong>Roadmap Planning &amp; Maintenance:</strong> Active SLA-backed post-launch support, server\n                  maintenance, security patching, and product updates.\n                </div>\n              </div>\n            </div>\n\n            <!-- CTA Card -->\n            <div class=\"hww-cta-card\">\n              <h3>Start Your SaaS Journey</h3>\n              <p>Discuss your SaaS concept with our product consultants. We help validate ideas, design MVPs, and plan\n                product launches.</p>\n              <a href=\"contact\" class=\"hww-cta-btn\">Start Your Journey →</a>\n              <span class=\"hww-cta-note\">🚀 From MVP to enterprise-grade — we scale with you</span>\n            </div>\n          </div>\n\n        </div>\n      </div>\n    </section>\n\n    <section class=\"full-width half-padding\" style=\"background: #f8f9fb\">\n      <div class=\"max-width\">\n        <div class=\"wwu-sec-head text-center mb-5\">\n          <h2>\n            Explore\n            <span>Other Models</span>\n          </h2>\n        </div>\n\n        <div class=\"row\">\n          <!-- Dedicated Dev Teams -->\n          <div class=\"col-lg-6 mb-4\">\n            <a href=\"dedicated-development-teams\" class=\"hww-card-link\">\n              <div class=\"hww-card\">\n                <div class=\"hww-card-image\">\n                  <img src=\"/images/resource/dedicated-teams-cover.png\" alt=\"Dedicated Development Teams\">\n                </div>\n\n                <div class=\"hww-card-content\">\n                  <span class=\"hww-card-badge\">Team Augmentation</span>\n\n                  <h3 class=\"hww-card-title\">Dedicated Development Teams</h3>\n\n                  <p class=\"hww-card-desc\">\n                    Scale your product capacity instantly with an embedded development team that works as a seamless,\n                    transparent extension of your in-house engineering.\n                  </p>\n\n                  <span class=\"hww-card-btn\">\n                    Explore This Model\n                  </span>\n                </div>\n              </div>\n            </a>\n          </div>\n\n          <!-- AI Modernization Partner -->\n          <div class=\"col-lg-6 mb-4\">\n            <a href=\"ai-modernization-partner\" class=\"hww-card-link\">\n              <div class=\"hww-card\">\n                <div class=\"hww-card-image\">\n                  <img src=\"/images/resource/ai-modernization-cover.png\" alt=\"AI Modernization Partner\">\n                </div>\n\n                <div class=\"hww-card-content\">\n                  <span class=\"hww-card-badge\">AI Integration</span>\n\n                  <h3 class=\"hww-card-title\">AI Modernization Partner</h3>\n\n                  <p class=\"hww-card-desc\">\n                    Upgrade your existing products with AI-powered experiences, automation, and intelligent workflows.\n                  </p>\n\n                  <span class=\"hww-card-btn\">\n                    Explore This Model\n                  </span>\n                </div>\n              </div>\n            </a>\n          </div>\n        </div>\n      </div>\n    </section>\n    <section class=\"full-width half-padding\"></section>\n    <!-- Footer -->\n    \n  "
-      }}
-    />
+    <div className="min-h-screen bg-[#07080b] text-[#f8fafc] py-16 md:py-24 relative overflow-hidden">
+      <div className="ambient-glow-top"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-24">
+        
+        {/* 1. Hero Section */}
+        <div className="max-w-4xl text-left space-y-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs font-mono text-[#ff8a48]">
+            <Boxes className="w-3.5 h-3.5" />
+            <span>Industry Solution // Enterprise B2B SaaS</span>
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.08]">
+            Enterprise B2B SaaS <br />
+            <span className="text-[#ff8a48]">Product Engineering & Hyper-Scale</span>
+          </h1>
+
+          <p className="text-zinc-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl">
+            We partner with ambitious software founders and technology companies to engineer multi-tenant SaaS platforms from MVP to enterprise maturity — with usage-based billing, enterprise SSO, and native AI copilots.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4 pt-2">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold bg-white text-[#07080b] hover:bg-zinc-200 transition-all shadow-[0_2px_20px_rgba(255,255,255,0.2)]"
+            >
+              <span>Schedule SaaS Consultation</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/portfolio"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-zinc-300 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 transition-all"
+            >
+              <span>Explore SaaS Products</span>
+            </Link>
+          </div>
+
+          {/* Guarantees */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-white/[0.08] text-xs font-mono text-zinc-400">
+            <div className="flex items-center gap-2">
+              <Lock className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span>100% Tenant Isolation</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CreditCard className="w-4 h-4 text-cyan-400 shrink-0" />
+              <span>Usage Metering & Stripe</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-[#ff8a48] shrink-0" />
+              <span>SAML SSO & SCIM Ready</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Server className="w-4 h-4 text-purple-400 shrink-0" />
+              <span>99.99% Multi-Region SLA</span>
+            </div>
+          </div>
+        </div>
+
+        {/* 2. Solutions Bento Grid */}
+        <div className="space-y-10">
+          <div>
+            <div className="text-xs font-mono uppercase tracking-widest text-[#ff8a48] mb-2">
+              SaaS Engineering Vectors
+            </div>
+            <h2 className="text-3xl font-bold text-white tracking-tight">
+              Enterprise Foundations for High-Growth SaaS
+            </h2>
+            <p className="text-zinc-400 text-sm sm:text-base mt-2 max-w-2xl">
+              Engineered to satisfy the stringent security questionnaires of Fortune 500 procurement teams.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {pillars.map((item, idx) => (
+              <div 
+                key={idx}
+                className="p-8 rounded-3xl bg-[#0c0e16] border border-white/[0.08] hover:border-white/20 transition-all flex flex-col justify-between space-y-6"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-[#ff8a48]">
+                      <item.icon className="w-5 h-5" />
+                    </div>
+                    <span className="text-xs font-mono px-3 py-1 rounded-full bg-white/[0.04] text-emerald-400 border border-emerald-500/20">
+                      {item.metric}
+                    </span>
+                  </div>
+
+                  <div className="text-xs font-mono text-[#ff8a48] uppercase mb-1">{item.tag}</div>
+                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-sm text-zinc-400 leading-relaxed mb-6">{item.desc}</p>
+
+                  <div className="space-y-2.5 pt-4 border-t border-white/[0.04]">
+                    {item.features.map((feat, i) => (
+                      <div key={i} className="flex items-center gap-2 text-xs text-zinc-300">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                        <span>{feat}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-white/[0.04] flex items-center justify-between text-xs font-mono text-zinc-500">
+                  <span>SaaS Vector #{idx + 1}</span>
+                  <Link href="/contact" className="text-[#ff8a48] hover:underline flex items-center gap-1 font-sans font-medium">
+                    <span>Discuss SaaS roadmap</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 3. Delivery Lifecycle */}
+        <div className="p-8 sm:p-12 rounded-3xl bg-[#0c0e16] border border-white/[0.08] space-y-8">
+          <div>
+            <div className="text-xs font-mono uppercase tracking-widest text-[#ff8a48] mb-2">
+              SaaS Delivery Roadmap
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+              From Concept to Market-Ready SaaS in 8 Weeks
+            </h2>
+            <p className="text-zinc-400 text-sm mt-2 max-w-2xl">
+              A disciplined, predictable agile roadmap that transforms product vision into recurring revenue.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {lifecycle.map((l, idx) => (
+              <div 
+                key={idx}
+                className="p-6 rounded-2xl bg-[#07080b] border border-white/[0.06] hover:border-[#ff8a48]/40 transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-mono font-bold text-[#ff8a48] mb-2">{l.step}</div>
+                  <h4 className="text-base font-bold text-white mb-2">{l.title}</h4>
+                  <p className="text-xs text-zinc-400 leading-relaxed">{l.desc}</p>
+                </div>
+                <div className="pt-4 mt-6 border-t border-white/[0.04] text-[11px] font-mono text-zinc-500">
+                  Milestone #{idx + 1}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 4. Bottom Executive CTA */}
+        <div className="p-10 sm:p-14 rounded-3xl bg-gradient-to-br from-[#0c0e16] via-[#111422] to-[#0c0e16] border border-[#ff6b2b]/30 shadow-[0_10px_50px_rgba(255,107,43,0.1)] relative overflow-hidden">
+          <div className="max-w-2xl space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ff6b2b]/10 border border-[#ff6b2b]/20 text-xs font-mono text-[#ff8a48]">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Launch Your SaaS Platform</span>
+            </div>
+            <h3 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Turn your software concept into an enterprise-grade SaaS.
+            </h3>
+            <p className="text-sm sm:text-base text-zinc-300 leading-relaxed">
+              Book a product architecture session with our SaaS engineering leads. We will review your data schemas, tenant model, and technical roadmap.
+            </p>
+            <div className="pt-2 flex flex-wrap gap-4">
+              <Link
+                href="/contact"
+                className="px-6 py-3.5 rounded-full text-sm font-semibold bg-white text-[#07080b] hover:bg-zinc-200 transition-all shadow-lg flex items-center gap-2"
+              >
+                <span>Schedule SaaS Discovery</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/portfolio"
+                className="px-6 py-3.5 rounded-full text-sm font-semibold text-zinc-300 hover:text-white bg-white/[0.05] border border-white/10 transition-all"
+              >
+                <span>View SaaS Portfolio</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   );
 }

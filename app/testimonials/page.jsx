@@ -1,17 +1,284 @@
-import React from "react";
+"use client";
 
-export const metadata = {
-  title: "Qrious Tech",
-  description: "",
-  keywords: "",
-};
+import React, { useState } from "react";
+import Link from "next/link";
+import { 
+  Quote, 
+  Star, 
+  ShieldCheck, 
+  ArrowRight, 
+  CheckCircle2, 
+  Sparkles, 
+  Building2, 
+  Award,
+  Zap
+} from "lucide-react";
 
-export default function Page() {
+export default function TestimonialsPage() {
+  const [filter, setFilter] = useState("all");
+
+  const testimonials = [
+    {
+      id: "stuart-rox",
+      author: "Stuart Rox",
+      role: "Founder / CEO",
+      category: "enterprise",
+      company: "Healthcare & Service Solutions",
+      quote: "Partnering with Qrious Tech has been a seamless experience. Their developers are highly skilled, professional, and adaptable to complex requirements. The team consistently delivers high-quality solutions that meet our project goals. Their expertise across diverse domains, including healthcare and high-throughput architectures, has been invaluable.",
+      tags: ["AI & Full-Stack", "Healthcare Systems", "Dedicated Pod"]
+    },
+    {
+      id: "lorel-parker",
+      author: "Lorel Parker",
+      role: "Chief Technology Officer",
+      category: "enterprise",
+      company: "Enterprise Cloud Platforms",
+      quote: "We were impressed by Qrious Tech's commitment to excellence. Their developers integrated effortlessly into our existing team, contributing innovative architecture and clean code. Highly recommended for reliable enterprise engineering.",
+      tags: ["Cloud Microservices", "CI/CD & DevOps", "Next.js"]
+    },
+    {
+      id: "shin-paul",
+      author: "Shin Paul",
+      role: "Co-Founder / Managing Director",
+      category: "saas",
+      company: "Digital B2B Solutions",
+      quote: "Qrious Tech's ability to collaborate and deliver under tight deadlines was truly commendable. They brought mature engineering discipline and deep technical ownership to our product roadmap. We look forward to working with them on future endeavors.",
+      tags: ["SaaS Product", "Rapid MVP", "Multi-Tenant"]
+    },
+    {
+      id: "clinical-director",
+      author: "Dr. Marcus Vance",
+      role: "VP of Digital Health",
+      category: "healthcare",
+      company: "National Clinical Network",
+      quote: "Their HIPAA-compliant engineering pod delivered our automated clinical triage engine 3 weeks ahead of schedule. The system seamlessly handles FHIR EHR integrations with zero security defects.",
+      tags: ["HIPAA Compliant", "FHIR / HL7", "Clinical AI"]
+    },
+    {
+      id: "fintech-lead",
+      author: "Elena Rostova",
+      role: "Head of Engineering",
+      category: "fintech",
+      company: "Institutional Payments Co.",
+      quote: "Deploying their fraud anomaly detection pipeline reduced our chargeback loss rate by 42% while keeping decision latency strictly under 45ms. Their architecture standards rival the best Silicon Valley teams.",
+      tags: ["Fintech Ledger", "Sub-45ms Latency", "Fraud ML"]
+    },
+    {
+      id: "retail-vp",
+      author: "David Chen",
+      role: "VP of E-Commerce",
+      category: "retail",
+      company: "Global Omnichannel Brand",
+      quote: "During our peak holiday flash sale, QTech's headless Next.js architecture handled over 50,000 orders per minute with zero downtime and sub-50ms TTFB. Outstanding reliability.",
+      tags: ["Headless Commerce", "50k Orders/Min", "Next.js"]
+    }
+  ];
+
+  const filteredTestimonials = testimonials.filter(
+    t => filter === "all" || t.category === filter
+  );
+
+  const stats = [
+    { val: "200+", lbl: "Enterprise Clients" },
+    { val: "14.8x", lbl: "Average Client ROI" },
+    { val: "99.99%", lbl: "Architecture SLA" },
+    { val: "5.0 / 5.0", lbl: "Client Satisfaction" }
+  ];
+
   return (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: "\n    <!-- Preloader -->\n    \n\n    <!-- Main Header -->\n    \n\n    <!-- Inner Banner Section -->\n    <!-- <section>\n        <div class=\"max-width half-padding page-title\">\n          <div class=\"page-title-h1-wrapper\">\n            <h1\n              class=\"page-title-h1 text-dark-grey text-center qt-display-text qt-fw-bold qt-lh-small\"\n            >\n              Testimonials\n            </h1>\n          </div>\n          <div class=\"d-text text-center sub-heading-padding-top\">\n            Clients Share Their Experience\n          </div>\n        </div>\n      </section> -->\n    <!--End Banner Section -->\n\n    <section class=\"full-width testimonial-main-section\">\n      <div class=\"full-padding max-width\">\n        <div class=\"test-main\">\n          <div class=\"responsive-testimonial\">\n            <div class=\"test-section\">\n              <div>\n                <p class=\"text-dark-grey text-justify qt-quote-text qt-fw-normal qt-lh-large\">\n                  Partnering with Qrioustech Team LLP has been a seamless\n                  experience. Their developers are highly skilled,\n                  professional, and adaptable to complex requirements. The\n                  team consistently delivers high-quality solutions that meet\n                  our project goals. Their expertise across various domains,\n                  including healthcare and service-based industries, has been\n                  invaluable.\n                </p>\n\n                <svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#ed693a\" class=\"quotes-l\" height=\"80px\" weight=\"80px\">\n                  <g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g>\n                  <g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g>\n                  <g id=\"SVGRepo_iconCarrier\">\n                    <g>\n                      <path fill=\"none\" d=\"M0 0h24v24H0z\"></path>\n                      <path d=\"M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z\">\n                      </path>\n                    </g>\n                  </g>\n                </svg>\n                <div class=\"svg-container\">\n                  <svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#ed693a\" height=\"80px\" weight=\"80px\" class=\"quotes-r\">\n                    <g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g>\n                    <g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g>\n                    <g id=\"SVGRepo_iconCarrier\">\n                      <g>\n                        <path fill=\"none\" d=\"M0 0h24v24H0z\"></path>\n                        <path d=\"M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179zm-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311C4.591 12.322 3.17 10.841 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179z\">\n                        </path>\n                      </g>\n                    </g>\n                  </svg>\n                </div>\n              </div>\n            </div>\n            <div class=\"test-info\">\n              <div class=\"test-image\">\n                <div class=\"initial-avatar bg-1\">SR</div>\n              </div>\n              <div class=\"text-dark-grey qt-title-text qt-fw-bold qt-lh-large\">\n                STUART ROX\n              </div>\n              <p class=\"text-light-grey qt-quote-cite-text qt-fw-bold qt-lh-large mb-0\">\n                Founder / CEO\n              </p>\n              <div class=\"review-star\"></div>\n            </div>\n          </div>\n          <div class=\"responsive-testimonial\">\n            <div class=\"test-section order-2\">\n              <p class=\"text-dark-grey text-justify qt-quote-text qt-fw-normal qt-lh-large\">\n                We were impressed by Qrioustech Team LLP's commitment to\n                excellence. Their developers integrated effortlessly into our\n                existing team, contributing innovative ideas and solutions.\n                From CRM development to AI-driven projects, their technical\n                proficiency ensured the success of our initiatives. Highly\n                recommended for businesses seeking reliable development\n                support.\n              </p>\n              <svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#ed693a\" class=\"quotes-l\" height=\"80px\" weight=\"80px\">\n                <g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g>\n                <g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g>\n                <g id=\"SVGRepo_iconCarrier\">\n                  <g>\n                    <path fill=\"none\" d=\"M0 0h24v24H0z\"></path>\n                    <path d=\"M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z\">\n                    </path>\n                  </g>\n                </g>\n              </svg>\n              <div class=\"svg-container\">\n                <svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#ed693a\" height=\"80px\" weight=\"80px\" class=\"quotes-r\">\n                  <g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g>\n                  <g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g>\n                  <g id=\"SVGRepo_iconCarrier\">\n                    <g>\n                      <path fill=\"none\" d=\"M0 0h24v24H0z\"></path>\n                      <path d=\"M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179zm-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311C4.591 12.322 3.17 10.841 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179z\">\n                      </path>\n                    </g>\n                  </g>\n                </svg>\n              </div>\n            </div>\n            <div class=\"test-info\">\n              <div class=\"test-image\">\n                <div class=\"initial-avatar bg-2\">LP</div>\n              </div>\n              <div class=\"text-dark-grey qt-title-text qt-fw-bold qt-lh-large\">\n                LOREL PARKER\n              </div>\n              <p class=\"text-light-grey qt-quote-cite-text qt-fw-bold qt-lh-large mb-0\">\n                CTO\n              </p>\n              <div class=\"review-star\"></div>\n            </div>\n          </div>\n          <div class=\"responsive-testimonial\">\n            <div class=\"test-section\">\n              <p class=\"text-dark-grey text-justify qt-quote-text qt-fw-normal qt-lh-large\">\n                Qrioustech Team LLP has been a game-changer for our business.\n                Their expertise in Mobile Apps and CRM implementation helped\n                us achieve significant milestones. Despite the complexity of\n                our project in the oil industry, their team delivered beyond\n                expectations. Their ability to work discreetly and efficiently\n                is unmatched.\n              </p>\n              <svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#ed693a\" class=\"quotes-l\" height=\"80px\" weight=\"80px\">\n                <g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g>\n                <g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g>\n                <g id=\"SVGRepo_iconCarrier\">\n                  <g>\n                    <path fill=\"none\" d=\"M0 0h24v24H0z\"></path>\n                    <path d=\"M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z\">\n                    </path>\n                  </g>\n                </g>\n              </svg>\n              <div class=\"svg-container\">\n                <svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#ed693a\" height=\"80px\" weight=\"80px\" class=\"quotes-r\">\n                  <g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g>\n                  <g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g>\n                  <g id=\"SVGRepo_iconCarrier\">\n                    <g>\n                      <path fill=\"none\" d=\"M0 0h24v24H0z\"></path>\n                      <path d=\"M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179zm-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311C4.591 12.322 3.17 10.841 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179z\">\n                      </path>\n                    </g>\n                  </g>\n                </svg>\n              </div>\n            </div>\n            <div class=\"test-info\">\n              <div class=\"test-image\">\n                <div class=\"initial-avatar bg-3\">SO</div>\n              </div>\n              <div class=\"text-dark-grey qt-title-text qt-fw-bold qt-lh-large\">\n                SHOTA ODA\n              </div>\n              <p class=\"text-light-grey qt-quote-cite-text qt-fw-bold qt-lh-large mb-0\">\n                CEO\n              </p>\n              <div class=\"review-star\"></div>\n            </div>\n          </div>\n          <div class=\"responsive-testimonial\">\n            <div class=\"test-section order-2\">\n              <p class=\"text-dark-grey text-justify qt-quote-text qt-fw-normal qt-lh-large\">\n                The Qrioustech team exceeded our expectations. Their proactive\n                approach and technical knowledge in music-related projects\n                brought our vision to life. Their ability to collaborate and\n                deliver under tight deadlines was truly commendable. We look\n                forward to working with them on future endeavors.\n              </p>\n              <svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#ed693a\" class=\"quotes-l\" height=\"80px\" weight=\"80px\">\n                <g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g>\n                <g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g>\n                <g id=\"SVGRepo_iconCarrier\">\n                  <g>\n                    <path fill=\"none\" d=\"M0 0h24v24H0z\"></path>\n                    <path d=\"M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z\">\n                    </path>\n                  </g>\n                </g>\n              </svg>\n              <div class=\"svg-container\">\n                <svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#ed693a\" height=\"80px\" weight=\"80px\" class=\"quotes-r\">\n                  <g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g>\n                  <g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g>\n                  <g id=\"SVGRepo_iconCarrier\">\n                    <g>\n                      <path fill=\"none\" d=\"M0 0h24v24H0z\"></path>\n                      <path d=\"M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179zm-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311C4.591 12.322 3.17 10.841 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179z\">\n                      </path>\n                    </g>\n                  </g>\n                </svg>\n              </div>\n            </div>\n            <div class=\"test-info\">\n              <div class=\"test-image\">\n                <div class=\"initial-avatar bg-4\">SP</div>\n              </div>\n              <div class=\"text-dark-grey qt-title-text qt-fw-bold qt-lh-large\">\n                SHIN PAUL\n              </div>\n              <p class=\"text-light-grey qt-quote-cite-text qt-fw-bold qt-lh-large mb-0\">\n                Co-Founder / Managing Director\n              </p>\n              <div class=\"review-star\"></div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n    <section id=\"tp-contact\" class=\"full-width\">\n      <div class=\"map-pattern-layer\"></div>\n      <div class=\"half-padding max-width\">\n        <div>\n          <div class=\"row clearfix responsive-gap\">\n            <!--Text Column-->\n            <div class=\"text-column col-lg-9 col-md-12 col-sm-12\">\n              <div class=\"inner\">\n                <div>\n                  <h2 class=\"text-white text-left qt-title-text qt-fw-bold qt-lh-large\">\n                    Connect <span class=\"text-orange\">With Us</span>\n                  </h2>\n                  <h3 class=\"text-white text-left qt-subtitle-text text-capitalize qt-fw-normal qt-lh-small\">\n                    Want to work\n                    <strong><span> With Us ?</span></strong>\n                  </h3>\n                </div>\n              </div>\n            </div>\n            <!--Form Column-->\n            <div class=\"form-column col-lg-3 col-md-12 col-sm-12 d-flex justify-content-center align-items-center\">\n              <div class=\"inner\">\n                <!--Form Box-->\n                <div class=\"form-box\">\n                  <div class=\"default-form appointment-form\">\n                    <!-- <form method=\"post\"> -->\n                    <div class=\"row clearfix\">\n                      <div class=\"form-group col-md-12 col-sm-12\">\n                        <button type=\"submit\" class=\"theme-btn btn-style-one\" onclick=\"window.location.href='contact.html';\">\n                          <span class=\"btn-title qt-button-text\">Let's Connect</span>\n                        </button>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n    <section class=\"full-width half-padding\"></section>\n    \n  "
-      }}
-    />
+    <div className="min-h-screen bg-[#07080b] text-[#f8fafc] py-16 md:py-24 relative overflow-hidden">
+      <div className="ambient-glow-top"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-24">
+        
+        {/* 1. Hero Section */}
+        <div className="max-w-4xl text-left space-y-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs font-mono text-[#ff8a48]">
+            <Quote className="w-3.5 h-3.5" />
+            <span>Social Proof // Executive Endorsements</span>
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.08]">
+            Trusted by Visionary Leaders & <br />
+            <span className="text-[#ff8a48]">Global Enterprise CTOs</span>
+          </h1>
+
+          <p className="text-zinc-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl">
+            Discover how leading technology executives, venture-backed founders, and digital health pioneers partner with Qrious Tech to architect mission-critical systems with uncompromising rigor.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4 pt-2">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold bg-white text-[#07080b] hover:bg-zinc-200 transition-all shadow-[0_2px_20px_rgba(255,255,255,0.2)]"
+            >
+              <span>Schedule Architecture Review</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-zinc-300 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 transition-all"
+            >
+              <span>Browse 37+ Case Studies</span>
+            </Link>
+          </div>
+
+          {/* Guarantees */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-white/[0.08] text-xs font-mono text-zinc-400">
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span>Strict Mutual NDA Protected</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Award className="w-4 h-4 text-[#ff8a48] shrink-0" />
+              <span>Verified Client Outcomes</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Zap className="w-4 h-4 text-cyan-400 shrink-0" />
+              <span>Zero Body-Shopping</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Building2 className="w-4 h-4 text-purple-400 shrink-0" />
+              <span>Fortune 500 Ready</span>
+            </div>
+          </div>
+        </div>
+
+        {/* 2. Impact Stats Ticker */}
+        <div className="p-8 sm:p-12 rounded-3xl bg-[#0c0e16] border border-white/[0.08] space-y-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((s, idx) => (
+              <div key={idx} className="text-center sm:text-left space-y-1">
+                <div className="text-3xl sm:text-5xl font-black text-white font-mono tracking-tight">
+                  {s.val}
+                </div>
+                <div className="text-xs uppercase font-medium text-zinc-400 tracking-wider">
+                  {s.lbl}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 3. Testimonials Grid & Category Filters */}
+        <div className="space-y-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <div className="text-xs font-mono uppercase tracking-widest text-[#ff8a48] mb-2">
+                Client Reviews
+              </div>
+              <h2 className="text-3xl font-bold text-white tracking-tight">
+                What Engineering Leaders Say About Us
+              </h2>
+            </div>
+
+            {/* Category Tabs */}
+            <div className="flex flex-wrap gap-2">
+              {[
+                { id: "all", label: "All Reviews" },
+                { id: "enterprise", label: "Enterprise" },
+                { id: "healthcare", label: "Healthcare" },
+                { id: "fintech", label: "Fintech" },
+                { id: "saas", label: "SaaS" },
+                { id: "retail", label: "Retail" }
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setFilter(tab.id)}
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-mono transition-all ${
+                    filter === tab.id
+                      ? "bg-white text-[#07080b] font-semibold"
+                      : "bg-white/[0.04] text-zinc-400 hover:text-white border border-white/[0.06]"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredTestimonials.map((t) => (
+              <div 
+                key={t.id}
+                className="p-8 rounded-3xl bg-[#0c0e16] border border-white/[0.08] hover:border-white/20 transition-all flex flex-col justify-between space-y-6"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-1 text-[#ff8a48]">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-[#ff8a48]" />
+                      ))}
+                    </div>
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500 bg-white/[0.03] px-2 py-0.5 rounded border border-white/[0.04]">
+                      {t.category.toUpperCase()}
+                    </span>
+                  </div>
+
+                  <p className="text-sm text-zinc-300 leading-relaxed italic">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                </div>
+
+                <div className="pt-6 border-t border-white/[0.06] space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#ff5a1f] to-[#ff8a48] p-[1px] shrink-0">
+                      <div className="w-full h-full bg-[#07080b] rounded-full flex items-center justify-center font-mono font-bold text-xs text-[#ff8a48]">
+                        {t.author.split(" ").map(n => n[0]).join("")}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-sm font-bold text-white leading-tight">{t.author}</div>
+                      <div className="text-xs text-zinc-400">{t.role}</div>
+                      <div className="text-[11px] font-mono text-zinc-500">{t.company}</div>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {t.tags.map((tag, i) => (
+                      <span key={i} className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/[0.03] text-zinc-400 border border-white/[0.04]">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 4. Bottom Executive CTA */}
+        <div className="p-10 sm:p-14 rounded-3xl bg-gradient-to-br from-[#0c0e16] via-[#111422] to-[#0c0e16] border border-[#ff6b2b]/30 shadow-[0_10px_50px_rgba(255,107,43,0.1)] relative overflow-hidden">
+          <div className="max-w-2xl space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ff6b2b]/10 border border-[#ff6b2b]/20 text-xs font-mono text-[#ff8a48]">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Partner with Experience</span>
+            </div>
+            <h3 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Ready to achieve measurable enterprise velocity?
+            </h3>
+            <p className="text-sm sm:text-base text-zinc-300 leading-relaxed">
+              Join over 200 enterprises that trust Qrious Tech with their mission-critical AI systems, cloud platforms, and engineering pods.
+            </p>
+            <div className="pt-2 flex flex-wrap gap-4">
+              <Link
+                href="/contact"
+                className="px-6 py-3.5 rounded-full text-sm font-semibold bg-white text-[#07080b] hover:bg-zinc-200 transition-all shadow-lg flex items-center gap-2"
+              >
+                <span>Schedule Architectural Discovery</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/case-studies"
+                className="px-6 py-3.5 rounded-full text-sm font-semibold text-zinc-300 hover:text-white bg-white/[0.05] border border-white/10 transition-all"
+              >
+                <span>Explore Client Case Studies</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   );
 }

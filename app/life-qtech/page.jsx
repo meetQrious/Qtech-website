@@ -1,17 +1,286 @@
-import React from "react";
+"use client";
 
-export const metadata = {
-  title: "Qrious TechHappy Face",
-  description: "",
-  keywords: "",
-};
+import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { 
+  Sparkles, 
+  Heart, 
+  Trophy, 
+  Users, 
+  ArrowRight, 
+  CheckCircle2, 
+  Calendar, 
+  Coffee, 
+  Zap, 
+  Smile,
+  Compass
+} from "lucide-react";
 
-export default function Page() {
+export default function LifeQtechPage() {
+  const [activeTab, setActiveTab] = useState("all");
+
+  const values = [
+    {
+      title: "Relentless Curiosity",
+      desc: "We are obsessed with how things work under the hood. We encourage open-source experimentation, weekly architecture teardowns, and deep exploration of frontier models.",
+      icon: Compass
+    },
+    {
+      title: "Extreme Ownership",
+      desc: "Every engineer has direct ownership of their deliverables. From initial PR design to production telemetry, we celebrate initiative and pride of craftsmanship.",
+      icon: Zap
+    },
+    {
+      title: "Radical Transparency",
+      desc: "Information flows freely. No hidden silos, no gatekeeping. Executive leadership is directly accessible, and our sprint planning is open to the entire company.",
+      icon: Users
+    },
+    {
+      title: "Celebration & Joy",
+      desc: "Great engineering deserves great celebrations. From celebrating team birthdays and festive traditions to weekend sports tournaments, we work hard and celebrate together.",
+      icon: Smile
+    }
+  ];
+
+  const galleryItems = [
+    {
+      title: "Annual Excellence Awards",
+      category: "milestones",
+      img: "/images/resource/awards.webp",
+      caption: "Honoring outstanding architectural and delivery achievements across our engineering pods."
+    },
+    {
+      title: "Festival Celebrations",
+      category: "festivals",
+      img: "/images/festival/festival-1.webp",
+      caption: "Embracing cultural diversity with colorful festivities, traditional cuisine, and team bonding."
+    },
+    {
+      title: "Weekend Team Celebrations",
+      category: "weekends",
+      img: "/images/weekend/weekend-1.webp",
+      caption: "Unwinding after high-velocity sprint deliveries with games, team dinners, and relaxed hangouts."
+    },
+    {
+      title: "Birthday & Milestone Parties",
+      category: "milestones",
+      img: "/images/birthday/birthday-main.webp",
+      caption: "Every team member's birthday and work anniversary is celebrated with cake and fun rituals."
+    },
+    {
+      title: "Innovation Summit & Tech Sprints",
+      category: "hackathons",
+      img: "/images/resource/IMG_2530.webp",
+      caption: "Hackathon brainstorms where engineers build proof-of-concepts using emerging AI frameworks."
+    },
+    {
+      title: "Workplace Happy Hours",
+      category: "weekends",
+      img: "/images/resource/IMG_7618.webp",
+      caption: "Friday happy hours filled with gaming tournaments, snacks, and lively technical banter."
+    }
+  ];
+
+  const filteredGallery = galleryItems.filter(
+    item => activeTab === "all" || item.category === activeTab
+  );
+
   return (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: "\n    <!-- Preloader -->\n    \n\n    <!-- Main Header -->\n    \n    <!-- End Main Header -->\n\n    <!-- Inner Banner Section -->\n    <!-- <section>\n        <div class=\"max-width half-padding page-title\">\n          <div class=\"page-title-h1-wrapper\">\n            <h1\n              class=\"page-title-h1 text-dark-grey text-center qt-display-text qt-fw-bold qt-lh-small\"\n            >\n              Life & Culture at Qtech\n            </h1>\n          </div>\n          <div class=\"d-text text-center sub-heading-padding-top\">\n            A lively mix of teamwork, creativity, and personal growth, making\n            every day an exciting journey.\n          </div>\n        </div>\n      </section> -->\n    <!--End Banner Section -->\n\n    <section class=\"top-full-padding\">\n      <h2 class=\"text-light-grey text-center qt-title-text qt-fw-bold qt-lh-large\">\n        Life <span class=\"text-orange\">@ Qtech</span>\n      </h2>\n      <h3 class=\"text-dark-grey text-center qt-subtitle-text text-capitalize qt-fw-normal qt-lh-small pb-5\">\n        A Culture of Collaboration and <strong>Growth</strong>\n      </h3>\n      <div class=\"life-at-qtech-img-gallery max-width bottom-half-padding\">\n        <div class=\"gallery-main\">\n          <div class=\"gallery__column\">\n            <div class=\"gallery__item\">\n              <img src=\"/images/life-at-qtech-1.png\" alt=\"\">\n            </div>\n            <div class=\"gallery__item gallery__item--vert\">\n              <img src=\"/images/resource/IMG_2738.webp\" alt=\"\">\n            </div>\n          </div>\n          <div class=\"gallery__item gallery__item--center\">\n            <!-- <img src=\"images/4.webp\" alt=\"\" /> -->\n            <img src=\"/images/resource/IMG_2530.webp\" alt=\"\">\n          </div>\n          <div class=\"gallery__column\">\n            <div class=\"gallery__item gallery__item--vert\">\n              <img src=\"/images/resource/IMG_7698.webp\" alt=\"\">\n            </div>\n            <div class=\"gallery__item\">\n              <img src=\"/images/home-page-3.webp\" alt=\"\">\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n\n    <!-- happy hours section -->\n    <section class=\"full-width\">\n      <div class=\"full-padding\" style=\"overflow: hidden\">\n        <h2 class=\"text-light-grey text-center qt-title-text qt-fw-bold qt-lh-large\">\n          Workplace Happy <span class=\"text-orange\">Hours</span>\n        </h2>\n        <h3 class=\"text-dark-grey text-center qt-subtitle-text text-capitalize qt-fw-normal qt-lh-small pb-5\">\n          Vibrant celebrations define our<strong> Cultural Essence</strong>\n        </h3>\n        <div class=\"scroll-content\">\n          <div class=\"photobanner main-scroll-content\">\n            <img loading=\"lazy\" class=\"first\" src=\"/images/resource/IMG_7618.webp\" alt=\"\">\n            <img loading=\"lazy\" src=\"/images/resource/IMG_3318.webp\" alt=\"\">\n            <img loading=\"lazy\" src=\"/images/resource/IMG_7554.webp\" alt=\"\">\n            <img loading=\"lazy\" src=\"/images/resource/ASU07005.webp\" alt=\"\">\n            <img loading=\"lazy\" src=\"/images/resource/IMG_2294.webp\" alt=\"\">\n            <img loading=\"lazy\" src=\"/images/resource/IMG_2530.webp\" alt=\"\">\n            <img loading=\"lazy\" src=\"/images/resource/IMG_7107.webp\" alt=\"\">\n            <img loading=\"lazy\" src=\"/images/resource/IMG_7616.webp\" alt=\"\">\n            <img loading=\"lazy\" src=\"/images/resource/IMG_1480.webp\" alt=\"\">\n            <img loading=\"lazy\" src=\"/images/resource/ASU07123.webp\" alt=\"\">\n            <img loading=\"lazy\" src=\"/images/resource/IMG_8803.webp\" alt=\"\">\n            <img loading=\"lazy\" src=\"/images/resource/ASU07328.webp\" alt=\"\">\n            <img loading=\"lazy\" src=\"/images/resource/awards.webp\" alt=\"\">\n            <img loading=\"lazy\" src=\"/images/resource/DSC_0404.webp\" alt=\"\">\n            <img loading=\"lazy\" src=\"/images/resource/IMG_1485.webp\" alt=\"\">\n          </div>\n        </div>\n        <!-- <p class=\"happy-content\">\n                  At Qtech, we prioritize the well-being of our employees by\n                  cultivating a positive workplace atmosphere. Our work culture is\n                  centered around hiring the right talent and empowering them with\n                  freedom-focused, result-oriented environments to tackle challenges\n                  and deliver exceptional value.\n                </p> -->\n      </div>\n    </section>\n    <!-- insta life  -->\n    <section class=\"full-width top-full-padding pl-0 pr-0\">\n      <h2 class=\"text-light-grey text-center qt-title-text qt-fw-bold qt-lh-large\">\n        Insta Life <span class=\"text-orange\">@ Qtech</span>\n      </h2>\n      <h3 class=\"text-dark-grey text-center qt-subtitle-text text-capitalize qt-fw-normal qt-lh-small pb-5\">\n        Capturing Life's<strong> Highlights</strong>\n      </h3>\n      <div class=\"upper-row reels-section\">\n        <!-- <button class=\"prev\" >\n            <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><path d=\"M32 15H3.41l8.29-8.29-1.41-1.42-10 10a1 1 0 0 0 0 1.41l10 10 1.41-1.41L3.41 17H32z\" data-name=\"4-Arrow Left\"/></svg>\n          </button>\n\n\n          <button class=\"next\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><path d=\"M32 15H3.41l8.29-8.29-1.41-1.42-10 10a1 1 0 0 0 0 1.41l10 10 1.41-1.41L3.41 17H32z\" data-name=\"4-Arrow Left\"/></svg>\n          </button> -->\n\n        <div class=\"arrow-buttons-custom prev\" onclick=\"handlePrevReel()\">\n          <button class=\"button-custom\">\n            <div class=\"button-box-custom\">\n              <span class=\"button-elem-custom\">\n                <svg viewBox=\"0 0 46 40\" xmlns=\"http://www.w3.org/2000/svg\">\n                  <path d=\"M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z\">\n                  </path>\n                </svg>\n              </span>\n              <span class=\"button-elem-custom\">\n                <svg viewBox=\"0 0 46 40\">\n                  <path d=\"M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z\">\n                  </path>\n                </svg>\n              </span>\n            </div>\n          </button>\n        </div>\n        <div class=\"arrow-buttons-custom next\" onclick=\"handleNextReel()\">\n          <button class=\"button-custom\">\n            <div class=\"button-box-custom\">\n              <span class=\"button-elem-custom\">\n                <svg viewBox=\"0 0 46 40\" xmlns=\"http://www.w3.org/2000/svg\">\n                  <path d=\"M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z\">\n                  </path>\n                </svg>\n              </span>\n              <span class=\"button-elem-custom\">\n                <svg viewBox=\"0 0 46 40\">\n                  <path d=\"M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z\">\n                  </path>\n                </svg>\n              </span>\n            </div>\n          </button>\n        </div>\n\n        <section id=\"carousel\">\n          <div class=\"carousel\">\n            <div class=\"scroll-container carousel-main gallery\">\n              <div class=\"scroll-item horizontal-scroll\">\n                <a data-fancybox=\"gallery\" href=\"images/video/republic.mp4\" class=\"item\" id=\"carousel-id\">\n                  <div class=\"item item-1\"></div>\n                </a>\n                <video id=\"myVideo\" style=\"display: none\">\n                  <source type=\"video/mp4\">\n                </video>\n              </div>\n              <div class=\"scroll-item horizontal-scroll\">\n                <a data-fancybox=\"gallery\" href=\"images/video/diwali.mp4\" class=\"item\" id=\"carousel-id\">\n                  <div class=\"item item-2\"></div>\n                </a>\n                <video id=\"myVideo\" style=\"display: none\">\n                  <source type=\"video/mp4\">\n                </video>\n              </div>\n              <div class=\"scroll-item horizontal-scroll\">\n                <a data-fancybox=\"gallery\" href=\"images/video/chrismas.mp4\" class=\"item\" id=\"carousel-id\">\n                  <div class=\"item item-3\"></div>\n                </a>\n                <video id=\"myVideo\" style=\"display: none\">\n                  <source type=\"video/mp4\">\n                </video>\n              </div>\n              <div class=\"scroll-item horizontal-scroll\">\n                <a data-fancybox=\"gallery\" href=\"images/video/saturday-fun.mp4\" class=\"item\" id=\"carousel-id\">\n                  <div class=\"item item-4\"></div>\n                </a>\n                <video id=\"myVideo\" style=\"display: none\">\n                  <source type=\"video/mp4\">\n                </video>\n              </div>\n              <div class=\"scroll-item horizontal-scroll\">\n                <a data-fancybox=\"gallery\" href=\"images/video/independence.mp4\" class=\"item\" id=\"carousel-id\">\n                  <div class=\"item item-5\"></div>\n                </a>\n                <video id=\"myVideo\" style=\"display: none\">\n                  <source type=\"video/mp4\">\n                </video>\n              </div>\n              <div class=\"scroll-item horizontal-scroll\">\n                <a data-fancybox=\"gallery\" href=\"images/video/funny-1.mp4\" class=\"item\" id=\"carousel-id\">\n                  <div class=\"item item-6\"></div>\n                </a>\n                <video id=\"myVideo\" style=\"display: none\">\n                  <source type=\"video/mp4\">\n                </video>\n              </div>\n              <div class=\"scroll-item horizontal-scroll\">\n                <a data-fancybox=\"gallery\" href=\"images/video/lunch.mp4\" class=\"item\" id=\"carousel-id\">\n                  <div class=\"item item-7\"></div>\n                </a>\n                <video id=\"myVideo\" style=\"display: none\">\n                  <source type=\"video/mp4\">\n                </video>\n              </div>\n              <div class=\"scroll-item horizontal-scroll\">\n                <a data-fancybox=\"gallery\" href=\"images/video/udaipur.mp4\" class=\"item\" id=\"carousel-id\">\n                  <div class=\"item item-8\"></div>\n                </a>\n                <video id=\"myVideo\" style=\"display: none\">\n                  <source type=\"video/mp4\">\n                </video>\n              </div>\n              <div class=\"scroll-item horizontal-scroll\">\n                <a data-fancybox=\"gallery\" href=\"images/video/funny-2.mp4\" class=\"item\" id=\"carousel-id\">\n                  <div class=\"item item-9\"></div>\n                </a>\n                <video id=\"myVideo\" style=\"display: none\">\n                  <source type=\"video/mp4\">\n                </video>\n              </div>\n              <div class=\"scroll-item horizontal-scroll\">\n                <a data-fancybox=\"gallery\" href=\"images/video/funny-3.mp4\" class=\"item\" id=\"carousel-id\">\n                  <div class=\"item item-10\"></div>\n                </a>\n                <video id=\"myVideo\" style=\"display: none\">\n                  <source type=\"video/mp4\">\n                </video>\n              </div>\n            </div>\n          </div>\n        </section>\n      </div>\n    </section>\n\n    <!-- join our team -->\n    <section class=\"full-width\">\n      <div class=\"col-md-12 col-sm-12 bottom-full-padding max-width pt-0\" style=\"display: flex; justify-content: center; width: 100%\">\n        <a href=\"crew\" class=\"theme-btn btn-style-one hover-effect\">\n          <span class=\"btn-title\">Join Our Team</span>\n        </a>\n      </div>\n    </section>\n\n    <!-- perks of being -->\n    <section id=\"modern-platform-section\" class=\"full-width\">\n      <div class=\"modern-container-wrapper full-padding max-width\">\n        <div class=\"modern-container\">\n          <div class=\"technology-info\" style=\"padding-right: 0\">\n            <h2 class=\"text-white text-left qt-title-text qt-fw-bold qt-lh-large pb-3\">\n              Perks <span class=\"text-orange\">@ Qtech</span>\n            </h2>\n            <h3 class=\"text-white text-left qt-subtitle-text text-capitalize qt-fw-normal qt-lh-small pb-3\">\n              Positives of being part of the<strong class=\"text-white\">\n                Qtech Team</strong>\n            </h3>\n            <p class=\"text-white text-justify qt-intro-text qt-fw-normal qt-lh-large\">\n              At Qtech, you'll find a fun and lively workplace with lots of\n              chances to learn and grow. We support each other and come up\n              with new ideas together.\n            </p>\n          </div>\n          <ul class=\"technology-list perks-hover perks-list\">\n            <li>\n              <a>\n                <svg fill=\"#323232\" width=\"50px\" height=\"50px\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n                  <path d=\"M19,4H17V3a1,1,0,0,0-2,0V4H9V3A1,1,0,0,0,7,3V4H5A3,3,0,0,0,2,7V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4Zm1,15a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V12H20Zm0-9H4V7A1,1,0,0,1,5,6H7V7A1,1,0,0,0,9,7V6h6V7a1,1,0,0,0,2,0V6h2a1,1,0,0,1,1,1Z\"></path>\n                </svg>\n                <span>5 Days a Week</span>\n              </a>\n            </li>\n            <li>\n              <a>\n                <svg width=\"50px\" height=\"50px\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"fill-with-stroke\">\n                  <path d=\"M14.9999 15.2547C13.8661 14.4638 12.4872 14 10.9999 14C7.40399 14 4.44136 16.7114 4.04498 20.2013C4.01693 20.4483 4.0029 20.5718 4.05221 20.6911C4.09256 20.7886 4.1799 20.8864 4.2723 20.9375C4.38522 21 4.52346 21 4.79992 21H9.94465M13.9999 19.2857L15.7999 21L19.9999 17M14.9999 7C14.9999 9.20914 13.2091 11 10.9999 11C8.79078 11 6.99992 9.20914 6.99992 7C6.99992 4.79086 8.79078 3 10.9999 3C13.2091 3 14.9999 4.79086 14.9999 7Z\" stroke=\"#323232\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n                </svg>\n                <span>Employee First</span>\n              </a>\n            </li>\n            <li>\n              <a>\n                <svg fill=\"#323232\" width=\"50px\" height=\"50px\" viewBox=\"0 0 24 24\" id=\"reward-5\" data-name=\"Line Color\" xmlns=\"http://www.w3.org/2000/svg\" class=\"icon line-color fill-with-stroke\">\n                  <g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g>\n\n                  <g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g>\n\n                  <g id=\"SVGRepo_iconCarrier\">\n                    <polyline id=\"secondary\" points=\"10 10 11.33 11.5 14 8.5\" style=\"\n                          fill: none;\n                          stroke: #323232;\n                          stroke-linecap: round;\n                          stroke-linejoin: round;\n                          stroke-width: 2;\n                        \" class=\"fill-with-polyline\"></polyline>\n\n                    <polyline id=\"primary\" points=\"16.11 15.66 17 21 12 20 7 21 7.89 15.66\" style=\"\n                          fill: none;\n                          stroke: #323232;\n                          stroke-linecap: round;\n                          stroke-linejoin: round;\n                          stroke-width: 2;\n                        \" class=\"fill-with-polyline\"></polyline>\n\n                    <circle id=\"primary-2\" data-name=\"primary\" cx=\"12\" cy=\"10\" r=\"7\" style=\"\n                          fill: none;\n                          stroke: #323232;\n                          stroke-linecap: round;\n                          stroke-linejoin: round;\n                          stroke-width: 2;\n                        \" class=\"fill-with-polyline\"></circle>\n                  </g>\n                </svg>\n                <span>Rewards Benefits</span>\n              </a>\n            </li>\n\n            <li>\n              <a>\n                <svg fill=\"#323232\" width=\"50px\" height=\"50px\" viewBox=\"0 0 32 32\" style=\"\n                      fill-rule: evenodd;\n                      clip-rule: evenodd;\n                      stroke-linejoin: round;\n                      stroke-miterlimit: 2;\n                    \" version=\"1.1\" xml:space=\"preserve\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:serif=\"http://www.serif.com/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" stroke=\"#323232\" stroke-width=\"0.544\" class=\"fill-stroke-both\">\n                  <g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g>\n\n                  <g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g>\n\n                  <g id=\"SVGRepo_iconCarrier\">\n                    <path d=\"M4.234,6.266c-1.409,1.45 -2.202,3.415 -2.202,5.464c-0,2.05 0.793,4.015 2.202,5.464l9.625,9.899c0.568,0.584 1.339,0.91 2.143,0.91c0.803,0 1.575,-0.326 2.143,-0.91c1.743,-1.793 9.617,-9.907 9.617,-9.907c1.409,-1.449 2.202,-3.414 2.202,-5.464c0,-2.05 -0.793,-4.014 -2.202,-5.464c-0,0 -0,0 -0,0c-1.419,-1.459 -3.345,-2.277 -5.352,-2.277c-2.007,-0 -3.932,0.818 -5.351,2.277c-0,0 -1.065,1.095 -1.065,1.095c0,0 -1.057,-1.087 -1.057,-1.087c-1.419,-1.459 -3.344,-2.277 -5.351,-2.277c-2.007,0 -3.933,0.818 -5.352,2.277m1.434,1.395c1.039,-1.069 2.448,-1.672 3.918,-1.672c1.47,0 2.878,0.603 3.917,1.672c0,-0 1.774,1.824 1.774,1.824c0.188,0.193 0.447,0.303 0.717,0.303c0.27,-0 0.529,-0.11 0.717,-0.303l1.782,-1.833c1.039,-1.068 2.447,-1.671 3.917,-1.671c1.47,-0 2.878,0.603 3.918,1.671c0.003,0.004 0.006,0.007 0.01,0.011c1.039,1.069 1.626,2.533 1.626,4.059c0,1.526 -0.587,2.991 -1.636,4.07c-0,-0 -7.874,8.114 -9.617,9.907c-0.188,0.193 -0.443,0.304 -0.709,0.304c-0.266,0 -0.521,-0.111 -0.709,-0.304l-9.625,-9.899c-1.049,-1.079 -1.636,-2.544 -1.636,-4.07c-0,-1.526 0.587,-2.99 1.636,-4.069\"></path>\n\n                    <path d=\"M14.998,15.003l-1.997,-0c-0.552,-0 -1,0.448 -1,1c0,0.552 0.448,1 1,1l1.997,-0l-0,1.997c-0,0.552 0.448,1 1,1c0.552,-0 1,-0.448 1,-1l-0,-1.997l1.997,-0c0.552,-0 1,-0.448 1,-1c-0,-0.552 -0.448,-1 -1,-1l-1.997,-0l-0,-1.997c-0,-0.552 -0.448,-1 -1,-1c-0.552,0 -1,0.448 -1,1l-0,1.997Z\"></path>\n                  </g>\n                </svg>\n                <span>Healthy Living Support</span>\n              </a>\n            </li>\n            <li>\n              <a>\n                <svg width=\"50px\" height=\"50px\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"fill-with-stroke\">\n                  <path d=\"M20 18L17 18M17 18L14 18M17 18V15M17 18V21M11 21H4C4 17.134 7.13401 14 11 14C11.695 14 12.3663 14.1013 13 14.2899M15 7C15 9.20914 13.2091 11 11 11C8.79086 11 7 9.20914 7 7C7 4.79086 8.79086 3 11 3C13.2091 3 15 4.79086 15 7Z\" stroke=\"#323232\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n                </svg>\n                <span>Advanced Resources</span>\n              </a>\n            </li>\n            <li>\n              <a>\n                <svg width=\"50px\" height=\"50px\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"fill-with-stroke\">\n                  <path d=\"M9 11L11 13L15 9M19 10.2C19 14.1764 15.5 17.4 12 21C8.5 17.4 5 14.1764 5 10.2C5 6.22355 8.13401 3 12 3C15.866 3 19 6.22355 19 10.2Z\" stroke=\"#323232\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n                </svg>\n                <span>Onsite Opportunities</span>\n              </a>\n            </li>\n            <li>\n              <a>\n                <svg fill=\"#323232\" width=\"50px\" height=\"50px\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n                  <path d=\"M5,22a4,4,0,0,0,3.858-3h6.284a4.043,4.043,0,1,0,2.789-4.837L14.816,8.836a4,4,0,1,0-5.63,0L6.078,14.166A3.961,3.961,0,0,0,5,14a4,4,0,0,0,0,8Zm14-6a2,2,0,1,1-2,2A2,2,0,0,1,19,16ZM12,4a2,2,0,1,1-2,2A2,2,0,0,1,12,4ZM10.922,9.834A3.961,3.961,0,0,0,12,10a3.909,3.909,0,0,0,1.082-.168l3.112,5.323A4,4,0,0,0,15.142,17H8.858a3.994,3.994,0,0,0-1.044-1.838ZM5,16a2,2,0,1,1-2,2A2,2,0,0,1,5,16Z\"></path>\n                </svg>\n                <span>Referral Program</span>\n              </a>\n            </li>\n            <li>\n              <a>\n                <svg width=\"50px\" height=\"50px\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"fill-with-stroke\">\n                  <g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g>\n\n                  <g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g>\n\n                  <g id=\"SVGRepo_iconCarrier\">\n                    <path d=\"M13.3057 18.2975L8.23724 19.987C5.47183 20.9088 4.08912 21.3697 3.35924 20.6398C2.62936 19.9099 3.09026 18.5272 4.01207 15.7618L5.70156 10.6933C6.46758 8.39525 6.85059 7.24623 7.75684 7.03229C8.6631 6.81835 9.51953 7.67478 11.2324 9.38764L14.6114 12.7666C16.3242 14.4795 17.1807 15.3359 16.9667 16.2422\" stroke=\"#323232\" stroke-width=\"1.6799999999999997\" stroke-linecap=\"round\"></path>\n                    <path d=\"M12.2351 18.3461C12.2351 18.3461 11.477 16.0649 11.477 14.5552C11.477 13.0454 12.2351 10.7643 12.2351 10.7643M8.06517 19.4833C8.06517 19.4833 7.42484 16.7314 7.307 14.9343C7.11229 11.965 8.06517 7.35254 8.06517 7.35254\" stroke=\"#323232\" stroke-width=\"1.6799999999999997\" stroke-linecap=\"round\"></path>\n                    <path d=\"M14.5093 10.0061L14.6533 9.28614C14.7986 8.55924 15.3224 7.96597 16.0256 7.73155C16.7289 7.49714 17.2526 6.90387 17.398 6.17697L17.542 5.45703\" stroke=\"#323232\" stroke-width=\"1.6799999999999997\" stroke-linecap=\"round\"></path>\n                    <path d=\"M17.5693 13.2533L17.7822 13.3762C18.4393 13.7556 19.2655 13.6719 19.8332 13.1685C20.3473 12.7126 21.0794 12.597 21.709 12.8723L22.0005 12.9997\" stroke=\"#323232\" stroke-width=\"1.6799999999999997\" stroke-linecap=\"round\"></path>\n                    <path d=\"M9.79513 2.77903C9.45764 3.33109 9.54223 4.04247 9.99976 4.5L10.0976 4.59788C10.4908 4.99104 10.6358 5.56862 10.4749 6.10085\" stroke=\"#323232\" stroke-width=\"1.6799999999999997\" stroke-linecap=\"round\"></path>\n                    <path d=\"M6.92761 3.94079C7.13708 3.73132 7.47669 3.73132 7.68616 3.94079C7.89563 4.15026 7.89563 4.48988 7.68616 4.69935C7.47669 4.90882 7.13708 4.90882 6.92761 4.69935C6.71814 4.48988 6.71814 4.15026 6.92761 3.94079Z\" fill=\"#323232\"></path>\n                    <path d=\"M12.1571 7.1571C12.3666 6.94763 12.7062 6.94763 12.9157 7.1571C13.1251 7.36657 13.1251 7.70619 12.9157 7.91566C12.7062 8.12512 12.3666 8.12512 12.1571 7.91566C11.9476 7.70619 11.9476 7.36657 12.1571 7.1571Z\" fill=\"#323232\"></path>\n                    <path d=\"M17.1571 10.1571C17.3666 9.94763 17.7062 9.94763 17.9157 10.1571C18.1251 10.3666 18.1251 10.7062 17.9157 10.9157C17.7062 11.1251 17.3666 11.1251 17.1571 10.9157C16.9476 10.7062 16.9476 10.3666 17.1571 10.1571Z\" fill=\"#323232\"></path>\n                    <path d=\"M19.0582 15.3134C19.2677 15.1039 19.6073 15.1039 19.8168 15.3134C20.0262 15.5228 20.0262 15.8624 19.8168 16.0719C19.6073 16.2814 19.2677 16.2814 19.0582 16.0719C18.8488 15.8624 18.8488 15.5228 19.0582 15.3134Z\" fill=\"#323232\"></path>\n                    <path d=\"M19.3615 7.71436C18.6912 8.38463 19.1722 10.328 19.1722 10.328C19.1722 10.328 21.1156 10.809 21.7859 10.1387C22.4958 9.42884 22.0941 8.49708 21.0002 8.5C21.0032 7.40615 20.0714 7.00447 19.3615 7.71436Z\" stroke=\"#323232\" stroke-linejoin=\"round\"></path>\n                    <path d=\"M15.1884 3.41748L15.1608 3.51459C15.1305 3.62126 15.1153 3.67459 15.1225 3.72695C15.1296 3.77931 15.1583 3.82476 15.2157 3.91567L15.2679 3.99844C15.4698 4.31836 15.5707 4.47831 15.5019 4.60915C15.4332 4.73998 15.2402 4.75504 14.8544 4.78517L14.7546 4.79296C14.6449 4.80152 14.5901 4.8058 14.5422 4.83099C14.4943 4.85618 14.4587 4.89943 14.3875 4.98592L14.3226 5.06467C14.072 5.36905 13.9467 5.52124 13.8038 5.50167C13.6609 5.4821 13.595 5.30373 13.4632 4.94699L13.4291 4.85469C13.3916 4.75332 13.3729 4.70263 13.3361 4.66584C13.2993 4.62905 13.2486 4.61033 13.1472 4.57287L13.0549 4.53878C12.6982 4.40698 12.5198 4.34108 12.5003 4.19815C12.4807 4.05522 12.6329 3.92992 12.9373 3.67932L13.016 3.61448C13.1025 3.54327 13.1458 3.50767 13.1709 3.45974C13.1961 3.41181 13.2004 3.35699 13.209 3.24735L13.2168 3.14753C13.2469 2.76169 13.262 2.56877 13.3928 2.50001C13.5236 2.43124 13.6836 2.53217 14.0035 2.73403L14.0863 2.78626C14.1772 2.84362 14.2226 2.8723 14.275 2.87947C14.3273 2.88664 14.3807 2.87148 14.4873 2.84117L14.5845 2.81358C14.9598 2.70692 15.1475 2.65359 15.2479 2.75402C15.3483 2.85445 15.295 3.04213 15.1884 3.41748Z\" stroke=\"#323232\"></path>\n                  </g>\n                </svg>\n                <span>Fun Connect</span>\n              </a>\n            </li>\n            <li>\n              <a>\n                <svg width=\"50px\" height=\"50px\" viewBox=\"0 0 24 24\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" aria-labelledby=\"happyFaceIconTitle\" stroke=\"#323232\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\" class=\"fill-with-svg\">\n                  <title id=\"happyFaceIconTitle\">Happy Face</title>\n                  <path d=\"M7.3010863,14.0011479 C8.0734404,15.7578367 9.98813711,17 11.9995889,17 C14.0024928,17 15.913479,15.7546194 16.6925307,14.0055328\"></path>\n                  <line stroke-linecap=\"round\" x1=\"9\" y1=\"9\" x2=\"9\" y2=\"9\"></line>\n                  <line stroke-linecap=\"round\" x1=\"15\" y1=\"9\" x2=\"15\" y2=\"9\"></line>\n                  <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n                </svg>\n                <span>Environment</span>\n              </a>\n            </li>\n          </ul>\n        </div>\n      </div>\n    </section>\n\n    <!-- celebrations -->\n    <section class=\"full-width\">\n      <div class=\"max-width half-padding\">\n        <h2 class=\"text-light-grey text-center qt-title-text qt-fw-bold qt-lh-large\">\n          Celebrations <span class=\"text-orange\">@ Qtech</span>\n        </h2>\n        <h3 class=\"text-dark-grey text-center qt-subtitle-text text-capitalize qt-fw-normal qt-lh-small pb-5\">\n          Where We Celebrate<strong> Good Times!</strong>\n        </h3>\n        <div class=\"upper-row\">\n          <div class=\"row clearfix\">\n            <div class=\"news-block col-lg-4 col-md-6 col-sm-12\">\n              <div class=\"inner-box wow fadeInUp\" data-wow-delay=\"0ms\" data-wow-duration=\"1500ms\">\n                <div class=\"image-box\">\n                  <img src=\"/images/birthday/birthday-main.webp\" alt=\"\" title=\"\">\n                </div>\n                <div class=\"lower-box\">\n                  <h3>\n                    <a href=\"birthday-celebration\">Birthday Celebration</a>\n                  </h3>\n                  <div class=\"more-link\">\n                    <a href=\"birthday-celebration\">\n                      <span class=\"fa fa-arrow-right\"></span></a>\n                  </div>\n                </div>\n              </div>\n            </div>\n            <div class=\"news-block col-lg-4 col-md-6 col-sm-12\">\n              <div class=\"inner-box wow fadeInUp\" data-wow-delay=\"300ms\" data-wow-duration=\"1500ms\">\n                <div class=\"image-box\">\n                  <img src=\"/images/festival/festival-1.webp\" alt=\"\" title=\"\">\n                </div>\n                <div class=\"lower-box\">\n                  <h3>\n                    <a href=\"festival-celebration\">Festival Celebration</a>\n                  </h3>\n                  <div class=\"more-link\">\n                    <a href=\"festival-celebration\">\n                      <span class=\"fa fa-arrow-right\"></span></a>\n                  </div>\n                </div>\n              </div>\n            </div>\n            <div class=\"news-block col-lg-4 col-md-6 col-sm-12\">\n              <div class=\"inner-box wow fadeInUp\" data-wow-delay=\"600ms\" data-wow-duration=\"1500ms\">\n                <div class=\"image-box\">\n                  <img loading=\"lazy\" src=\"/images/weekend/weekend-1.webp\" alt=\"\" title=\"\">\n                </div>\n                <div class=\"lower-box\">\n                  <h3>\n                    <a href=\"weekend-celebration\">Weekend Celebration</a>\n                  </h3>\n                  <div class=\"more-link\">\n                    <a href=\"weekend-celebration\">\n                      <span class=\"fa fa-arrow-right\"></span></a>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n    <section id=\"tp-contact\" class=\"full-width\">\n      <div class=\"map-pattern-layer\"></div>\n      <div class=\"half-padding max-width\">\n        <div>\n          <div class=\"row clearfix responsive-gap\">\n            <!--Text Column-->\n            <div class=\"text-column col-lg-9 col-md-12 col-sm-12\">\n              <div class=\"inner\">\n                <div>\n                  <!-- <div class=\"upper-text\">Get In Touch With Us Today!</div> -->\n                  <h2 class=\"text-white text-left qt-title-text qt-fw-bold qt-lh-large\">\n                    Explore <span class=\"text-orange\">Our Team</span>\n                  </h2>\n                  <h3 class=\"text-white text-left qt-subtitle-text text-capitalize qt-fw-normal qt-lh-small\">\n                    Want to know more about\n                    <br><strong><span> Our Crew ?</span></strong>\n                  </h3>\n                </div>\n              </div>\n            </div>\n            <!--Form Column-->\n            <div class=\"form-column col-lg-3 col-md-12 col-sm-12 d-flex justify-content-center align-items-center\">\n              <div class=\"inner\">\n                <!--Form Box-->\n                <div class=\"form-box\">\n                  <div class=\"default-form appointment-form\">\n                    <!-- <form method=\"post\"> -->\n                    <div class=\"row clearfix\">\n                      <div class=\"form-group col-md-12 col-sm-12\">\n                        <a href=\"crew\">\n                          <button type=\"submit\" class=\"theme-btn btn-style-one\">\n                            <span class=\"btn-title qt-button-text\">Know More</span>\n                          </button>\n                        </a>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n    <section class=\"full-width half-padding\"></section>\n\n    <!-- Main Footer -->\n    \n  "
-      }}
-    />
+    <div className="min-h-screen bg-[#07080b] text-[#f8fafc] py-16 md:py-24 relative overflow-hidden">
+      <div className="ambient-glow-top"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-24">
+        
+        {/* 1. Hero Section */}
+        <div className="max-w-4xl text-left space-y-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs font-mono text-[#ff8a48]">
+            <Heart className="w-3.5 h-3.5" />
+            <span>Culture & Community // Life @ QTech</span>
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.08]">
+            Where Technical Excellence <br />
+            <span className="text-[#ff8a48]">Meets Vibrant Culture</span>
+          </h1>
+
+          <p className="text-zinc-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl">
+            We believe that high-performance engineering thrives in an environment of camaraderie, trust, and continuous celebration. Take a look inside the daily life, celebrations, and team milestones at Qrious Tech.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4 pt-2">
+            <Link
+              href="/crew"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold bg-white text-[#07080b] hover:bg-zinc-200 transition-all shadow-[0_2px_20px_rgba(255,255,255,0.2)]"
+            >
+              <span>Join Our Crew</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/company"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-zinc-300 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 transition-all"
+            >
+              <span>About Our Company</span>
+            </Link>
+          </div>
+
+          {/* Highlights */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-white/[0.08] text-xs font-mono text-zinc-400">
+            <div className="flex items-center gap-2">
+              <Users className="w-4 h-4 text-[#ff8a48] shrink-0" />
+              <span>88+ Talented Engineers</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Trophy className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span>Quarterly Hackathons</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Calendar className="w-4 h-4 text-cyan-400 shrink-0" />
+              <span>Annual Retreats</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Coffee className="w-4 h-4 text-purple-400 shrink-0" />
+              <span>Free Fuel & Snacks Daily</span>
+            </div>
+          </div>
+        </div>
+
+        {/* 2. Cultural Values */}
+        <div className="space-y-10">
+          <div>
+            <div className="text-xs font-mono uppercase tracking-widest text-[#ff8a48] mb-2">
+              Our Principles
+            </div>
+            <h2 className="text-3xl font-bold text-white tracking-tight">
+              The Cultural Pillars of Qrious Tech
+            </h2>
+            <p className="text-zinc-400 text-sm sm:text-base mt-2 max-w-2xl">
+              These shared values guide how we collaborate, resolve architectural challenges, and treat one another.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {values.map((v, idx) => (
+              <div 
+                key={idx}
+                className="p-6 rounded-2xl bg-[#0c0e16] border border-white/[0.08] hover:border-white/20 transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-[#ff8a48] mb-4">
+                    <v.icon className="w-5 h-5" />
+                  </div>
+                  <h4 className="text-base font-bold text-white mb-2">{v.title}</h4>
+                  <p className="text-xs text-zinc-400 leading-relaxed">{v.desc}</p>
+                </div>
+                <div className="pt-4 mt-6 border-t border-white/[0.04] text-[11px] font-mono text-zinc-500">
+                  Value #{idx + 1}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 3. Life at QTech Gallery */}
+        <div className="space-y-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <div className="text-xs font-mono uppercase tracking-widest text-[#ff8a48] mb-2">
+                Moments & Memories
+              </div>
+              <h2 className="text-3xl font-bold text-white tracking-tight">
+                Life in Action at QTech
+              </h2>
+            </div>
+
+            {/* Filter Tabs */}
+            <div className="flex flex-wrap gap-2">
+              {[
+                { id: "all", label: "All Moments" },
+                { id: "milestones", label: "Milestones & Awards" },
+                { id: "festivals", label: "Festivals" },
+                { id: "weekends", label: "Weekends & Happy Hours" },
+                { id: "hackathons", label: "Hackathons" }
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-mono transition-all ${
+                    activeTab === tab.id
+                      ? "bg-white text-[#07080b] font-semibold"
+                      : "bg-white/[0.04] text-zinc-400 hover:text-white border border-white/[0.06]"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredGallery.map((item, idx) => (
+              <div 
+                key={idx}
+                className="group rounded-3xl overflow-hidden bg-[#0c0e16] border border-white/[0.08] hover:border-white/20 transition-all flex flex-col"
+              >
+                <div className="aspect-[4/3] relative w-full overflow-hidden bg-black/40">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c0e16] via-transparent to-transparent opacity-60"></div>
+                </div>
+                <div className="p-6 flex-1 flex flex-col justify-between space-y-3">
+                  <div>
+                    <span className="text-[10px] font-mono uppercase text-[#ff8a48] tracking-wider font-semibold">
+                      {item.category.toUpperCase()}
+                    </span>
+                    <h3 className="text-lg font-bold text-white mt-1 group-hover:text-[#ff8a48] transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-zinc-400 leading-relaxed mt-2">
+                      {item.caption}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 4. Bottom Executive CTA */}
+        <div className="p-10 sm:p-14 rounded-3xl bg-gradient-to-br from-white via-orange-50/40 to-slate-50 dark:from-[#0c0e16] dark:via-[#111422] dark:to-[#0c0e16] border border-orange-200/80 dark:border-[#ff6b2b]/30 shadow-xl shadow-orange-500/5 dark:shadow-[0_10px_50px_rgba(255,107,43,0.1)] relative overflow-hidden transition-all duration-300">
+          <div className="max-w-2xl space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 dark:bg-[#ff6b2b]/10 border border-orange-200 dark:border-[#ff6b2b]/20 text-xs font-mono text-[#ff5a1f] dark:text-[#ff8a48]">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Ready to Be Part of the Story?</span>
+            </div>
+            <h3 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug">
+              Join a team that values your craft and celebrates your growth.
+            </h3>
+            <p className="text-sm sm:text-base text-slate-600 dark:text-zinc-300 leading-relaxed">
+              Explore our current career opportunities or connect with our team to learn more about life at Qrious Tech.
+            </p>
+            <div className="pt-2 flex flex-wrap gap-4">
+              <Link
+                href="/crew"
+                className="px-6 py-3.5 rounded-full text-sm font-semibold bg-[#090d16] dark:bg-white text-white dark:text-[#07080b] hover:bg-slate-800 dark:hover:bg-zinc-200 transition-all shadow-md flex items-center gap-2"
+              >
+                <span>View Open Engineering Roles</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/company"
+                className="px-6 py-3.5 rounded-full text-sm font-semibold text-slate-700 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white bg-white dark:bg-white/[0.05] border border-slate-300 dark:border-white/10 hover:bg-slate-50 transition-all shadow-sm dark:shadow-none"
+              >
+                <span>Read About Our Leadership</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   );
 }
